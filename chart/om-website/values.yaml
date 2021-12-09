@@ -11,7 +11,7 @@ service:
   type: ClusterIP
   port: 80
 
-DockerRepo: "quay.io/ortelius/ortelius-www"
+DockerRepo: "quay.io/openmake/om-website"
 DockerTag: "latest"
 
 ingress:
@@ -21,7 +21,7 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   paths: []
   hosts:
-    - dh-ms-docs.local
+    - om-website.local
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:

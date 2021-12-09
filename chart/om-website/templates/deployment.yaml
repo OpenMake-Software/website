@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name:  {{ include "ortelius-www.name" . }}
+  name:  {{ include "om-website.name" . }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app:  {{ include "ortelius-www.name" . }}
+      app:  {{ include "om-website.name" . }}
       tier: backend
       track: stable
   template:
     metadata:
       labels:
-        app:  {{ include "ortelius-www.name" . }}
+        app:  {{ include "om-website.name" . }}
         tier: backend
         track: stable
     spec:
       containers:
-        - name: {{ include "ortelius-www.name" . }}
+        - name: {{ include "om-website.name" . }}
           image: "{{ .Values.DockerRepo }}:{{ .Values.DockerTag }}"
           imagePullPolicy: Always
           ports:
