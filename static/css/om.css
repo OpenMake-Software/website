@@ -1,0 +1,26 @@
+.h4 > h1 {
+    color: black;
+    font-size: 4rem;
+}
+
+.h4 > p {
+    color: black;
+}
+
+.td-navbar {
+    background: #1e8b91 !important;
+}
+
+body > div > main > section > div::before { 
+    display: none;
+}
+
+.flowlogos {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
