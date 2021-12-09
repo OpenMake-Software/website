@@ -24,3 +24,12 @@ body > div > main > section > div::before {
   flex-flow: row wrap;
   justify-content: space-around;
 }
+
+p>button {
+    border-radius: 6px;
+    box-shadow: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(30, 139, 145);
+    padding: 6px 20px;
+}
