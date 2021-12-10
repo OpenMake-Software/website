@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>GetSubTaskDeps ( $TargetDeps, $TargetRelDeps, $wanted_dir, $sub_task_ext )</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/WritingandUsingBuildMethods.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="getlocalclasspathhomeenv.htm" /><link rel="next" href="getantincludexmlitems.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="cac2b80f-611a-4c9c-aefd-01dfb57d9586">
+<h3><a name="_GetSubTaskDeps_(_$TargetDeps," id="_GetSubTaskDeps_(_$TargetDeps,"></a>GetSubTaskDeps ( $TargetDeps, 
+$TargetRelDeps, $wanted_dir,<i> $sub_task_ext )</i></h3>
+<p class="MsoPlainText"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'"></span> </p>
+<p class="MsoNormal">Resolves all “Results From” Sub Task dependencies found in 
+the Target Definition File for a given Sub Task extension.  Once the 
+derived dependency is located in the TargetDeps or TargetRelDeps array, it is 
+scanned for any included file references.  All file references are put into 
+an array of Sub Task Dependencies along with the relative path to their root 
+location.  Consider the passed in Sub Task file 
+“int_classes/hello.javac”.  contained in “int+classes/hello.javac” are 
+references to all of the classes required to build the hello.jar target.  
+For example:</p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%"></span> </p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%">                     
+</span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 150%">com/my/package/*.class</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%"></span> </p>
+<p class="MsoNormal">GetSubTaskDeps will return all of the class reference found 
+in hello.javac as well as the relative path to the root of those 
+locations.  In this case, the relative path would resolve to:</p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%"></span> </p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%">                               
+</span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 150%">int_classes</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%"></span> </p>
+<p class="MsoNormal">and the classes would be:</p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%"></span> </p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%">                     
+</span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 150%">com/my/packages/*.class</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%"></span> </p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><u><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">USAGE:</span></u></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 9pt; FONT-FAMILY: Courier; LINE-HEIGHT: 150%">($rel_dir, 
+@subtask_deps) = 
+&amp;GetSubTaskDeps($TargetDeps,$TargetRelDeps,$wanted_dir,$sub_task_ext);</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 9pt; FONT-FAMILY: Courier; LINE-HEIGHT: 150%"></span> </p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 150%">$TargetDeps</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%"> 
+and </span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 150%">$TargetRelDeps</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%"> 
+</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">are</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%"> 
+</span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 150%">Openmake::FileList</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%"> 
+</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">references.</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%"></span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 150%">$wanted_dir</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%"> 
+is a passed in directory value that might contain the derived dependencies, such 
+as Ant’s</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%"> 
+</span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 150%">basedir=&lt;value&gt;</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%">. 
+</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%"> An 
+empty value assumes</span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 150%"> 
+“.”.</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%"></span> </p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 150%">$sub_task_ext</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%"> 
+</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">is 
+the extension to search for, such as</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%"> 
+</span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 150%">.javac, .rmic, 
+.jup</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%">.</span><span style="FONT-SIZE: 9pt; FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%"></span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%"></span> </p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><u><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">RETURNS: 
+</span></u></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt">The relative directory where all of 
+the derived dependencies are found and the complete list of the resolved 
+dependencies in an array.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt">   </p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'"></span> </p>
+<p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%"></span> </p><span id="related-topics"></span></body></html>

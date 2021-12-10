@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Phony Targets</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/UsingBuildServices.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="wildcardsinbuildrules.htm" /><link rel="next" href="microsoftteambuildandworkflows.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="83098b03-19a0-42e3-a96f-d20f63ac0186">
+<h3><a name="PhonyTargets" id="PhonyTargets"></a><a name="TargetFileExt" id="TargetFileExt"></a>Phony Targets</h3>
+<p class="MsoHeader"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt">Phony Targets are <i>Targets</i> 
+that do not represent a "runnable" binary object such as an executable or 
+library. Phony Targets instead are placeholders for performing specific actions 
+such as copying files from one directory to the next.  </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt">To create Phony Targets, first a 
+<i>Build Service </i>for the Phony Target needs to be defined.  The 
+<i>Build Service </i>must have specific<i> Build Rules</i> and <i>Build 
+Methods</i> associated to the <i>Build Service </i>that performs the logic 
+needed to create the Phony Target.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt">Typically the Phony Target <i>Build 
+Service </i>has a rule that defines the Final Target as <span style="FONT-FAMILY: 'Courier New'">.noext</span> (no extension).  The 
+dependency file extensions to the <i>Build Rule </i>should list all of the 
+extensions that the <i>Build Method</i> will expect when performing the 
+action.  </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt">In order for the build to 
+understand a Phony Target, a <i>Final Target</i> must be assigned to the 
+<i>Build Service</i>, through a <i>Build Rule.</i>  This <i>Final 
+Target</i> is most typically a 0 byte file that is created in the build 
+directory as a result of the build. The <i>Final Target</i> is Phony simply 
+because it is not the end result desired from the execution of the <i>Build 
+Method</i>, but instead a placeholder that indicates the actions of the Phony 
+Target were completed successfully.  Because of the need to have a Final 
+Target result, when developing a customized <i>Build Method</i> for Phony 
+Targets, the creation of a Final Target is required.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt">In some cases, the Phony Target 
+does not need to be created every time a build is completed.  For example, 
+if you are using a Phony Target to copy files to a shared execution area, you 
+may only want this Phony Target step executed in certain cases.  To prevent 
+Phony Targets from being created with every full build, select the checkbox 
+"exclude from full build" found on the <i>Target Overview</i> 
+Screen.   This will prevent the Phony Target from being created when 
+the full build is executed.  To build the Phony Target, you must go to the 
+Setup Build screen and "check" the Phony Target independently.  </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt"> </p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"> </p><span id="related-topics"></span></body></html>

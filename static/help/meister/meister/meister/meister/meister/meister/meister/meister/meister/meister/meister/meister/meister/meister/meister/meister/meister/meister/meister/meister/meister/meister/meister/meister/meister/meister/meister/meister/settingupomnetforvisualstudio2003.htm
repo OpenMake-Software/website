@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Setting Up omNet for Visual Studio 2003</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/CreatingandManagingTargets.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="creatingmicrosoftnet2003targetswithouttheaddin.htm" /><link rel="next" href="generatingtargetsusingomnet.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="22811509-244e-4fdb-bffb-2ca69c8ccc69">
+<h3>Setting Up omNet for Visual Studio 2003</h3>
+<p class="MsoNormal"></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt">Within the .NET 2003 IDE, it is 
+necessary to configure bldmake and om to perform local unit builds.  This 
+is accomplished by defining two External Tool configurations both of which 
+execute omNET.  <span style="FONT-FAMILY: 'Courier New'">omNET</span> is an 
+executable located in the bin directory of the Command Line Client that performs 
+two primary functions based on the defined parameters:</p>
+<p class="MsoBodyTextIndent"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 54pt; TEXT-INDENT: -18pt; tab-stops: 54.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">     
+</span>Automates converting .NET 2003 Solutions and <i>Projects</i> into 
+<i>Targets</i> and calls <span style="FONT-FAMILY: 'Courier New'">bldmake</span> 
+which constructs a Build Control File for a specified <i>Project </i>and 
+<i>Dependency Directories.</i><br /><br /></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 54pt; TEXT-INDENT: -18pt; tab-stops: 54.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">     
+</span>Calls <span style="FONT-FAMILY: 'Courier New'">om</span> which executes a 
+build against the Build Control File found in the defined Build Directory.</p>
+<p class="MsoBodyTextIndent"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt"><b>Note:</b><span style="FONT-FAMILY: 'Courier New'"> omNET </span>requires PERL 5.8.6, 5.8.7, 
+5.8.8, 5.10 or 5.12.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt">The External Tools can be defined 
+within the .NET 2003 IDE through the <i>Tools</i><i>→External Tools</i> menu 
+option.  After being defined, the <i>External Tools</i> can be executed and 
+adjusted directly from the Tools menu.</p>
+<p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times','serif'"></span> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 18pt"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 18pt"><b>Setting Up for Target 
+Generation</b></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt">The first .NET 2003 External Tool 
+that needs to be configured is omNET: TGT<b> </b>Generation.  The following 
+steps are required to configure omNET: TGT Generation.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 18pt"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 18pt"> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><b>Table SI-33 Adding the 
+External Tool</b></p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" cellspacing="0" cellpadding="0" border="1">
+  <thead>
+  <tr>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Step</p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Action</p></td></tr></thead>
+  <tbody>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">1</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Go to  </p>
+      <p class="MsoBodyTextIndent">External Tools in the menu bar. Click “Add” in 
+      the External Tools screen.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">2</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Type the title name in 
+      the “Title” field, for example, “omNET: TGT Generation”</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">3</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Type <span style="FONT-FAMILY: 'Courier New'">omNET.exe</span> in the “Command” field 
+      for the name of the executable</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">4</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Add the following 
+      arguments to the “Arguments” field to pass to <span style="FONT-FAMILY: 'Courier New'">omNET.exe.<br />      
+      -omProject &lt;Meister Project&gt;<br />      
+      -omSearchpath &lt;Meister Dependency 
+      Directories&gt;<br />      -slnDir $(SolutionDir) 
+      <br />      -slnFile $(SolutionFileName) 
+      <br />      -action CONVERT</span></p>
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"> </p>
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Once added the 
+      “Arguments” field should look like:<br /><span style="FONT-FAMILY: Courier">-omProject &lt;Meister Client Project 
+      Name&gt; -omSearchpath &lt;Meister Client Dependency Directories&gt; 
+      -slnDir $(SolutionDir) -slnFile $(SolutionFileName) -action 
+      CONVERT</span></p>
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier"></span> </p>
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">An optional argument 
+      <span style="FONT-FAMILY: Courier">“-targetDir &lt;output 
+      location&gt;”</span>, may be provided to force all build output for all 
+      projects in the solution to  be created in the same location, 
+      indicated by &lt;output location&gt;. Example: <span style="FONT-FAMILY: Courier">-targetDir 
+      ..\..\BuildOutput\release\bin</span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">5</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent3" style="MARGIN-LEFT: 0pt">Add the build 
+      directory path to the “Initial Directory” field.  This is where Build 
+      Control Files and logs will be generated.  All executables will also 
+      be built relative to the <i>Build Directory</i>. This value should be set 
+      the same for both the Conversion and Build External Tool settings.</p>
+      <p class="MsoNormal" style="MARGIN-LEFT: 18pt"> </p>
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 4.25pt"><u>Note</u>: The 
+      “Initial Directory” for <span style="FONT-FAMILY: 'Courier New'">omNET</span> should not be the solution 
+      directory. This causes the main solution files to be overwritten and a 
+      pop-up message will result.  The initial directory must exist 
+      (currently). If the directory does not exist, it will use the solution 
+      directory.<i></i></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">6</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent3" style="MARGIN-LEFT: 0pt">Check the box “Use 
+      Output window” to have <span style="FONT-FAMILY: 'Courier New'">omNET</span> logging information 
+      displayed at in the console window.</p></td></tr></tbody></table>
+<p class="MsoNormal" style="MARGIN-LEFT: 18pt"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 18pt"><br />If the <span style="FONT-FAMILY: 'Courier New'">-omproject</span> and <span style="FONT-FAMILY: 'Courier New'">-omsearchpath</span> arguments do not have 
+defined parameters, the <span style="FONT-FAMILY: 'Courier New'">omNET 
+</span>process will default to the <span style="FONT-FAMILY: 'Courier New'">.sln</span> file name minus the “<span style="FONT-FAMILY: 'Courier New'">.sln</span>” extension for the <i>Project</i> 
+value and “DEVELOPMENT” for the<i> Dependency Directories</i> value.  In 
+addition to the required arguments indicated above, all of the standard <span style="FONT-FAMILY: 'Courier New'">bldmake</span> options can also be added to 
+the “Arguments” field.<br /><br /></p>
+<p class="MsoBodyText" style="MARGIN-LEFT: 18pt"><i><u>Note</u>: The variables are 
+provided to the External Tools by the .NET 2003 IDE and can be selected by 
+clicking on the black arrow next to the “Arguments” entry field.</i></p>
+<p class="MsoBodyText" style="MARGIN-LEFT: 18pt"><i></i> </p>
+<p class="MsoNormal"><b>Setting up for Build Execution</b></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 18pt">The second .NET 2003 External Tool 
+that needs to be configured is omNET: Build.  The following steps are 
+required to configure omNET: Build.</p>
+<p class="MsoBodyTextIndent"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 18pt"> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><b>Table SI-34 Adding the 
+External Tool</b></p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" cellspacing="0" cellpadding="0" border="1">
+  <thead>
+  <tr>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Step</p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Action</p></td></tr></thead>
+  <tbody>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">1</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Go to  </p>
+      <p class="MsoBodyTextIndent">External Tools in the menu bar. Click “Add” in 
+      the External Tools screen.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">2</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Type the title name in 
+      the “Title” field, for example, “omNET: TGT Generation”</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">3</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Type <span style="FONT-FAMILY: 'Courier New'">omNET</span> in the “Command” field for 
+      the name of the executable</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">4</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Add the following 
+      arguments to the “Arguments” field to pass to <span style="FONT-FAMILY: 'Courier New'">omNET</span>.<br />          
+      <span style="FONT-FAMILY: 'Courier New'">-slnDir 
+      $(SolutionDir)*<br />      -slnFile 
+      $(SolutionFileName)*<br />      -projDir 
+      $(ProjectDir)*<br />      -projFile 
+      $(ProjectFileName)*<br />      -action 
+      BUILD</span></p>
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"> </p>
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Once added the 
+      “Arguments” field should look like:<br /><span style="FONT-FAMILY: Courier; COLOR: black">-slnDir $(SolutionDir) -slnFile 
+      $(SolutionFileName) -projDir $(ProjectDir) -projFile $(ProjectFileName) 
+      -action BUILD</span><span style="COLOR: black"><br /><br /></span>All of the 
+      standard <span style="FONT-FAMILY: 'Courier New'">om</span> options can 
+      also be added to the “Arguments” field.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">5</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent3" style="MARGIN-LEFT: 0pt">Add the build 
+      directory path to the “Initial Directory” field.  This is where Build 
+      Control Files and logs will be generated.  All executables will also 
+      be built relative to the build directory. This value should be set the 
+      same for both the Conversion and Build External Tool settings.</p>
+      <p class="MsoNormal" style="MARGIN-LEFT: 18pt"> </p>
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 4.25pt"><u>Note</u>: The 
+      “Initial Directory” for <span style="FONT-FAMILY: 'Courier New'">omNET</span> should not be the solution 
+      directory. This causes the main solution files to be overwritten and a 
+      pop-up message will result.  The initial directory must exist 
+      (currently). If the directory does not exist, it will use the solution 
+      directory.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">6</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent3" style="MARGIN-LEFT: 0pt">Check the box “Use 
+      Output window” to have <span style="FONT-FAMILY: 'Courier New'">omNET</span> logging information 
+      displayed at in the console window.</p></td></tr></tbody></table>
+<p class="MsoNormal" style="MARGIN-LEFT: 18pt"> </p>
+<p class="MsoBodyTextIndent"> </p>
+<p class="MsoBodyTextIndent"> </p><span id="related-topics"></span></body></html>

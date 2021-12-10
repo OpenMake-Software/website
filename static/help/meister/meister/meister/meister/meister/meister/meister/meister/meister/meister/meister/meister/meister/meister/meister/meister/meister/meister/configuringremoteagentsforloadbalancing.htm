@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Configuring Remote Agents for Load Balancing</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/UsingRemoteBuildServers.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="assigningremoteagentstotheserverpool.htm" /><link rel="next" href="continuousintegrationforagileteams.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="fc99a5eb-e52c-4999-a6df-5647ad00142b">
+<h3>Configuring Remote Agents for Load Balancing</h3>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%">To configure your <i>Remote 
+Agents</i>, go to the “Server Pool” and “Administer” menu option on the OpenMake 
+Management Control Console.  Highlight the <i>Remote Agent</i> and select 
+the “Edit” button.  You will first be prompted for a <i>Remote Agent</i> 
+“Type.”  The Type value can be:</p>
+<p class="MsoListParagraph" style="MARGIN-LEFT: 54pt; LINE-HEIGHT: 150%; TEXT-INDENT: -18pt; tab-stops: 54.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">     
+</span>Physical</p>
+<p class="MsoListParagraph" style="MARGIN-LEFT: 54pt; LINE-HEIGHT: 150%; TEXT-INDENT: -18pt; tab-stops: 54.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">     
+</span>Pre-Provisioned Virtual</p>
+<p class="MsoListParagraph" style="MARGIN-LEFT: 54pt; LINE-HEIGHT: 150%; TEXT-INDENT: -18pt; tab-stops: 54.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">     
+</span>CloudBuilder Options:  Amazon EC2, HyperV, and vCenter. </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%">If you are using virtual machines, 
+but not using CloudBuilder, you will need to choose “Pre-Provisioned 
+Virtual.”  If you are using CloudBuilder, refer to the “CloudBuilder 
+Automatic Provisioning” section of this User Guide for details in configuring 
+CloudBuilder virtual machines.  </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%">Note: You can shut down a <i>Remote 
+Agent</i> without it being removed from the <i>Remote Agents</i> list.</p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%">Once you have selected the 
+<i>Remote Agent</i> Type, you must determine the load balancing criteria for the 
+Remote Agent.  Load balancing is the process of identifying the Remote 
+Agent with the least amount of utilization.  Load balancing maximizes 
+machine usage by distributing the workload of a Workflow to the least utilized 
+machine.  The following values are required:</p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><b>CPU % 
+Threshold:</b> Used to create a weighted value for use in deciding to which 
+machine a queued activity will be assigned during load balancing. Recommend 
+value is 80%.   For instance, if there are two <i>Remote Agents</i>, 
+Agent A and Agent B, a CPU % Threshold can be assigned to determine which 
+machine to use first.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%">The equation for 
+this weighted value is:</p>
+<p class="MsoNormal" style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%" align="center">CPU  % Threshold – Current CPU % Usage</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%">For example, if 
+Agent A and Agent B both have a CPU % Threshold of 80%, and Agent A is currently 
+running at 50% CPU, its weighted value will be 30. If Agent B is running at 70% 
+CPU utilization, its weighted value will be 10. In this case, if all other 
+settings for the two <i>Remote Agents </i>are the same, Agent A will have the 
+queued activities assigned to it, since it has a higher differential between CPU 
+% threshold and current CPU % usage.</p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><b>Queue Depth 
+Threshold: </b>Determines how many <i>Workflow Activities</i> will be queued up 
+to run before the KB server starts offloading activities to other <i>Remote 
+Agents</i> in the <i>Server Pool</i>.  The value of this number is 
+determined by the amount of resources available to process Workflow 
+Activities.  You can enter a number between 1 and 200.  The initial 
+recommended value to 10 and can be increased if additional Remote Agents are 
+being started unnecessarily.  The higher the number, the larger the queue. 
+</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><b>Max # of 
+Running Workflows: </b> Controls how many <i>Workflows </i>can be run 
+simultaneously on the same <i>Remote Agent</i>.  Note: this value is 
+different from the value set by the <span style="FONT-FAMILY: 'Courier New'">OMSUBMIT_MAX_USER_PROC</span>  variable, 
+which controls how many simultaneous <i>Workflow</i> processes can be run on a 
+<i>Remote Agent</i>, or better known as parallelized processes. </p><span id="related-topics"></span></body></html>

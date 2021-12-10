@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Configure Workflow Activity Environment Variables Section</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/DevelopingWorkflows.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="configuringworkflowactivities.htm" /><link rel="next" href="usingbatchscriptstosetworkflowactivityvariables.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="0cc22a93-31f5-4ea6-b448-2c33935fa516">
+<h4>Configure Workflow Activity Environment Variables Section</h4>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt; tab-stops: 112.5pt"><span style="FONT-FAMILY: 'Times New Roman','serif'"></span> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%">You can define unique Environment 
+Variables to your <i>Workflow Activity</i> or override <i>Sever Pool</i> level 
+or “Global” <i>Workflow</i> variables using the Configure Workflow activity 
+Environment Variable option. To add a variable that will apply only to your 
+<i>Workflow Activity</i>, expand on the “Configure Workflow Activity Environment 
+Variable” option to display the Environment Variable table.  Click on the 
+<i>New Variable</i> button and enter the variable name into the <i>Variable 
+</i>input line and then enter the desired value into the <i>Value</i> input 
+line. You can also choose one of the pre-defined values by clicking on the 
+<i>Macros</i> button and then selecting one of the variables from 
+the pop-up menu. See the “Macros” table below for a list of the available 
+Macros. After clicking OK, the configure environment field will display the new 
+variable as <b>Set</b>. If you delete the value of this variable using the 
+<i>Edit</i> button, the variable will display as <b>Unset</b>. </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%">Once your <i>Workflow Activity</i> 
+completes, the Environment Variables will be reset to the <i>Server Pool</i> 
+level, or if no <i>Server Pool</i> level Variables exist, to the “Global” 
+<i>Workflow </i>level.</p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 14pt; LINE-HEIGHT: 150%"></span><span style="FONT-SIZE: 14pt; LINE-HEIGHT: 150%"></span></p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><b><span style="FONT-FAMILY: 'Times New Roman','serif'">Table Macros.  Environment 
+Macros and Descriptions</span></b><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 446.4pt" cellspacing="0" cellpadding="0" width="893" border="1">
+  <thead>
+  <tr>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 138.2pt" valign="top" width="276">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><b><span style="FONT-FAMILY: 'Times New Roman','serif'">Activity 
+      Macros</span></b></p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 308.2pt" valign="top" width="616">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><b><span style="FONT-FAMILY: 'Times New Roman','serif'">Description</span></b></p></td></tr></thead>
+  <tbody>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 138.2pt" valign="top" width="276">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">$(LOG_URL)</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span><span style="FONT-FAMILY: 'Courier New'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 308.2pt" valign="top" width="616">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">URL where log output for 
+      the <i>Workflow</i> is located.</span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 138.2pt" valign="top" width="276">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">$(MACHINE_NAME)</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span><span style="FONT-FAMILY: 'Courier New'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 308.2pt" valign="top" width="616">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">Name of the machine 
+      executing this activity.</span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 138.2pt" valign="top" width="276">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">$(USER_NAME)</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span><span style="FONT-FAMILY: 'Courier New'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 308.2pt" valign="top" width="616">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">Name of the user executing 
+      the <i>Workflow</i>.</span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 138.2pt" valign="top" width="276">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">$(BUILD_DIRECTORY)</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span><span style="FONT-FAMILY: 'Courier New'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 308.2pt" valign="top" width="616">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">Build directory from which 
+      activities will be executed.</span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 138.2pt" valign="top" width="276">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">$(BUILD_DATE)</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span><span style="FONT-FAMILY: 'Courier New'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 308.2pt" valign="top" width="616">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">Date the <i>Workflow</i> 
+      was executed.</span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 138.2pt" valign="top" width="276">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">$(BUILD_TIME)</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span><span style="FONT-FAMILY: 'Courier New'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 308.2pt" valign="top" width="616">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">Time the <i>Workflow</i> 
+      was executed.</span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 138.2pt" valign="top" width="276">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">$(JOB_NAME)</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span><span style="FONT-FAMILY: 'Courier New'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 308.2pt" valign="top" width="616">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">The <i>Job Name</i> that 
+      appears in the <i>General Information</i> field on the <i>Configure 
+      Tab</i> screen. </span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 138.2pt" valign="top" width="276">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">$(JOB_LABEL)</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span><span style="FONT-FAMILY: 'Courier New'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 308.2pt" valign="top" width="616">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">The <i>Job Label</i> that 
+      appears in the <i>General Information</i> field on the <i>Configure 
+      Tab</i> screen.</span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 138.2pt" valign="top" width="276">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">$(JOB_NUMBER)</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span><span style="FONT-FAMILY: 'Courier New'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 308.2pt" valign="top" width="616">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">The <i>Job Number</i> that 
+      appears in the <i>General Information</i> field on the <i>Configure 
+      Tab</i> screen.</span></p></td></tr></tbody></table>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><b><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></b> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p><span id="related-topics"></span></body></html>

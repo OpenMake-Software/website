@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Matching on **</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/CreatingandManagingTargets.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="matchingonand.htm" /><link rel="next" href="includesandexcludes.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="68e956a2-8c19-4de3-8f94-082666912cb9">
+<h3>Matching on **</h3>
+<p class="MsoListContinue"> </p>
+<p class="MsoBodyTextIndent">The matching pattern "**" allows more flexibility 
+than the use of "*" and/or "?" alone because it matches to zero or more 
+dependency directories.  The "**" indicates that the pattern matching 
+should be recursive through multiple directories.  Consider the above 
+example, but with the pattern ab?/**/*.java. This matches our original file 
+<span style="FONT-FAMILY: 'Courier New'">abc/def/xyz.java</span>, but would also 
+match the following:</p>
+<p class="MsoBodyTextIndent"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt; TEXT-INDENT: 18pt; tab-stops: 27.0pt 36.0pt"><span style="FONT-FAMILY: 'Arial','sans-serif'">1.      
+</span>abc/a.java                
+(no intermediate directory)</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt; TEXT-INDENT: 18pt; tab-stops: 27.0pt 36.0pt"><span style="FONT-FAMILY: 'Arial','sans-serif'">2.      
+</span>abc/def/ghi/b.java    (multiple intermediate 
+directories)</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt"> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 23.15pt">The "double-star" 
+notation is very useful for matching Java package structures.  For example, 
+consider a simplified example of a Java package: </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 63pt"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 63pt"><span style="FONT-FAMILY: Courier">com/acmepackage/online/<br />com/acmepackage/online/actions/<br />com/acmepackage/online/build/<br />com/acmepackage/online/data/<br />com/acmepackage/online/markers/<br />com/acmepackage/online/parsers/<br />com/acmepackage/online/parsers/<br />com/acmepackage/online/ui/<br />com/acmepackage/online/ui/events/<br />com/acmepackage/online/ui/panels/<br />com/acmepackage/online/ui/preferences/<br />com/acmepackage/online/ui/properties/<br />com/acmepackage/online/ui/wizards/</span></p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"> </p>
+<p class="MsoBodyTextIndent">To create a <i>Target</i> for this package structure 
+without the recursive wildcard (**) would require listing each of the package 
+directories with "*/.java", for a total of 13 listed dependencies. Now we can 
+simply create one dependency:</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt; TEXT-INDENT: 18pt"> </p>
+<p class="MsoHeader" style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: Courier">com/acmepackage/online/**/*.java</span></p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 23.15pt; TEXT-INDENT: 18pt"> </p>
+<p class="MsoBodyTextIndent">In addition, if the package structure changes, the 
+file dependency listed in the <i>Target</i> does not need to be modified.</p>
+<p class="MsoBodyTextIndent" style="TEXT-INDENT: 18pt"> </p>
+<p class="MsoBodyTextIndent">The wildcard matching uses a port of code written for 
+the Apache Ant project (<a href="http://ant.apache.org/">http://ant.apache.org</a>).</p>
+<h4> </h4><span id="related-topics"></span></body></html>

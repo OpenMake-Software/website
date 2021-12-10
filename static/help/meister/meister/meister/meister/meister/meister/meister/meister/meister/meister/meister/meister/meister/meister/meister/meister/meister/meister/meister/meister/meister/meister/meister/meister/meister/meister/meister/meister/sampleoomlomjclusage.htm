@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Sample OOMLOM JCL Usage</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/zOS Development Guide.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="releaseordebug1.htm" /><link rel="next" href="dependencyscanningwithoomlom.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="76583534-34ce-4b58-876f-7d6ee08cd9fb">
+<h3>Sample OOMLOM JCL Usage</h3>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">/*</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">//OM      EXEC 
+PGM=OOMLOM,</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">//  
+PARM='ENVAR("_CEE_ENVFILE=DD:ENV"),/@DD:PARMS'</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">//STEPLIB  DD 
+DSN=<b>&lt;qual1&gt;</b>.OPENMAKE.OOMLOAD,DISP=SHR</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">//         
+DD DSN=CEE.SCEERUN,DISP=SHR</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">//SYSOUT   DD SYSOUT=*</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">//SYSPRINT DD SYSOUT=*</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">//ENV      DD *</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">OPENMAKE_SERVER=http://<b>&lt;enter kb server 
+name&gt;:&lt;enter port number&gt;</b></span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">/*</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">//PARMS DD *</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">CFG=RELEASE</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">-f <b>&lt;enter Build Control file 
+name&gt;</b></span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">-c <b>&lt;enter high level data set name for the 
+build&gt;</b></span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">-mj <b>//&lt;enter the file name that contains the 
+job card&gt;</b></span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">-a</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">-ov</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">-lo <b>&lt;enter user name to own 
+logs&gt;</b></span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">-oh </span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">-lj <b>"&lt;enter build job name&gt;</b>" 
+</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">-lm &lt;<b>enter machine name&gt;</b></span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">-ld "<b>&lt;enter date for log 
+file&gt;</b>"</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">/*</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">//*</span></p>
+<div style="MARGIN-BOTTOM: 0pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0pt; PADDING-TOP: 1pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; MARGIN-TOP: 0pt; PADDING-RIGHT: 0pt">
+<p class="MsoFooter" style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt"> </p></div>
+<p class="MsoNormal">Example:</p>
+<div style="MARGIN-BOTTOM: 0pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0pt; PADDING-TOP: 1pt; PADDING-LEFT: 0pt; BORDER-LEFT: medium none; MARGIN-TOP: 0pt; PADDING-RIGHT: 0pt">
+<p class="MsoFooter" style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt"> </p></div>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">//OM      EXEC 
+PGM=OOMLOM,</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">//  
+PARM='ENVAR("_CEE_ENVFILE=DD:ENV"),/@DD:PARMS'</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">//STEPLIB  DD 
+DSN=OMBUILD.OPENMAKE.OOMLOAD,DISP=SHR</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">//         
+DD DSN=CEE.SCEERUN,DISP=SHR</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">//SYSOUT   DD SYSOUT=*</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">//SYSPRINT DD SYSOUT=*</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">//ENV      DD *</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">OPENMAKE_SERVER=http://kbserver1:8080/openmake</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">/*</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">//PARMS DD *</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">CFG=RELEASE</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">-f ombuild.acctpay.MAK(z/OS)</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">-c ombuild.acctpay</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">-mj //ombuild.acctpay.JCLLIB(JOBCARD)</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">-a</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">-ov</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">-lo jdoe142</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">-oh </span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">-lj "AcctPay Prod Rel 1"</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">-lm TSTLPAR</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">-ld "2002-11-24 19_04_29"</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: Courier">/*</span></p>
+<div style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0pt; PADDING-TOP: 1pt; PADDING-LEFT: 0pt; MARGIN: 0pt 0pt 0pt 27.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 0pt">
+<p class="MsoFooter" style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt"><span style="FONT-FAMILY: Courier">//*</span><span style="FONT-FAMILY: Courier"></span></p></div>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"> </p><span id="related-topics"></span></body></html>

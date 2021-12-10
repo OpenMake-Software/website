@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Meister for z/OS Build Types</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/zOS Development Guide.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="editflagdetail.htm" /><link rel="next" href="zosdependencyandtargets.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="31a037e4-d135-4675-a669-5554c8abbe1f">
+<h2><a name="_Ref37069272" id="_Ref37069272"></a><a name="_Ref34471163" id="_Ref34471163">Meister for z/OS Build 
+Types</a></h2>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt"><i>Build Type</i> indicates which 
+development tool should be used to create your <i>Target</i>.  Select a 
+<i>Build Type</i> to be associated with your <i>Target</i>.  This selection 
+determines how your <i>Target</i> is created, including the compile flags to be 
+used.  <i>Build Types</i> and Rules are set up by the Build 
+Administrator.  If the <i>Build Type</i> you need is not available, contact 
+your Administrator. The Administrator can create new <i>Build Types</i>, or 
+modify the compile flags associated with any particular <i>Build 
+Type</i>.   The <i>Build Type</i> is a required field.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt"><i>Build Types</i> specific to the 
+standard mainframe compiles come as part of the standard installation.  In 
+some cases, these <i>Build Types</i> may need to be modified to suit your 
+particular installation data set names.  </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt">Following is a description of the 
+z/OS <i>Build Types</i>:</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt"> </p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" cellspacing="0" cellpadding="0" border="1">
+  <thead>
+  <tr>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 144pt" valign="top" width="288">
+      <p class="MsoNormal"><b>Build Type</b></p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 293.4pt" valign="top" width="587">
+      <p class="MsoNormal"><b>Description</b></p></td></tr></thead>
+  <tbody>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 144pt" valign="top" width="288">
+      <p class="MsoNormal">Assembler Load Module</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 293.4pt" valign="top" width="587">
+      <p class="MsoNormal">Creates a standard Assembler load module.  Uses 
+      OBJ  as an Intermediate <i>Target</i> Dataset.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 144pt" valign="top" width="288">
+      <p class="MsoNormal">Assembler OBJ Load Module</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 293.4pt" valign="top" width="587">
+      <p class="MsoNormal">Creates a standard Assembler load module using an 
+      intermediate OBJ PDS before linking.  This is used for Load modules 
+      that are made up of multiple Assembler source programs.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 144pt" valign="top" width="288">
+      <p class="MsoNormal">Assembler Object</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 293.4pt" valign="top" width="587">
+      <p class="MsoNormal">Creates a standard Assembler object.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 144pt" valign="top" width="288">
+      <p class="MsoNormal">BMS Map CSect</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 293.4pt" valign="top" width="587">
+      <p class="MsoNormal">Creates a BMS Map module.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 144pt" valign="top" width="288">
+      <p class="MsoNormal">BMS Map DSect</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 293.4pt" valign="top" width="587">
+      <p class="MsoNormal">Creates a BMS Map module.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 144pt" valign="top" width="288">
+      <p class="MsoNormal">COBOL Load Module</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 293.4pt" valign="top" width="587">
+      <p class="MsoNormal">Creates a standard COBOL load module.  </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 144pt" valign="top" width="288">
+      <p class="MsoNormal">COBOL object</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 293.4pt" valign="top" width="587">
+      <p class="MsoNormal">Creates a standard COBOL object.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 144pt" valign="top" width="288">
+      <p class="MsoNormal">COBOL OBJ Load Module</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 293.4pt" valign="top" width="587">
+      <p class="MsoNormal">Creates a standard COBOL load module using an 
+      intermediate OBJ PDS before linking.  This is used for Load modules 
+      that are made up of multiple COBOL source programs.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 144pt" valign="top" width="288">
+      <p class="MsoNormal">CICS/COBOL Load Module</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 293.4pt" valign="top" width="587">
+      <p class="MsoNormal">Creates a standard COBOL/CICS load module. Uses the 
+      DFHECP1 CICS translator and the IBM Cobol compiler.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 144pt" valign="top" width="288">
+      <p class="MsoNormal">CICS IMS COBOL Load Module</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 293.4pt" valign="top" width="587">
+      <p class="MsoNormal">Creates a COBOL CICS/IMS load module.  Uses the 
+      DFHECP1 CICS translator and the IBM Cobol compiler.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 144pt" valign="top" width="288">
+      <p class="MsoNormal">DB2 CICS COBOL Load Module</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 293.4pt" valign="top" width="587">
+      <p class="MsoNormal">Creates a DB2/CICS COBOL load module.  Creates a 
+      member in LOAD and in DBRMLIB.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 144pt" valign="top" width="288">
+      <p class="MsoNormal">C Load 
+      Module          </p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 293.4pt" valign="top" width="587">
+      <p class="MsoNormal">Creates a C load module using OBJ as an intermediate 
+      <i>Target</i> Dataset.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 144pt" valign="top" width="288">
+      <p class="MsoNormal">C NCAL 
+      Module         </p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 293.4pt" valign="top" width="587">
+      <p class="MsoNormal">Creates a C or Assembler NCAL module using LOADMOD as 
+      the <i>Target</i> Dataset.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 144pt" valign="top" width="288">
+      <p class="MsoNormal">CPP Load Module</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 293.4pt" valign="top" width="587">
+      <p class="MsoNormal">Creates a CPP load module using OBJ as an Intermediate 
+      <i>Target</i> data set.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 144pt" valign="top" width="288">
+      <p class="MsoNormal">DB2  C Load Module</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 293.4pt" valign="top" width="587">
+      <p class="MsoNormal">Creates a DB2 – C load module. Uses OBJ and an 
+      Intermediate <i>Target</i> data set. Uses Load and DBRMLIB as Final 
+      <i>Target</i> Datasets.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 144pt" valign="top" width="288">
+      <p class="MsoNormal">DB2 CPP Load Module</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 293.4pt" valign="top" width="587">
+      <p class="MsoNormal">Creates a DB2 – CPP load module. Uses OBJ and an 
+      Intermediate <i>Target</i> data set. Uses Load and DBRMLIB as Final 
+      <i>Target</i> Datasets.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 144pt" valign="top" width="288">
+      <p class="MsoNormal">PL1 Load Module</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 293.4pt" valign="top" width="587">
+      <p class="MsoNormal">Creates a standard PL1 load 
+module.</p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"> </p><span id="related-topics"></span></body></html>

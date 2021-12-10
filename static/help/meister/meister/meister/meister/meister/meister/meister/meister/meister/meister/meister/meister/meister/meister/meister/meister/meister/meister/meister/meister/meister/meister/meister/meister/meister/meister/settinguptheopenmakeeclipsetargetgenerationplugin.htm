@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Setting Up the OpenMake Eclipse Target Generation Plug-in</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/CreatingandManagingTargets.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="automaticallygeneratingyourjavatargets1.htm" /><link rel="next" href="mappingmeisterbuildservicestoeclipseprojects.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="220aed69-a829-4a5e-b43f-4876dceee31b">
+<h3>Setting Up the OpenMake Eclipse Target Generation Plug-in</h3>
+<p class="MsoNormal"> </p>
+<p class="MsoBodyTextIndent">Within Eclipse, there is some additional 
+customization necessary to access Plug-in features from the top-level 
+menu.  These features are not required to be activated for the Plug-in to 
+run but will make access to build functions more convenient.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 18pt"> </p>
+<p class="MsoBodyTextIndent">While context-sensitive popup menu options will be 
+immediately available, Plug-in specific menu-bar items will need to be activated 
+through Perspective Customization.  After launching Eclipse perform the 
+following actions:</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 18pt"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 18pt"> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><b>Table PB-9 Activating 
+Plug-In Menus within Eclipse</b></p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" cellspacing="0" cellpadding="0" border="1">
+  <thead>
+  <tr>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Step</p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Action</p></td></tr></thead>
+  <tbody>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">1</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Go to  </p>
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 32.15pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">     
+      </span>Eclipse <i>Window &gt; Customize Perspective…</i></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">2</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">In the Customize 
+      Perspective dialog, select the Shortcuts tab, select "New" from the 
+      submenus dropdown. Check the box next to "Openmake"</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">3</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">In the Customize 
+      Perspective dialog, select the Shortcuts tab, select "Show View". Check 
+      the box next to “Openmake”:</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">4</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">In the Customize 
+      Perspective dialog, select the Commands tab. Check the box next to "Action 
+      Set”</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">5</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Click 
+  OK</p></td></tr></tbody></table>
+<p class="MsoNormal" style="MARGIN-LEFT: 18pt"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 18pt"> </p>
+<p class="MsoNormal">A menu will now be visible with shortcuts to commonly used 
+functions. Additionally, Plug-in related options are available from context 
+sensitive menus when you right click on Projects within Eclipse. This process 
+should be repeated in all Perspectives where the Plug-In will be used.  
+Typically, this will be in Java and J2EE. </p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">The build Console will display log information when a build 
+is performed through the Eclipse IDE.  Inside Eclipse, perform the 
+following actions to configure the build Console:</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><b>Table PB-10 Accessing 
+Plug-In Views in Eclipse </b></p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" cellspacing="0" cellpadding="0" border="1">
+  <thead>
+  <tr>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Step</p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Action</p></td></tr></thead>
+  <tbody>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">1</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><i>Go to  
+</i></p>
+      <p class="MsoHeader"><i>Window &gt; Show View &gt; Other</i></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">2</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Expand the section and 
+      choose <i>Openmake Console</i> and <i>Openmake Logging 
+  Console.</i></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">3</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Click 
+  OK</p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 200%"> </p><span id="related-topics"></span></body></html>

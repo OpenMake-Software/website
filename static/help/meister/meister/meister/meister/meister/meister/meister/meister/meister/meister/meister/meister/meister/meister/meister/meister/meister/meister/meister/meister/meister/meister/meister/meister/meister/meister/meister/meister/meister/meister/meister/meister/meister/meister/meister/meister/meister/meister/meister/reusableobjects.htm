@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Reusable Objects</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/WritingandUsingBuildMethods.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="exitscriptrcdoomedfiles.htm" /><link rel="next" href="openmakefile.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="f4572ae6-86d6-4a91-8fba-39b7f01d7596">
+<h2><a name="ReusablePerlModules" id="ReusablePerlModules"><i>Reusable Objects</i></a></h2>
+<p class="MsoNormal">Reusable Objects are provided to streamline the manipulation 
+of file names, Project Dependency Directories, and lists of file names.  
+These objects provide convenient processes for obtaining the information 
+contained in the object.</p>
+<p class="MsoNormal"> </p>
+<div class="related-topics-header">
+<p class="RelatedHead">More:</p>
+<div class="related-topics">
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="openmakefile.htm">Openmake::File</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="newnewfilename.htm">new(), new($FileName)</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="setfilename.htm">set($FileName)</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getextgete.htm">getExt(), getE()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getquoted.htm">getQuoted()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getescaped.htm">getEscaped()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getescapedquoted.htm">getEscapedQuoted()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getjescaped.htm">getJEscaped()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getjescapedquoted.htm">getJEscapedQuoted()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="setfilefilename.htm">setFile($FileName)</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getfilegetfe.htm">getFile(), getFE()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getf.htm">getF()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getpfe.htm">getPFE()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getdpf.htm">getDPF()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getdpfeget.htm">getDPFE(), get()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getabsolute.htm">getAbsolute()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getrelative.htm">getRelative()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="openmakefilelist.htm">Openmake::FileList</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="newnewlistoffiles.htm">new, new( @list_of_files )</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getextension.htm">getExtension()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getextextensionlist.htm">getExt( @ExtensionList )</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getextlistextensionlist.htm">getExtList( @ExtensionList)</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getextquotedextensionlist.htm">getExtQuoted( @ExtensionList )</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getextquotedlist.htm">getExtQuotedList</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getabsolutegetabsoluteanchordir.htm">getAbsolute, 
+getAbsolute($anchor_dir)</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getabsolutelistgetabsolutelistanchordir.htm">getAbsoluteList, 
+getAbsoluteList($anchor_dir)</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getquotedabsolutegetquotedabsoluteanchordir.htm">getQuotedAbsolute, 
+getQuotedAbsolute( $anchor_dir )</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="openmakelog.htm">Openmake::Log</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="omlogger.htm">omLogger</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="openmakesearchpath.htm">Openmake::SearchPath</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="cleansearchpathlistofdirectories.htm">CleanSearchPath(@list_of_directories)</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="newlistofdirectoriesnewstringofdirectories.htm">new(@list_of_directories), 
+new($string_of_directories)</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="newfromscalarstringofdirectories.htm">newFromScalar($string_of_directories)</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="setsetlistofdirectories.htm">set(), set(@list_of_directories)</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="setfromscalarsetfromscalarstringofdirectories.htm">setFromScalar(), 
+setFromScalar($string_of_directories)</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="get.htm">get()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getlist.htm">getList()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getstringpretextposttext.htm">getString($PreText,$PostText)</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="count.htm">count()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getquoted1.htm">getQuoted()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getquotedlist.htm">getQuotedList()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getescapedlist.htm">getEscapedList()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getescapedquotedlistgetquotedescapedlist.htm">getEscapedQuotedList(), 
+getQuotedEscapedList()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getjescapedlistgetjavaescapedlist.htm">getJEscapedList(), 
+getJavaEscapedList()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getjescapedquotedlistgetjavacescapedquotedlist.htm">getJEscapedQuotedList(), 
+getJavacEscapedQuotedList()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="pushdir.htm">push($dir)</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="pop.htm">pop()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="mkdirs.htm">mkdirs()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="unshiftdir.htm">unshift($dir)</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="shift.htm">shift()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="openmakepath.htm">Openmake::Path</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="newnewfullpathstring.htm">new(), new($full_path_string)</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getgetdp.htm">get(), getDP()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="setvolumedrivesetdrivedrive.htm">setVolume( $drive ), setDrive( $drive 
+)</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getvolumegetdrivegetd.htm">getVolume(), getDrive(), getD()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="setpathpathstring.htm">setPath ( $path_string )</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="setpathstring.htm">set( $path_string )</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getpathgetp.htm">getPath(), getP()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getquoted2.htm">getQuoted()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getescaped1.htm">getEscaped()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getescapedquoted1.htm">getEscapedQuoted()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getjavacescapedgetjescaped.htm">getJavacEscaped(), getJEscaped()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getquotedjavacescapedgetjescapedquoted.htm">getQuotedJavacEscaped(), 
+getJEscapedQuoted()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getescapedpath.htm">getEscapedPath()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getperlfileescapedgetperlified.htm">getPerlFileEscaped(), 
+getPerlified()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getanchor.htm">getAnchor()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="setanchorsetanchorfullpathstring.htm">setAnchor(), setAnchor( 
+$full_path_string )</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getrelative1.htm">getRelative()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getquotedrelative.htm">getQuotedRelative()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="isrelative.htm">isRelative()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="isabsolute.htm">isAbsolute()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getabsolute1.htm">getAbsolute()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getquotedabsolute.htm">getQuotedAbsolute()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="cleanpath.htm">CleanPath()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="openmakesnapshot.htm">Openmake::Snapshot</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="leftsnapshotonlyaftersnapshotbeforesnapshot.htm">LeftSnapshotOnly($after_snapshot, 
+$before_snapshot)</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="newnewdirectoryfileextension.htm">new(), new($directory, 
+$file_extension)</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="get1.htm">get()</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="openmakebuildoption.htm">Openmake::BuildOption</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="newdebugflagsreleaseflags.htm">new($DebugFlags|$ReleaseFlags)</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="updatehashref.htm">update( $hashref)</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getbuildtasks.htm">getBuildTasks</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getoptiongroupsbuildtask.htm">getOptionGroups( $build_task)</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getbuildtaskfilesbuildtaskoptiongroupall.htm">getBuildTaskFiles( 
+$BuildTask, $OptionGroup, $all)</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getbuildtaskoptionoptionnamebuildtaskoptiongroup.htm">getBuildTaskOption( 
+$option_name, $build_task, $option_group)</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="getbuildtaskoptionsbuildtaskoptiongroup.htm">getBuildTaskOptions( 
+$build_task, $option_group)</a></p></div></div></body></html>

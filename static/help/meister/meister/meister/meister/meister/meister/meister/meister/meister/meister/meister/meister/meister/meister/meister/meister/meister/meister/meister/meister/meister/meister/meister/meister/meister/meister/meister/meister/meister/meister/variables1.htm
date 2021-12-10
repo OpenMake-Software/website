@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Variables</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/zOS Administration Guide.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="methodsandoomlom.htm" /><link rel="next" href="alldeps.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="473e4494-d541-4ac5-b86c-25b9eb707e50">
+<h3>Variables</h3>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">When developing your customized <i>Methods</i>, it is 
+important to remember that you must not use any hard coded values.  Use 
+only the Variables that are provided to represent the Target specific 
+information.  OOMLOM creates the Target specific REXX exec for you.  
+This use of generic <i>Methods</i> means that all <i>Methods</i> are 
+reusable.  This reusability allows you to streamline the build process and 
+eliminate the need for "hard coded" JCL modules.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"><i>Methods</i> are the venue through which <span style="FONT-FAMILY: Courier">OOMLOM</span> interacts with compilers and 
+development tools.  Compilers and development tools work according to 
+specific information that is passed to them, such as file names or flags.  
+When writing <i>Methods</i>, this specific information is represented by 
+Variables. The use of these variables allows a script to remain generic so that 
+any similar program can use that same script.  When OOMLOM executes, it 
+uses information from the Build Control file to assign the correct values to the 
+Variables and to generate the Target specific batch file.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">The following variables can be used in your custom Command 
+<i>Methods</i>.  These are specific variables that the <span style="FONT-FAMILY: Courier">OOMLOM</span> program understands and translates 
+from the Command <i>Methods</i>. This specificty allows you to write generic 
+<i>Methods</i> that can be used for multiple programs instead of using a script 
+that hard codes the Target information. The Variables are resolved by <span style="FONT-FAMILY: Courier">OOMLOM</span> and saved as part of the temporary 
+"Target specific" REXX exec, which is used by <span style="FONT-FAMILY: Courier">OOMLOM</span> for executing the build.</p>
+<div class="related-topics-header">
+<p class="RelatedHead">More:</p>
+<div class="related-topics">
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="alldeps.htm">$AllDeps</a></p></div></div></body></html>

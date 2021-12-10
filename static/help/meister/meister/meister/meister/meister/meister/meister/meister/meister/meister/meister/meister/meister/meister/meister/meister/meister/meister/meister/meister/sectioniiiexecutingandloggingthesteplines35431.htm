@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Section III: Executing and Logging the Step (Lines 35 - 43)</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/WritingandUsingBuildMethods.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="sectioniiconstructingthecompilersteplines19341.htm" /><link rel="next" href="creatingandmanagingtargets.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="962ba488-805f-4ce2-9987-bac50e4b17bd">
+<h3>Section III: Executing and Logging the Step (Lines 35 - 43)</h3>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'"></span> </p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">35 
+$StepDescription = "Performing C/C++ Compile for $TargetFile";</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">36 
+$CompilerArguments = "$Defines $Flags";</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">37</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">38 
+omlogger("Begin",$StepDescription,"ERROR:","$StepDescription 
+succeeded.",$Compiler,$CompilerArguments,$IncludeNL,$RC,@CompilerOut);</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">39 
+@CompilerOut = `$Compiler /nologo \@$rsp 2&gt;&amp;1`;</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">40 
+$RC = $?;</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">41 
+$StepError = "$StepDescription failed!";</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">42 
+omlogger("Abort",$StepDescription,"ERROR:","ERROR: $StepDescription 
+failed!",$Compiler,$CompilerArguments,$IncludeNL,$RC,@CompilerOut), $RC = 1 if 
+($RC != 0);</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">43 
+omlogger("Final",$StepDescription,"ERROR:","$StepDescription 
+succeeded.",$Compiler,$CompilerArguments,$IncludeNL,$RC,@CompilerOut), 
+push(@DeleteFileList,$rsp) if ($RC == 0);</span></p>
+<p class="t1Text141"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">     
+</span>The first line sets the version of the <i>Build Method</i> script which 
+is displayed upon execution.</p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-FAMILY: 'Courier New'">$ScriptVersion = "6.0";</span></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">     
+</span>The following lines extract the compiler to be used and then search for 
+that compiler.</p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-FAMILY: 'Courier New'">@CompilersPassedInFlags = ("cl");</span></p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-FAMILY: 'Courier New'">$DefaultCompiler  = "cl";</span></p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-FAMILY: 'Courier New'">$Compiler,$Flags) = 
+get_compiler($DebugFlags,$ReleaseFlags,$DefaultCompiler,@CompilersPassedInFlags);</span><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'"></span></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">     
+</span>The list variable<span style="FONT-FAMILY: 'Courier New'"> 
+@CompilersPassedInFlags</span> contains the list of compilers that can be passed 
+via the flags.  </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">     
+</span><span style="FONT-FAMILY: 'Courier New'">$DefaultCompiler </span>is the 
+default compiler to be used if none was passed in the flags. </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">     
+</span>The subroutine<span style="FONT-FAMILY: 'Courier New'"> 
+get_compiler</span>, determines which compiler to use based on the values of 
+<span style="FONT-FAMILY: 'Courier New'">@CompilersPassedInFlags, 
+$DefaultCompiler </span>and the Flags to be used (Debug or Release).  It 
+then returns the the full path to the compiler to be used, <span style="FONT-FAMILY: 'Courier New'">$Compiler</span>, as well as the flags to be 
+used (with the compiler name removed), <span style="FONT-FAMILY: 'Courier New'">$Flags</span>.  </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">     
+</span>Line 6 defines the variable <span style="FONT-FAMILY: 'Courier New'">$TargetFileName</span>, which is obtained 
+from the generated File Object, <span style="FONT-FAMILY: 'Courier New'">$Target</span>.</p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-FAMILY: 'Courier New'">$TargetFile = $Target-&gt;get;</span></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt">When using this <i>Build Method</i> 
+script for the compilation <span style="FONT-FAMILY: 'Courier New'">radius.obj</span> a header section that 
+initializes the values of these variables specifically for the task at hand is 
+prepended (shown below), so that as a result of the declaration in line 6,<span style="FONT-FAMILY: 'Courier New'"> $TargetFileName</span> is set to<span style="FONT-FAMILY: 'Courier New'"> bin/radius.obj </span>(This information is 
+determined from the <i>Target</i>, the <i>Build Method </i>and <i>Build 
+Rules</i> associated with it as well as the Dependency Directory  used). 
+</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">     
+</span>Line 7 extracts the Intermediate Directory to be used</p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-FAMILY: 'Courier New'">$IntDirName = $IntDir -&gt; get;</span></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">     
+</span>Lines 8 and 9 derives the name of the .pch and .pdb files from the name 
+of the Final Target</p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-FAMILY: 'Courier New'">$Pch       = 
+'"' . $IntDirName . "\\" . $FinalTarget-&gt;getF . '.pch"';</span></p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-FAMILY: 'Courier New'">$Pdb       = 
+'"' . $IntDirName . "\\" . $FinalTarget-&gt;getF . '.pdb"';</span></p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'"></span> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">     
+</span>Line 10 determines the Source File to be compiled by extracting the 
+dependency whose extension matches <span style="FONT-FAMILY: 'Courier New'">.C, 
+.CPP </span>or <span style="FONT-FAMILY: 'Courier New'">.CXX</span> from a 
+generated <span style="FONT-FAMILY: 'Courier New'">FileList </span>object of 
+Target Dependencies of <span style="FONT-FAMILY: 'Courier New'">bin/radius.obj</span>. Note how the method 
+<span style="FONT-FAMILY: 'Courier New'">getExtQuoted</span> applied to the 
+<span style="FONT-FAMILY: 'Courier New'">FileList</span> object <span style="FONT-FAMILY: 'Courier New'">$TargetDeps</span> does this in a single 
+step.</p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-FAMILY: 'Courier New'">$Source = $TargetDeps-&gt;getExtQuoted(qw(.C 
+.CPP .CXX));</span></p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">     
+</span>Lines 11 – 34 completes the steps necessary for the construction of the 
+compile steps, creates a temporary resource file and adds the compiler flags and 
+#Defines.</p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">if ($Target-&gt;getExt =~ 
+/pch/i &amp;&amp; $Source =~ /stdafx\.cpp/i)}</span></p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'"> $TargetFile = '"' . 
+$Target-&gt;getPath . "\\stdafx.obj\""; }</span></p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'"> else {</span></p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">  $TargetFile = 
+$Target-&gt;getQuoted;}</span></p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">$ENV{'LIB'}     
+= '';</span></p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">$ENV{'INCLUDE'} = 
+'';</span></p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">$Flags .= ' /Fp' . $Pch . ' 
+/Fo' . $TargetFile . ' /Fd' . $Pdb . ' /c ' . $Source if ($CFG eq 
+'DEBUG');</span></p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">$Flags .= ' /Fp' . $Pch . ' 
+/Fo' . $TargetFile 
+.                 
+' /c ' . $Source if ($CFG ne 'DEBUG');</span></p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">$Flags =~ s/\/Yu/\/Yc/ if 
+($Target-&gt;getE =~ /pch/i || $Target-&gt;getFE =~ /stdafx\.obj/i);</span></p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">#print "$Compiler $Defines 
+$Flags\n$IncludeNL\n\n" if ($Silent ne 'Yes');</span></p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">($tmpfh, $rsp) = 
+tempfile('omXXXXX', SUFFIX =&gt; '.rsp', UNLINK =&gt; 1 );</span></p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">print $tmpfh "$Defines 
+$Include $Flags";</span></p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">close $tmpfh;</span></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">     
+</span>Line 35 prepares and writes out the command to be executed. The actual 
+compiler step is carried out on line 39 and the remaining lines capture the 
+return code and log the output.</p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">$StepDescription = 
+"Performing C/C++ Compile for $TargetFile";</span></p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">$CompilerArguments = 
+"$Defines $Flags";</span></p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">omlogger("Begin",$StepDescription,"ERROR:","$StepDescription 
+succeeded.",$Compiler,$CompilerArguments,$IncludeNL,$RC,@CompilerOut);</span></p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">@CompilerOut = `$Compiler 
+/nologo \@$rsp 2&gt;&amp;1`;</span></p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">$RC = $?;</span></p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">$StepError = 
+"$StepDescription failed!";</span></p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">omlogger("Abort",$StepDescription,"ERROR:","ERROR: 
+$StepDescription 
+failed!",$Compiler,$CompilerArguments,$IncludeNL,$RC,@CompilerOut), $RC = 1 if 
+($RC != 0);</span></p>
+<p class="t1Text141" style="MARGIN-LEFT: 54pt"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">omlogger("Final",$StepDescription,"ERROR:","$StepDescription 
+succeeded.",$Compiler,$CompilerArguments,$IncludeNL,$RC,@CompilerOut), 
+push(@DeleteFileList,$rsp) if ($RC == 0);</span></p><span id="related-topics"></span></body></html>

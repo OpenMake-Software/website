@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Generating Microsoft Visual Studio 2010 Targets</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/CreatingandManagingTargets.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="settingupthevisualstudio20052008and2010addin.htm" /><link rel="next" href="generatingmicrosoftvisualstudio2008targets.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="6ff49b89-e56b-4bbd-b9c3-c870fe177c7b">
+<h3>Generating Microsoft Visual Studio 2010 Targets</h3>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">When you first configure a build for a specific solution, the 
+Visual Studio Add-in will create a directory beneath your solution directory. 
+This directory contains all the information for a Build Project. The naming of a 
+Build Project will follow the convention <span style="FONT-FAMILY: 'Courier New'">&lt;SOLUTION NAME&gt;OMBuild</span> by 
+default – e.g. <span style="FONT-FAMILY: 'Courier New'">MySolutionOMBuild</span>. </p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"><b>Note:</b> Unless you unselected the box next to “Build 
+output to project output directories?” from the Build-&gt; Openmake -&gt; 
+Configure Openmake, all files associated with a build (including final and 
+intermediate <i>Targets</i>, logs and debug files) will be generated inside the 
+Build Project directory.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">Using the Add-in is simple, requiring only 1 step as shown in 
+Table PB-31 below:</p>
+<p class="MsoNormal"> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><b>Table PB-31 Generating 
+Target Definitions using the Add-in</b></p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" cellspacing="0" cellpadding="0" border="1">
+  <thead>
+  <tr>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Step</p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Action</p></td></tr></thead>
+  <tbody>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">0</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">You must install the 
+      Microsoft Visual Studio 2010 Add-in to receive these features.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">1</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">From the menu bar, 
+      select Build - Meister - Generate TGTs</p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">The <span style="FONT-FAMILY: Courier">Generate 
+TGTs</span><b><span style="FONT-SIZE: 11pt">  </span></b>menu item 
+generates <i>Targets</i> for all projects underneath the Solution. A <i>Target 
+</i>is generated for each project in the build. All <i>Targets</i> will be 
+generated in the directory you defined during configuration for the build.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">If the <i>Targets</i> are created successfully you will be 
+notified of the success in pop-up box. If errors occur during <i>Target 
+</i>generation, they will be displayed in a pop-up box (or a series of pop-up 
+boxes.)</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"><b>Note:</b> Each time you regenerate <i>Target</i>, the old 
+<i>Targets</i> in the <span style="FONT-FAMILY: 'Courier New'">tgt</span> 
+directory are deleted. If you wish to keep a version of a <i>Target</i>, rename 
+it or check it into your version control system before generating new 
+<i>Targets</i>.</p><span id="related-topics"></span></body></html>

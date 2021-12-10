@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Meister Setup</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/CreatingandManagingTargets.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="archivaconfiguration.htm" /><link rel="next" href="meistersinteractionwitharchiva1.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="54afa15a-4685-4c40-8b8d-04a2ee7e3feb">
+<h4>Meister Setup</h4>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">The Meister Ant War<i> </i>Build Method includes the logic to 
+integrate with Archiva.  The following PERL Modules must be installed, 
+<span style="FONT-FAMILY: 'Courier New'">Frontier::Client, Frontier::RPC2</span> 
+and <span style="FONT-FAMILY: 'Courier New'">LWP::Simple</span> for the Ant War 
+Build Method to run correctly.  This integration allows Archiva to be used 
+without changing any Targets or Build Services.  Targets that use <i>Build 
+Services</i>: Java War, Java Weblogic War, Java War as Jar, Java War from 
+Filter, Java Weblogic War, Java Weblogic WLI War, or Java Websphere War, will 
+automatically place the transitive runtime dependencies into the <span style="FONT-FAMILY: 'Courier New'">WEB-LIB/lib</span> folder in the war archive 
+when Archiva interface is enabled.   Any <span style="FONT-FAMILY: 'Courier New'">.jar</span> or <span style="FONT-FAMILY: 'Courier New'">.zip</span> listed as a dependency to the 
+Target will be interrogated against Archiva for transitive dependencies.  
+For example, a jar listed as a <span style="FONT-FAMILY: 'Courier New'">Set 
+Classpath</span> dependency in the Target will be queried against Archiva for 
+transitive dependencies.  Also, a jar listed as a dependency in the <span style="FONT-FAMILY: 'Courier New'">WEB-INF/lib</span> option group will queried 
+against Archiva.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">To enable the Archiva integration the following environment 
+variables must be used.  These environment variables can be defined at the 
+machine system level, Workflow level or passed in as parameters to <span style="FONT-FAMILY: 'Courier New'">om</span>.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">Table ARCHIVA-1  Required Meister Archiva Environment 
+Variables</p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" cellspacing="0" cellpadding="0" width="947" border="1">
+  <thead>
+  <tr>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 136.85pt" valign="top" width="274">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Variable</p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 129.55pt" valign="top" width="259">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Value</p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 207pt" valign="top" width="414">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Example</p></td></tr></thead>
+  <tbody>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 136.85pt" valign="top" width="274">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">ARCHIVA_URL</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 129.55pt" valign="top" width="259">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Points to the Archiva 
+      Repository Server</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 207pt" valign="top" width="414">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 13.25pt"><a href="http://repo1.mycomp.com/archiva">http://repo1.mycomp.com/archiva</a></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 136.85pt" valign="top" width="274">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">ARCHIVA_USERID</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 129.55pt" valign="top" width="259">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Userid for 
+    Archiva</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 207pt" valign="top" width="414">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 13.25pt">user1</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 136.85pt" valign="top" width="274">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">ARCHIVA_PASSWORD</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 129.55pt" valign="top" width="259">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Password for 
+      Archiva</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 207pt" valign="top" width="414">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 13.25pt">Mysecret</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 136.85pt" valign="top" width="274">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">ARCHIVA_REPO</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 129.55pt" valign="top" width="259">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Repository in Archiva 
+      to use to find an archive’s dependency tree from</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 207pt" valign="top" width="414">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 13.25pt">internal</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 136.85pt" valign="top" width="274">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">&lt;archive-time 
+      dependency versions&gt;</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 129.55pt" valign="top" width="259">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Dependencies in the 
+      Archiva Repository may have version numbers defined as variables.  
+      This means that they must be supplied in order for the dependency tree to 
+      be resolved.  For example: commons-logging.version</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 207pt" valign="top" width="414">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 13.25pt">commons-logging.version=1.1.2</p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">NOTES</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">     
+</span>The ARCHIVA_USERID can be Guest which will use anonymous access to 
+Archiva.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">     
+</span>The ARCHIVA_REPO can be a virtual Archiva repository.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; TEXT-INDENT: -18pt; tab-stops: 36.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">     
+</span>Archive-time version numbers must be specified or an ERROR 210 will 
+occur.</p>
+<p class="MsoNormal"> </p><span id="related-topics"></span></body></html>

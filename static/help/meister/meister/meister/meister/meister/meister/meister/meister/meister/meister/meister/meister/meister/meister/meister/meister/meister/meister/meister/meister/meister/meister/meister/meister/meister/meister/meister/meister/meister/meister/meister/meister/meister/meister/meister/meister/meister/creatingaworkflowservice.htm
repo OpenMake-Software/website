@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Creating a Workflow Service</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/DevelopingWorkflows.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="emailnotificationsinyourworkflow.htm" /><link rel="next" href="addingactivitiestoaworkflowservice.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="3d60f05c-9a46-47f1-bbb4-e16d3535a499">
+<h2 style="LINE-HEIGHT: 150%">Creating a Workflow Service</h2>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%">Configuring s <i>Workflow 
+Services</i> is very similar to that of creating <i>Workflows, </i>however, 
+since the <i>Services </i>are stateless and cannot execute stand alone, they do 
+not contain information pertaining to machine configuration, scheduling or 
+continuous integration. The steps for configuring a <i>Workflow</i> <i>Services 
+</i>follow the same process.</p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%; tab-stops: 225.0pt 360.0pt 432.0pt"><b>Table WM-14 
+Creating a Workflow </b></p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" cellspacing="0" cellpadding="0" border="1">
+  <thead>
+  <tr>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 54.9pt" valign="top" width="110">
+      <p class="MsoNormal" style="MARGIN-BOTTOM: 6pt"><b>Steps</b></p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 387.9pt" valign="top" width="776">
+      <p class="MsoNormal" style="MARGIN-BOTTOM: 6pt"><b>Actions</b></p></td></tr></thead>
+  <tbody>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 54.9pt" valign="top" width="110">
+      <p class="MsoNormal" style="MARGIN-BOTTOM: 6pt">1</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 387.9pt" valign="top" width="776">
+      <p class="MsoNormal" style="MARGIN-BOTTOM: 6pt">Navigate to the <i>OM 
+      Workflow</i> perspective. Make sure you can see the <i>Workflow Service 
+      Explorer</i> views. If not, go to <i>Window-&gt;Show View </i>to 
+      enable.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 54.9pt" valign="top" width="110">
+      <p class="MsoNormal" style="MARGIN-BOTTOM: 6pt">2</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 387.9pt" valign="top" width="776">
+      <p class="MsoNormal" style="MARGIN-BOTTOM: 6pt">Right click on the 
+      <i>Workflow Explorer</i> tree and select <i>New-&gt;Workflow Service 
+      </i>or use the <i>File-&gt;New-&gt;Workflow Service </i>menu 
+  item.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 54.9pt" valign="top" width="110">
+      <p class="MsoNormal" style="MARGIN-BOTTOM: 6pt">3</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 387.9pt" valign="top" width="776">
+      <p class="MsoNormal" style="MARGIN-BOTTOM: 6pt">Enter a  <i>Workflow 
+      Service </i>name and click <i>OK.</i></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 54.9pt" valign="top" width="110">
+      <p class="MsoNormal" style="MARGIN-BOTTOM: 6pt">4</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 387.9pt" valign="top" width="776">
+      <p class="MsoNormal" style="MARGIN-BOTTOM: 6pt">Click on the <i>Add 
+      Activities </i>Tab.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 54.9pt" valign="top" width="110">
+      <p class="MsoNormal" style="MARGIN-BOTTOM: 6pt">5</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 387.9pt" valign="top" width="776">
+      <p class="MsoNormal" style="MARGIN-BOTTOM: 6pt">Add desired <i>Activities 
+      </i>by clicking the <i>Add Activity </i>button</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 54.9pt" valign="top" width="110">
+      <p class="MsoNormal" style="MARGIN-BOTTOM: 6pt">6</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 387.9pt" valign="top" width="776">
+      <p class="MsoNormal" style="MARGIN-BOTTOM: 6pt"><i>File-&gt;Save </i>to save 
+      your results.</p></td></tr></tbody></table>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<div class="related-topics-header">
+<p class="RelatedHead">More:</p>
+<div class="related-topics">
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="addingactivitiestoaworkflowservice.htm">Adding Activities to a Workflow 
+Service</a></p></div></div></body></html>

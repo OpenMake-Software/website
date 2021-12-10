@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Target Detail Attributes</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/CreatingandManagingTargets.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="targetoverviewattributes.htm" /><link rel="next" href="targetdirectoriesandprojectdependencydirectories.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="fd3a8418-f71d-42a2-814e-5035cc24408e">
+<h3>Target Detail Attributes</h3>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 23.15pt; TEXT-INDENT: 18pt"> </p>
+<p class="MsoBodyTextIndent">Once the high level information from the 
+<i>Overview</i> tab has been defined, the <i>Target Detail </i>information must 
+be entered.  <i>Target Detail</i> attributes include the Target 
+Dependencies and the Options flags.</p>
+<p class="MsoBodyTextIndent" style="TEXT-INDENT: 18pt"> </p>
+<p class="MsoBodyTextIndent"><i>Target Detail</i> Attributes are based upon the 
+<i>Build Service</i> selected in the Overview tab.  The main elements of 
+the <i>Target Detail </i>tree are as follows:</p>
+<p class="MsoBodyTextIndent"> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 20.15pt"><b>Table PB-4  
+Target Detail Attributes</b></p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; MARGIN-LEFT: 32.4pt; BORDER-LEFT: medium none" cellspacing="0" cellpadding="0" border="1">
+  <thead>
+  <tr style="HEIGHT: 18.85pt">
+    <td style="BORDER-TOP: windowtext 1pt solid; HEIGHT: 18.85pt; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 139.5pt" valign="top" width="279">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Attribute</p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; HEIGHT: 18.85pt; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 270.9pt" valign="top" width="542">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Description</p></td></tr></thead>
+  <tbody>
+  <tr style="HEIGHT: 72.35pt">
+    <td style="BORDER-TOP: medium none; HEIGHT: 72.35pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 139.5pt" valign="top" width="279">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Build Task</p></td>
+    <td style="BORDER-TOP: medium none; HEIGHT: 72.35pt; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 270.9pt" valign="top" width="542">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Tasks are defined by 
+      the Build Service and encompass a collection of steps that are used to 
+      create the Target.  Each Build Task has specific source file 
+      dependencies.  When a Target is initially created, the Build Tasks 
+      will be automatically populated, but the Build Task file dependencies will 
+      be empty.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 139.5pt" valign="top" width="279">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Build Task File 
+      Dependencies</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 270.9pt" valign="top" width="542">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Build Task call an 
+      action in the build, passing file names to compilers, linkers, etc.  
+      For this reason, the source code dependency for each Build Task must be 
+      entered.  Build Task File Dependencies make the Target unique, 
+      defining precisely the files to be used t build the Target.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 139.5pt" valign="top" width="279">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Option Groups</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 270.9pt" valign="top" width="542">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Option Groups are used 
+      to define compile and link flags for the Target.  There are two 
+      levels of Option Groups, Standard – define by the Build Service and Custom 
+      – unique to the Target.   </p></td></tr></tbody></table>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 41.15pt; TEXT-INDENT: 18pt"> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 41.15pt; TEXT-INDENT: 18pt"> </p><span id="related-topics"></span></body></html>

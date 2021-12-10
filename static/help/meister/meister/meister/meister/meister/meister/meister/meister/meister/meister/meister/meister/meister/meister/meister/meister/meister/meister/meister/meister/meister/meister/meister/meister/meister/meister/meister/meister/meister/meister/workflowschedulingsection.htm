@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Workflow Scheduling Section</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/DevelopingWorkflows.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="usingabatchscripttodefineglobalvariables.htm" /><link rel="next" href="historytrendstabscreen.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="1ea7bbbb-0bbb-407b-8d38-88528f5d2846">
+<h4>Workflow Scheduling Section</h4>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%">By using the integrated scheduling 
+tool, you will no longer need to call an external scheduler or manually execute 
+activities at regular times. Scheduled <i>Workflows</i> will always run on a 
+local machine (My Computer) or on a <i>Server Pool</i>.  If you schedule a 
+<i>Workflow</i> to run on <i>My Computer,</i> it will use your Local 
+Machine.  If you schedule a <i>Workflow </i>for a <i>Server Pool</i>, it 
+will run on the <i>Remote Agent Machine </i>selected by the <i>Server 
+Pool</i>.  You cannot define schedule for a “Public” <i>Workflow</i> that 
+uses “MyComputer.”  <i>Workflows</i> that are defined as “Private” and 
+running on “MyCompter” cannot be scheduled.  If you promote a “Private” 
+Workflow running on “MyCompter” to “Public”, all scheduling will be disabled. 
+</p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> The Meister scheduler uses 
+standard Cron scheduling strings.  Table WM-6 shows the values and special 
+characters for input into the <i>Schedule Information</i> section on the 
+<i>Configure</i> tab, and Table WF-6 includes examples of expressions used for 
+basic <i>Workflow</i> scheduling.   For more information on using Cron 
+scheduling syntax, go to <a href="http://en.wikipedia.org/wiki/Cron#CRON_expression">http://en.wikipedia.org/wiki/Cron#CRON_expression</a> 
+</p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 32.15pt"> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><b><span style="FONT-FAMILY: 'Times New Roman','serif'">Table WM-6. Values and Special 
+Characters for <i>Workflow</i> Scheduling</span></b></p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 442.8pt" cellspacing="0" cellpadding="0" width="886" border="1">
+  <thead>
+  <tr>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 131.4pt" width="263">
+      <p class="MsoBodyTextIndent"><b><span style="FONT-FAMILY: 'Times New Roman','serif'">Field 
+Name</span></b></p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 126pt" width="252">
+      <p class="MsoBodyTextIndent"><b><span style="FONT-FAMILY: 'Times New Roman','serif'">Values</span></b></p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 185.4pt" width="371">
+      <p class="MsoBodyTextIndent"><b><span style="FONT-FAMILY: 'Times New Roman','serif'">Special 
+      Characters</span></b></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 131.4pt" width="263">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">Minutes 
+    Pattern</span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 126pt" width="252">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">0-59</span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 185.4pt" width="371">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">, - * /</span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 131.4pt" width="263">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">Hours Pattern</span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 126pt" width="252">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">0-23</span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 185.4pt" width="371">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">, - * /</span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 131.4pt" width="263">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">Dates Pattern</span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 126pt" width="252">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">1-31</span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 185.4pt" width="371">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">, - * ? / L W 
+    C</span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 131.4pt" width="263">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">Months 
+Pattern</span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 126pt" width="252">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">1-12 or 
+    JAN-DEC</span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 185.4pt" width="371">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">, - * /</span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 131.4pt" width="263">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">Weekdays 
+    Pattern</span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 126pt" width="252">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">1-7 or 
+SUN-SAT</span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 185.4pt" width="371">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">, - * ? / L C 
+    #</span></p></td></tr></thead>
+  <tbody></tbody></table>
+<p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'"></span> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt; tab-stops: 189.0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">The, (comma) character is used to 
+specify additional values. For example </span><b><span style="FONT-SIZE: 11pt; FONT-FAMILY: 'Times New Roman','serif'">MON,WED,FRI</span></b><span style="FONT-FAMILY: 'Times New Roman','serif'"> in the day-of-week field means 
+the days Monday, Wednesday, and Friday.  </span></p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt; tab-stops: 189.0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'"></span> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt; tab-stops: 189.0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">The <b>-</b> character is used to 
+specify ranges. For example, <b>10-12</b> in the hour field means the hours 10, 
+11, and 12.  </span></p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt; tab-stops: 189.0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'"></span> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt; tab-stops: 189.0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">The <b>*</b> character is used to 
+specify all values.  For example, the * character in the minute field means 
+every minute.  </span></p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt; tab-stops: 189.0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'"></span> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt; tab-stops: 189.0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">The <b>? </b>character is used 
+for the day-of-month and day-of-week fields and denotes no specific value.  
+Use this character when you need to specify something exclusively in one of the 
+two fields, but not in the other field. The allowed characters and the names of 
+months and days of the week are not case sensitive.</span></p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt; tab-stops: 189.0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'"></span> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt; tab-stops: 189.0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">The special characters <b>/</b>, 
+<b>L</b>, <b>W</b>, <b>C</b>, and <b># </b>are explained in detail below, and 
+examples of advanced scheduling expressions are shown in Table DW-7.</span></p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'"></span> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><b><span style="FONT-FAMILY: 'Times New Roman','serif'">Table WM-7. Examples of Basic 
+<i>Workflow </i>Scheduling Expressions</span></b><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 442.8pt" cellspacing="0" cellpadding="0" width="886" border="1">
+  <thead>
+  <tr>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 176.4pt" width="353">
+      <p class="MsoBodyTextIndent"><b><span style="FONT-FAMILY: 'Times New Roman','serif'">Expression</span></b></p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 266.4pt" width="533">
+      <p class="MsoBodyTextIndent"><b><span style="FONT-FAMILY: 'Times New Roman','serif'">Meaning</span></b></p></td></tr></thead>
+  <tbody>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 176.4pt" width="353">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">15 10 ? * *</span><span style="FONT-FAMILY: 'Courier New'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 266.4pt" width="533">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">Fire at 10:15 a.m. every 
+      day.</span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 176.4pt" width="353">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">15 10 * * ?</span><span style="FONT-FAMILY: 'Courier New'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 266.4pt" width="533">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">Fire at 10:15 a.m. every 
+      day.</span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 176.4pt" width="353">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">* 14 * * ?</span><span style="FONT-FAMILY: 'Courier New'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 266.4pt" width="533">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">Fire every minute starting 
+      at 2 p.m. and ending at 2:59 p.m. every day. </span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 176.4pt" width="353">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">10,44 14 ? 3 
+      WED</span><span style="FONT-FAMILY: 'Courier New'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 266.4pt" width="533">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">Fire at 2:10 p.m. and at 
+      2:44 p.m. every Wednesday in the month of March. </span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 176.4pt" width="353">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">15 10 ? * 
+      MON-FRI</span><span style="FONT-FAMILY: 'Courier New'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 266.4pt" width="533">
+      <p class="MsoBodyTextIndent"><span style="FONT-FAMILY: 'Times New Roman','serif'">Fire at 10:15 a.m. every 
+      Monday, Tuesday, Wednesday, Thursday, and Friday.  
+  </span></p></td></tr></tbody></table>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%">The <i>Workflow Scheduling</i> tool 
+also features special shorthand characters for scenarios that would be more 
+difficult to achieve with the basic scheduling characters. Expressions used for 
+advanced <i>Workflow</i> scheduling are shown in Table DW-8.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"><b>Table WM-8. Examples of Advanced 
+Scheduling Expressions</b></p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 442.8pt" cellspacing="0" cellpadding="0" width="886" border="1">
+  <thead>
+  <tr>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 122.4pt" width="245">
+      <p class="MsoNormal" style="MARGIN-LEFT: 36pt"><b>Expression</b></p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 320.4pt" width="641">
+      <p class="MsoNormal" style="MARGIN-LEFT: 36pt"><b>Meaning</b></p></td></tr></thead>
+  <tbody>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 122.4pt" width="245">
+      <p class="MsoNormal" style="MARGIN: 0pt 0pt 6pt 36pt">0/5 14 * * ?<span style="FONT-FAMILY: 'Courier New'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 320.4pt" width="641">
+      <p class="MsoNormal" style="MARGIN: 0pt 0pt 6pt 36pt">Fire every 5 minutes 
+      starting at 2 p.m. and ending at 2:55 p.m. every day. </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 122.4pt" width="245">
+      <p class="MsoNormal" style="MARGIN: 0pt 0pt 6pt 36pt">0 5/2 LW * ?<span style="FONT-FAMILY: 'Courier New'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 320.4pt" width="641">
+      <p class="MsoNormal" style="MARGIN-LEFT: 36pt">Fire every 2 hours starting 
+      at 5:00 a.m. and ending at </p>
+      <p class="MsoNormal" style="MARGIN: 0pt 0pt 6pt 36pt">11 p.m. on the last 
+      weekday of every month. </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 122.4pt" width="245">
+      <p class="MsoNormal" style="MARGIN: 0pt 0pt 6pt 36pt">15 10 ? * 6L<span style="FONT-FAMILY: 'Courier New'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 320.4pt" width="641">
+      <p class="MsoNormal" style="MARGIN: 0pt 0pt 6pt 36pt">Fire at 10:15 a.m. on 
+      the last Friday of every month. </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 122.4pt" width="245">
+      <p class="MsoNormal" style="MARGIN: 0pt 0pt 6pt 36pt">15 10 ? * 6#3<span style="FONT-FAMILY: 'Courier New'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 320.4pt" width="641">
+      <p class="MsoNormal" style="MARGIN: 0pt 0pt 6pt 36pt">Fire at 10:15 a.m. on 
+      the third Friday of every month. </p></td></tr></tbody></table>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'"></span> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">Use the <b>/ </b>character to 
+specify increments. For example, <b>0/15</b> in the “minutes” field means the 
+minutes 0, 15, 30, and 45. Likewise, <b>5/15</b> in the “minutes” field means 
+the minutes 5, 20, 35, and 50. Specifying the <b>* </b>character before the 
+<b>/</b> character is equivalent to specifying <b>0</b> as the starting 
+value.</span></p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'"></span> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">Essentially, for each field in 
+the expression, there is a set of numbers that can be turned on or off. For 
+seconds and minutes, the numbers range from <b>0</b> to <b>59</b>. For hours 
+<b>0</b> to <b>23</b>, for days of the month <b>0</b> to <b>31</b>, and for 
+months <b>1</b> to <b>12</b>, the <b>/</b> character simply turns on every 
+<b>nth</b> value in the given set. Thus, <b>7/6</b> in the month field only 
+turns on month <b>7,</b> it does <i>not </i>mean every sixth month—please note 
+that subtlety.</span></p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'"></span> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">Use the <b>L</b> character to 
+specify the day-of-month and day-of-week fields. This character is shorthand for 
+<i>last</i>, but it has a different meaning in each of these two fields.  
+For example, the value <b>L</b> in the day-of-month field means the last day of 
+the month regardless of how many days are in the month (including leap 
+years).  If it is used in the day-of-week field by itself, it simply means 
+7 or SAT; however, if it is used in the day-of-week field after another value, 
+it means the last <i>x</i> day of the month. For example, <b>6L</b> means the 
+last Friday of the month. When you use the <b>L</b> option, do <i>not</i> 
+specify lists or ranges of values or the results will be confusing.</span></p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'"></span> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">Use the<b> W</b> character to 
+specify the day-of-month field—that is, the weekday (Monday-Friday) nearest to 
+the given day. For example, specifying <b>15W</b> as the value for the 
+day-of-month field means the nearest weekday to the fifteenth of the month. 
+Therefore, if the fifteenth is a Saturday, the trigger will fire on Friday the 
+fourteenth. If the fifteenth is a Sunday, the trigger will fire on Monday the 
+sixteenth. If the fifteenth is a Tuesday, then it will fire on Tuesday the 
+fifteenth. However, if you specify <b>1W</b> as the value for the day-of-month 
+field, and the first is a Saturday, the trigger will fire on Monday the third 
+because the trigger will not jump backwards over the boundary of a month's days. 
+The <b>W</b> character can only be specified when the day of month is a single 
+day, not a range or list of days.</span></p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'"></span> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">Combine the <b>L</b> and <b>W</b> 
+characters for the day-of-month expression <b>LW</b>, which means the last 
+weekday of the month. </span></p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'"></span> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">Use the <b># </b>character to 
+specify the day-of-week field as <b>the nth</b> <i>x</i> day of the month. For 
+example, the value of <b>6#3</b> in the day-of-week field means the third Friday 
+of the month (<b>6</b> is the day Friday, and <b>#3</b> is the third Friday in 
+the month). Likewise, <b>2#1</b> is the first Monday of the month, and 
+<b>4#5</b> is the fifth Wednesday of the month. If you specify <b>#5</b>, and 
+there are not five given days of the week in a particular month, then no firing 
+will occur that month. </span></p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'"></span> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">Use the <b>C</b><i> </i>character 
+for the day-of-month and day-of-week fields. This character is shorthand for 
+<i>calendar</i>, which means that values are calculated against the associated 
+calendar, if any. If no calendar is associated, then it is equivalent to having 
+an all-inclusive calendar. A value of <b>5C</b> in the day-of-month field means 
+the first day included by the calendar on or after the fifth. A value of 
+<b>1C</b> in the day-of-week field means the first day included by the calendar 
+on or after Sunday. </span></p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><b><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></b> </p>
+<p class="BodyTextChallengeSub" style="MARGIN: 0pt; LINE-HEIGHT: 150%"><span style="FONT-FAMILY: 'Times New Roman','serif'"></span> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"><i></i> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 4.5pt; LINE-HEIGHT: 150%"> </p><span id="related-topics"></span></body></html>

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Openmake.pm</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/WritingandUsingBuildMethods.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="reusablefunctions.htm" /><link rel="next" href="firstfoundinpath.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="a723a430-1185-4558-b2b7-6cfa106c0b1e">
+<h3>Openmake.pm</h3>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt">Openmake.pm is a reusable Perl 
+module that contains functions that are used by the <i>Build Methods</i> to pass 
+information from the scripts to the compiler. When developing customized 
+<i>Build Methods</i>, it is useful to borrow these common routines.  
+Functions are organized as listed in Table RF-1</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt"><b>Table RF-1  Reusable 
+Functions</b></p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; MARGIN-LEFT: 23.4pt; BORDER-LEFT: medium none; WIDTH: 401.4pt" cellspacing="0" cellpadding="0" width="803" border="1">
+  <thead>
+  <tr>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoNormal"><b>Path Functions</b></p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">Provide 
+      convenient ways to search for files in the PATH.</span></p>
+      <p class="MsoNormal"> </p></td></tr></thead>
+  <tbody>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoNormal" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="firstfoundinpath.htm">FirstFoundInPath</a></p>
+      <p class="MsoNormal"> </p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 0pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">This 
+      functions searches </span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 150%">$MyUserPath</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%"> 
+      for a file by the name of </span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 150%">$MyFile</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">. 
+      This process is useful for searching for an executable in a PATH 
+      statement.  It can also be used to find any file in any 
+      path.</span></p>
+      <p class="MsoNormal"> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoNormal" style="MARGIN-LEFT: 17.1pt"><a class="topic-link" href="getant.htm">GetAnt</a></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoNormal">This function returns the location of where Ant is 
+      installed.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoNormal"><b>List Functions</b></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">Provide an 
+      easy way to change list contents.</span></p>
+      <p class="MsoNormal"> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoNormal" style="MARGIN-LEFT: 17.1pt"><a class="topic-link" href="unique.htm">unique</a></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">This 
+      function is a filter for lists. It simply returns a list without 
+      duplicates.</span></p>
+      <p class="MsoPlainText"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoNormal" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="excludepatterninlist.htm">Exclude</a></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">This 
+      function filters out those items from a list that match the specified 
+      pattern.</span></p>
+      <p class="MsoPlainText"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText"><b><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">Compiler 
+      Flag Functions</span></b></p>
+      <p class="MsoNormal"> </p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">Parse 
+      compiler flags from a string passed by </span><span style="FONT-SIZE: 12pt">om</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"> to the 
+      temporary scripts.</span></p>
+      <p class="MsoNormal"> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="getcompilergetcompiler.htm"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">GetCompiler</span></a><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">The 
+      function parses the debug or release compiler flags and compiler 
+      names.</span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="findflagflagstringpossibleflags.htm"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">FindFlag</span></a><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">This 
+      function verifies the existence of @possibleFlags within a $flagstring. 
+      The first flag matched is returned.</span></p>
+      <p class="MsoPlainText"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="getflagflagstringpossibleflags.htm"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">GetFlag</span></a><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">This 
+      function is used with Ant Tasks Javac and Rmic to get the compiler name. 
+      Unlike 'GetCompiler', only the compiler name is returned, without the 
+      fully qualified path. </span></p>
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%"></span> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="getexcludesdefines.htm"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">GetExcludes</span></a><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">This 
+      function returns the excluded file pattern and removes the exclude 
+      statement from the $Defines variable.</span></p>
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%"></span> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText"><b><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">File Copy 
+      &amp; Directory Functions </span></b></p>
+      <p class="MsoNormal"> </p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">Provide 
+      the ability to copy files that are needed to perform compiles and 
+      manipulate directories.</span></p>
+      <p class="MsoNormal"> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="mkfulldirpath.htm" target="proc"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">mkfulldir</span></a><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">Creates 
+      a directory, including parent directories, if necessary.</span></p>
+      <p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="copylocalfullpathdepsreldepstodir.htm"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">CopyLocal</span></a><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoNormal">When a compiler cannot read source code in directories 
+      other than the <i>Build Directory</i>, this function copies the files to 
+      the local build directory. It keeps track of the files that are copied so 
+      they can be deleted when the script exits. </p>
+      <p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="copyexcludelocaltargetdepsreldepstodirexcludeextensions.htm"><i><span style="FONT-SIZE: 13pt; FONT-FAMILY: 'Times New Roman','serif'">CopyExcludeLocal</span></i></a><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoNormal">This function copies files from any location to a 
+      specified directory. The "exclude" list of extensions is a list of 
+      patterns to match against the end of the full path. </p>
+      <p class="MsoNormal"> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">Java 
+      Related Functions</span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">Provide 
+      the ability to format file names into compatible JAVA format and to get 
+      the JAVA dependencies.</span></p>
+      <p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="readpackagesfiletargetdeps.htm"><i><span style="FONT-SIZE: 13pt; FONT-FAMILY: 'Times New Roman','serif'">ReadPackagesFile</span></i></a><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoNormal">This function reads the <span style="FONT-FAMILY: 'Courier New'">.package</span> file created by a Javac 
+      Task.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="getpackagesfilelist.htm"><i><span style="FONT-SIZE: 13pt; FONT-FAMILY: 'Times New Roman','serif'">GetPackages</span></i></a><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">This 
+      function parses a list of files and returns the list of Java packages 
+      which the files correspond.</span></p>
+      <p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="getpackagedepstargetdeps.htm"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">GetPackageDeps</span></a><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">This 
+      function reads the </span><span style="FONT-SIZE: 12pt">.package</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"> files 
+      created by all Java Tasks.</span></p>
+      <p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="getclasspathtargetdeps.htm"><i><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">GetClassPath</span></i></a><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">This 
+      function reads the </span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 150%">.classpath</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%"> 
+      files created by the Set CLASSPATH  Java Task.</span></p>
+      <p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="getclassestargetdeps.htm"><i><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">GetClasses</span></i></a><i><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span></i></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">This 
+      function returns the list of all Class files and Java Packages generated 
+      by Java Compile and RMIC Tasks.   These files are determined by 
+      reading </span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 150%">.javac</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%"> 
+      and </span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 150%">.rmic</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%"> 
+      files created by those Tasks.  </span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="getlocalclasspathhomeenv.htm"><i><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">GetLocalClassPath</span></i></a><i><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span></i></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">This 
+      function gets the local </span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 150%">classpath </span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">for 
+      that tool by concatenating all Jar files in the $HOME_ENV\lib directory. 
+      </span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="getsubtaskdepstargetdepstargetreldepswanteddirsubtaskext.htm"><i><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">GetSubTaskDeps</span></i></a><i><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span></i></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">Resolves 
+      all “Results From” Sub Task dependencies found in the Target Definition 
+      File for a given Sub Task extension.</span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText"><b><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">Ant Build 
+      XML Functions</span></b></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">Provide a 
+      wrapper to create the </span><span style="FONT-SIZE: 12pt">build.xml</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">, which is 
+      used by Ant.</span></p>
+      <p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="getantincludexmlitems.htm"><i><span style="FONT-SIZE: 13pt; FONT-FAMILY: 'Times New Roman','serif'">GetAntIncludeXML</span></i></a><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">This 
+      functions generates the include XML tags for Ant, based on a list of 
+      files.</span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoNormal" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="writeantxml.htm">WriteAntXML</a></p>
+      <p class="MsoPlainText"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span> </p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">Writes the 
+      "</span><span style="FONT-SIZE: 12pt">build.xml</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">" file for 
+      ant.<b></b></span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText"><b><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">Build 
+      Audit Report Creator Function</span></b></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">Allow you 
+      to add the Build Audit reporting to your script.</span></p>
+      <p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoNormal" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="generatebillofmatbillofmatbillofmatrpttargetfile.htm">GenerateBillofMat</a></p>
+      <p class="MsoNormal"> </p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">This 
+      function generates the Build Audit for the specified 
+      <i>Target.</i></span></p>
+      <p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><b><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span></b> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText"><b><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">Foot Print 
+      Creator Function</span></b></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">Allow you 
+      to add Foot Printing to your script.</span></p>
+      <p class="MsoPlainText"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="generatefootprintfootprinttargetfilefpsourcefpobjectcompilerfoundfpcompilerarguments.htm"><i><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">GenerateFootPrint</span></i></a><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">This 
+      function generates the footprinting source file for the specified target 
+      file. This source file is compiled and linked into the target.</span></p>
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%"></span> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 0pt"><b><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">Cleanup 
+      Functions </span></b></p>
+      <p class="MsoPlainText"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span> </p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">These 
+      functions clean up variables and files, and set the return code for a 
+      point in the process when a script needs to exit.</span></p>
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%"></span> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="exitscriptrcdoomedfiles.htm"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">ExitScript</span></a><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">This 
+      function is the standard exit function. This function deletes any work 
+      files and passes the return code back to </span><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 150%">om</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">.</span></p>
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%"></span> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoPlainText"><b><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">Perl 
+      Objects</span></b></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">Perl 
+      Objects are variables that contain both data and methods to act upon the 
+      data.  </span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoNormal" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="openmakefile.htm">Openmake::File</a></p>
+      <p class="MsoPlainText"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span> </p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">This 
+      object contains convenience methods that are used to parse file names and 
+      return them in specific formats. This is useful in dealing with different 
+      compilers and operating systems where the file names need to be in a 
+      particular format.</span></p>
+      <p class="MsoPlainText"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoNormal" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="openmakefilelist.htm">Openmake::FileList</a></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">This 
+      object contains convenience methods that are used to parse lists of file 
+      names and return them in specific formats. </span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoNormal" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="openmakelog.htm">Openmake::Log</a></p>
+      <p class="MsoNormal" style="MARGIN-LEFT: 21.6pt"> </p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">This 
+      object contains functions that are called from a<i> </i></span><i><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">Build 
+      Method</span></i><i><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%"> 
+      </span></i><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">file 
+      and then used to print to standard output (STDOUT) and to create html 
+      logging.  </span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoNormal" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="openmakesearchpath.htm">Openmake::SearchPath</a></p>
+      <p class="MsoNormal" style="MARGIN-LEFT: 21.6pt"><b></b> </p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoBodyTextIndent3" style="MARGIN-LEFT: 0pt">This object manages a 
+      Project's Dependency Directories. The Dependency Directory is independent 
+      of operating system. It provides functions to return the Dependency 
+      Directory in different formats.</p>
+      <p class="MsoNormal"> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoNormal" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="openmakepath.htm">Openmake::Path</a></p>
+      <p class="MsoNormal" style="MARGIN-LEFT: 21.6pt"> </p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoNormal" style="MARGIN-LEFT: 0.6pt">This object contains common 
+      functions that are used to parse file paths and return them in specific 
+      formats. This process is useful in dealing with different compilers and 
+      operating systems where the file paths need to be in a particular 
+      format.</p>
+      <p class="MsoBodyTextIndent3" style="MARGIN-LEFT: 0pt"> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoNormal" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="openmakesnapshot.htm">Openmake::Snapshot</a></p>
+      <p class="MsoNormal" style="MARGIN-LEFT: 21.6pt"> </p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoBodyTextIndent3" style="MARGIN-LEFT: 0pt">This object allows 
+      you to compare the content of a directory before and after a command has 
+      been issued. Comparison of the snapshots makes it possible to determine 
+      which files have been updated by a compiler.</p>
+      <p class="MsoNormal" style="MARGIN-LEFT: 0.6pt"> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 153pt" valign="top" width="306">
+      <p class="MsoNormal" style="MARGIN-LEFT: 21.6pt"><a class="topic-link" href="openmakebuildoption.htm">Openmake::BuildOption</a></p>
+      <p class="MsoNormal" style="MARGIN-LEFT: 21.6pt"> </p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 248.4pt" valign="top" width="497">
+      <p class="MsoPlainText" style="LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">This 
+      object contains methods to deal with the parsing of build 
+      options.</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p class="MsoBodyTextIndent3" style="MARGIN-LEFT: 0pt"> </p></td></tr></tbody></table>
+<p class="MsoNormal" style="MARGIN-LEFT: 45pt"> </p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt"> </p><span id="related-topics"></span></body></html>

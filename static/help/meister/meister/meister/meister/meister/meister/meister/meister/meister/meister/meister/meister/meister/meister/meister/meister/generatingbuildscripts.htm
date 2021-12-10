@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Generating Build Scripts</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/GenBuildScriptsandRunBuilds.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="automatingyourcompileandlinkprocess.htm" /><link rel="next" href="bldmakeoptions.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="5a3119b0-ca25-431a-a719-aedd4034ef82">
+<h2>Generating Build Scripts</h2>
+<p class="MsoNormal">A new build script, called a <span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">Build Control 
+File</span></span>, can be generated just prior to executing the build.  By 
+updating your build script, you are guaranteed that changes to <span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">Targets</span></span> and 
+<span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">Projects</span></span> are captured in the build.  
+Something as simple as refactoring within the Eclipse IDE may change the 
+underlying directory structures of packages and names of source.  
+Regenerating your build script will catch these changes without you having to 
+address them in a manual way each time a build error occurs.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">A program called <span style="FONT-FAMILY: 'Courier New'">bldmake </span>performs the generation of the 
+build script.  It uses the Knowledge Base metadata to perform the script 
+generation.  <span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">Target</span></span> information is combined with the 
+<span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">Build 
+Service</span></span> information to create the script. The <span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">Build Method</span></span> 
+provides the build script formatting.  </p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">Before executing a Build, you must define a Build Project and 
+create a Target.  Refer to the <span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">Configuring Your Build Project </span></span>and <span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">Creating and Managing 
+Targets</span></span> section of this guide to prepare you for executing your 
+Builds.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">Note:  This guide will review the process that is used 
+to manage builds.  It will cover the automatic generation of your build 
+scripts based on pre-defined or custom <span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">Build Services </span></span>and<span class="NormalItalicChar"><span style="FONT-SIZE: 12pt"> 
+Targets</span></span>  and the execution of the build itself.  
+Following is a list of all options that can be passed to the <span style="FONT-FAMILY: 'Courier New'">bldmake</span> program.  Options can be 
+passed at the command line</p>
+<p class="Bulleted" style="MARGIN-LEFT: 0pt; LINE-HEIGHT: 150%; TEXT-INDENT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">or through the <i>Public</i> and 
+<i>Private Workflows</i>.  To pass options from a <i>Workflow</i> follow 
+the steps in Table BD-1.</span></p>
+<p class="Bulleted" style="MARGIN-LEFT: 0pt; LINE-HEIGHT: 150%; TEXT-INDENT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'"></span> </p>
+<p class="Bulleted" style="MARGIN-LEFT: 0pt; LINE-HEIGHT: 150%; TEXT-INDENT: 0pt"><b><span style="FONT-FAMILY: 'Times New Roman','serif'">Table BD-1 Using the Workflow to 
+set options</span></b></p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" cellspacing="0" cellpadding="0" border="1">
+  <thead>
+  <tr>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoNormal">Step</p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoNormal">Action</p></td></tr></thead>
+  <tbody>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoNormal">1</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoNormal">Open the <span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">Workflow Explorer</span></span> from the <span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">OM 
+      Workflow</span></span> perspective</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoNormal">2</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoNormal">Right Mouse Click on <span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">Private Workflow</span></span> and Select <span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">New</span></span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoNormal">3</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoNormal">Enter the name <span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">Sample Workflow</span></span> in the <span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">New 
+      Workflow</span></span> pop-up window.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoNormal">4</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoNormal">Select the <span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">Activities</span></span> tab located on the lower 
+      left portion of the <span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">Overview Tab</span></span> screen.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoNormal">5</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoNormal">Highlight <span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">My Computer</span></span> from the <span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">Workflow 
+      Hierarchy</span></span> field, which is located within the <span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">Workflow 
+      Editor</span></span> screen.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoNormal">6</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoNormal">Click the <span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">Add Activity</span></span> button. A window 
+      appears with two fields: one for plug-ins (<span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">Activity 
+      Plug-in</span></span>) and the other for activities (<span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">Activity 
+      Type</span></span>).</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoNormal">7</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoNormal">Select the Meister from the <span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">Activity 
+      Adapter</span></span> field and <span class="NormalItalicChar"><span style="FONT-SIZE: 12pt">Meister Build Control File </span></span>for the 
+      Activity Type.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 45.9pt" valign="top" width="92">
+      <p class="MsoNormal">8</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 396.9pt" valign="top" width="794">
+      <p class="MsoNormal">In the Command field enter the desired 
+  options.</p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<div class="related-topics-header">
+<p class="RelatedHead">More:</p>
+<div class="related-topics">
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="bldmakeoptions.htm">bldmake options</a></p></div></div></body></html>

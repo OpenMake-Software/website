@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Methods and OOMLOM</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/zOS Administration Guide.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="buildtypesandmethods1.htm" /><link rel="next" href="variables1.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="dd3b1d80-94f0-4709-b5c2-3735888a0a44">
+<h3>Methods and OOMLOM</h3>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">In order to understand how to develop your customized 
+<i>Methods</i>, it is important to understand how the <i>Methods</i> interact 
+with the generated Build Control file and the <span style="FONT-FAMILY: Courier">OOMLOM</span> build engine.  </p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"><i>Methods</i> are designed so that they contain no Target 
+specific data.  The <i>Methods</i> are generic and use the Scripting 
+Variables instead of hard coded values.  <i>Methods</i> are read by the 
+<span style="FONT-FAMILY: Courier">OOMLOM</span> engine and are translated into 
+temporary "Target specific" REXX execs.  These REXX execs contain 
+references to the actual Target information. <span style="FONT-FAMILY: Courier">OOMLOM</span> gets the Target information for the 
+batch file from the Build Control file.  <span style="FONT-FAMILY: Courier">OOMLOM</span> also gets the Script information from 
+the Build Control file. The Script information gets included in the Build 
+Control file because <span style="FONT-FAMILY: Courier">OOMLBLDM</span> 
+generates the Build Control file with the generic Command Script appended at the 
+bottom. The final step that <span style="FONT-FAMILY: Courier">OOMLOM</span> 
+performs is the execution of the Target specific batch file, which in turn, 
+executes the build. </p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">The temporary "Target specific" REXX exec is generated as a 
+member of the &lt;OPENMAKE_WORK&gt;.&lt;Generated Name&gt;.CNTL PDS. The member 
+name is randomly assigned.  </p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">Note:  As a debugging tool, you can pass OOMLOM  
+the -ks parameter.  This parameter forces <span style="FONT-FAMILY: Courier">OOMLOM</span> to "keep" the temporary script, so 
+that it can be viewed to determine if the variables have been set correctly. 
+</p><span id="related-topics"></span></body></html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Environment Variables</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/DevelopingWorkflows.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="workloadmanageromsubmit.htm" /><link rel="next" href="createandedityourworkflow.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="d0bbc99d-0734-455b-bfbb-492d804a8fbb">
+<h3>Environment Variables</h3>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%">Unique Environment Variables can be 
+defined at multiple levels in a <i>Workflow</i>. The highest level of 
+Environment Variables can be defined at a “Global” level for the entire 
+<i>Workflow</i>.  Environment Variable settings can be further defined at 
+the <i>Server Pool</i> level and at the <i>Workflow Activity</i> level.  If 
+the same Environment Variable is used at all levels, with a different value for 
+each, the lowest level will be used, which is the <i>Workflow Activity</i> 
+level.  Next in line would be the <i>Server Pool</i> level and lastly would 
+be the Global <i>Workflow</i> level. If the <i>Workflow Activity</i> level 
+re-assigned a value for an Environment Variable, it would be reset to the 
+<i>Server Pool</i> level once it completed.  The <i>Server Pool</i> level 
+is reset to the “Global” <i>Workflow</i> level once the <i>Workflow 
+Activities</i> in <i>the Server Pool</i> have been completed.  Using this 
+hierarchal approach to managing Environment Variables gives you maximum 
+flexibility in setting values at all levels in your <i>Workflow.</i></p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%">In cases where Environment 
+Variables are referenced in <i>Activities </i>within <i>Workflows</i> but they 
+are not defined in any of the Environment Variable table hierarchy, the 
+<i>Workflow</i> will prompt you to provide those values at execution time. This 
+can be very useful for Administrators that want to share a parameterized 
+Workflow to multiple different user configurations. Undefined Environment 
+Variables will be checked for through all <i>Workflow Activities</i> and any 
+included <i>Workflow </i>or <i>Deploy Services.</i></p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p><span id="related-topics"></span></body></html>

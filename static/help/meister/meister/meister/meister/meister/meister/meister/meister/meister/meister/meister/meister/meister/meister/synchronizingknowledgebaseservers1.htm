@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Synchronizing Knowledgebase Servers</title>
+<meta charset="utf-8" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="migratingkbservermetadatatoanotherkbserver.htm" /><link rel="next" href="switchingtothecommunityknowledgebase1.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="f042f9c6-32ef-4e85-bae2-7d868d4d2d5a">
+<h3>Synchronizing Knowledgebase Servers</h3>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">If you want to be able to build the same projects in a test 
+environment that exist in production, you may want to update the test server 
+with changes made to prod. These changes are usually on-demand changes made to 
+the live production server such as new or modified search paths. To synchronize 
+the changes is to copy the changed files from the prod server to the test 
+server.  Table MD-2 describes the files that need to be copied.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">Table MD-2 Files to Copy</p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" cellspacing="0" cellpadding="0" border="1">
+  <tbody>
+  <tr>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 234.9pt" valign="top" width="470">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Times New Roman','serif'">Folder (Relative to 
+      openmake.war/)</span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 234.9pt" valign="top" width="470">
+      <p class="MsoNormal">kb/jobs</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 234.9pt" valign="top" width="470">
+      <p class="MsoNormal">kb/projects</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 234.9pt" valign="top" width="470">
+      <p class="MsoNormal">kb/build types</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 234.9pt" valign="top" width="470">
+      <p class="MsoNormal">kb/activity descriptors</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 234.9pt" valign="top" width="470">
+      <p class="MsoNormal">scripts</p></td></tr></tbody></table>
+<p class="MsoNormal">The kb/groups and kb/users directory can be ignored since 
+different users and groups can exist on the test server.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">The Knowledgebase Server being updated will need to be 
+restarted in order to recognize the changes. </p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">Note:  The <i>Workflows </i>may need to be edited in 
+order to change the <i>Remote Agents</i> defined to new Knowledgebase 
+Server.</p>
+<h3> </h3><span id="related-topics"></span></body></html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>getBuildTaskOption( $option_name, $build_task, $option_group)</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/WritingandUsingBuildMethods.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="getbuildtaskfilesbuildtaskoptiongroupall.htm" /><link rel="next" href="getbuildtaskoptionsbuildtaskoptiongroup.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="bef248b3-0108-4610-a75a-60dd12bb1ac9">
+<h3>getBuildTaskOption( $option_name, $build_task, $option_group)</h3>
+<p class="MsoPlainText"><span style="FONT-SIZE: 12pt"></span> </p>
+<p class="MsoNormal">Gets the value of an option specified by $option_name, if the 
+option is defined in the form option=value, a given <i>Build Task</i> and 
+<i>Option Group</i>. If <i>Option Group</i> is not passed, the routine will 
+assume the standard option group as defined in $OPTIONGROUP_DEFAULT_NAME.</p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Arial','sans-serif'"></span> </p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><u><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">USAGE:</span></u></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%"></span> </p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 54pt; LINE-HEIGHT: 150%">my 
+$manifest_file = $build_option-&gt;getBuildTaskOption( "manifest",</p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 54pt; LINE-HEIGHT: 150%">$BuildTask); 
+$manifest_file =~ s|^"||g; $manifest_file =~ s|"$||g;</p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; LINE-HEIGHT: 150%"></span> </p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><u><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">RETURNS:</span></u></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%"></span> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt">The value of the option in the 
+&lt;option&gt;=&lt;value&gt; construction is returned. Note that quotes aren't 
+stripped from options like manifest="META-INF/manifest.mf".</p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt"><span style="FONT-SIZE: 12pt"></span> </p>
+<p class="MsoPlainText"><span style="FONT-SIZE: 12pt"></span> </p>
+<p class="MsoPlainText"><span style="FONT-SIZE: 12pt"></span> </p>
+<p class="MsoPlainText"><b><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'"></span></b> </p><span id="related-topics"></span></body></html>

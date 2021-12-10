@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Executing Pre-commit Builds Outside of Your IDE</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/Meister Pre-Commit Builds.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="definingdependencydirectoriestosupportprecommitbuilds.htm" /><link rel="next" href="usingbuildavoidancewithprecommitbuilds.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="28e494ab-e326-44b4-804f-8fafe4d65ab3">
+<h2>Executing Pre-commit Builds Outside of Your IDE</h2>
+<p class="MsoNormal" style="MARGIN-LEFT: 18pt; LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 18pt; LINE-HEIGHT: 150%">Meister makes it 
+easy to execute your IDE <i>Project</i> build inside of your IDE, and to execute 
+a full build outside of your IDE's control.  Meister's IDE integration 
+(Eclipse Plug-in and Microsoft Visual Studio Add-in) monitors changes occurring 
+inside the IDE that may impact the build itself.  This means that changes 
+such as refactoring, adding libraries, adding source modules or any modification 
+that requires a change to the build scripts themselves are tracked and monitored 
+by Meister from inside the IDE.  Meister then synchronizes those changes 
+with the <i>Pre-commit</i> or continuous build running outside of the IDE.  
+Within the IDE you can execute either an IDE build, or a Meister 
+<i>Pre-commit</i> build.  When the Meister <i>Pre-commit</i> build executes 
+it calls a Meister Workflow, which you define, to regenerate the build scripts 
+and to execute a full build of the entire application, not just your single 
+<i>Project</i>.  You can configure your Workflow to perform pre and post 
+build activities such as executing tests and deploying objects.  This 
+allows you to execute a private "continuous integration" build before you commit 
+your changes to the source repository.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 18pt; LINE-HEIGHT: 150%"> </p><span id="related-topics"></span></body></html>

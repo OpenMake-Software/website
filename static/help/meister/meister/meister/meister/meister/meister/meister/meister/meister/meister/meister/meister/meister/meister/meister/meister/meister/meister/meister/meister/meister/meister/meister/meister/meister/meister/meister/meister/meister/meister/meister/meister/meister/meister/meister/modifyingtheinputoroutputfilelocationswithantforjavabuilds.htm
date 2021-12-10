@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Modifying the Input or Output File Locations with Ant for Java Builds</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/GenBuildScriptsandRunBuilds.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="useofmultiplejavacompilers.htm" /><link rel="next" href="errorsandwarnings.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="3a60a987-41cd-4531-a938-81ea21481237">
+<h2>Modifying the Input or Output File Locations with Ant for Java Builds</h2>
+<p class="MsoNormal"></p>
+<p class="MsoBodyTextIndent">By default the output of Build Tasks that use the 
+Javac compile will be placed directly under the <i>Build Directory </i>as 
+determined by the compiler.  There are situations where this is not the 
+desired approach.  Certain IDEs such as Eclipse and IBM Rational 
+Application Developer place source code under intermediate directories that add 
+extra directories above the package structure.</p>
+<p class="MsoBodyTextIndent"> </p>
+<p class="MsoBodyTextIndent">Listed in the Table BD-11 are the Ant options within 
+Build Tasks that can be used to control the location of files.</p>
+<p class="MsoBodyTextIndent"> </p>
+<p class="MsoBodyTextIndent"><b>Table BD-11 Ant Options within Build Task</b></p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; MARGIN-LEFT: 18pt; BORDER-LEFT: medium none" cellspacing="0" cellpadding="0" border="1">
+  <thead>
+  <tr>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 137.9pt" valign="top" width="276">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><b>Task</b></p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 139.3pt" valign="top" width="279">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><b>Ant 
+    Option</b></p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 147.6pt" valign="top" width="295">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><b>Comment</b></p></td></tr></thead>
+  <tbody>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 137.9pt" valign="top" width="276">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Ant Javac</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 139.3pt" valign="top" width="279">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">destdir=</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 147.6pt" valign="top" width="295">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Location within the 
+      build directory to place the class files.  Typically set to the 
+      "intermediate" directory as created by the IDE.  E.g. 
+      <br />destdir="Webproject/Java Source".</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 137.9pt" valign="top" width="276">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Ant Jar – Default 
+      option group</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 139.3pt" valign="top" width="279">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">basedir=</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 147.6pt" valign="top" width="295">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Location from where to 
+      get files (either classes or resource files).  In the case of 
+      compiled classes, usually equal to the value of "destdir" from the Ant 
+      Javac task.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 137.9pt" valign="top" width="276">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Ant Jar – Custom 
+      option group</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 139.3pt" valign="top" width="279">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Dir=</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 147.6pt" valign="top" width="295">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Location from where to 
+      get files (either classes or resource files).  In the case of 
+      compiled classes, usually equal to the value of "destdir" from the Ant 
+      Javac task.  This is different from the "Ant Jar – Default option 
+      group" because it is implemented with an Ant "zipfileset" that takes the 
+      "dir=" option.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 137.9pt" valign="top" width="276">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Ant War</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 139.3pt" valign="top" width="279">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">basedir=</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 147.6pt" valign="top" width="295">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Same as the Ant Jar – 
+      Default option group.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 137.9pt" valign="top" width="276">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Ant War – Custom 
+      option group</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 139.3pt" valign="top" width="279">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Dir=</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 147.6pt" valign="top" width="295">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Same as the Ant Jar – 
+      Custom option group.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 137.9pt" valign="top" width="276">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Ant War – Custom 
+      option group</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 139.3pt" valign="top" width="279">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">prefix=</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 147.6pt" valign="top" width="295">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Location to place 
+      resource within the war file.  E.g. prefix="WEB-INF/classes" is 
+      typical for compiled classes</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 137.9pt" valign="top" width="276">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Ant Ear</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 139.3pt" valign="top" width="279">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">basedir=</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 147.6pt" valign="top" width="295">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Same as "basedir" in 
+      the Ant Jar Task.</p></td></tr></tbody></table>
+<p class="MsoBodyTextIndent"> </p>
+<p class="MsoBodyTextIndent"> </p><span id="related-topics"></span></body></html>

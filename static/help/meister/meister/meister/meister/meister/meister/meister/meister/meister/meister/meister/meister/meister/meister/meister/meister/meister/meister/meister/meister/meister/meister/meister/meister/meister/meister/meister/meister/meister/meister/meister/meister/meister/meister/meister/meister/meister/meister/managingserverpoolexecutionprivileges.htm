@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Managing Server Pool Execution Privileges</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/ManagingUsersandGroups1.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="managingpublicworkflowprivileges.htm" /><link rel="next" href="managinguserswithomadmin.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="24740fbe-c0d7-4175-9db5-3dccbc9cf610">
+<h3>Managing Server Pool Execution Privileges </h3>
+<p class="MsoNormal"></p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 23.15pt">A <i>Group</i> can be 
+assigned “execute” privileges for a <i>Server Pool.</i>  By default, all 
+<i>Groups</i> have access to all <i>Server Pools.  </i>Execute privileges 
+enable the User to run a <i>Workflow</i> on a particular <i>Server Pool.</i> The 
+security validation occurs at Workflow execution time.  This allows Users 
+to define <i>Workflow</i> on a particular <i>Server Pool</i>, but restricts them 
+from executing the <i>Workflow</i> on the <i>Server Pool</i>. This scenario is 
+useful for Production level machines, where a development group may need to 
+define the <i>Workflow</i> on behalf of a Production control group, but only 
+Production control and perform the execute step.  Restricting the Execute 
+access on a <i>Server Pool </i>does not restrict “Read” access to that <i>Server 
+Pool’s</i> logs.  Restrictions on “Read” access to logs are handled at the 
+<i>Workflow </i>privilege level. </p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"> </p><span id="related-topics"></span></body></html>

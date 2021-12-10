@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Defining a Private Pre-commit Workflow</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/Meister Pre-Commit Builds.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="usingbuildavoidancewithprecommitbuilds.htm" /><link rel="next" href="openmakemeisterforintelligentbuilds.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="d0d78ce6-f853-4eff-b037-40707f32e472">
+<h2>Defining a Private Pre-commit Workflow</h2>
+<p class="MsoNormal" style="MARGIN-LEFT: 18pt; LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 18pt; LINE-HEIGHT: 150%">In general, you 
+should identify which validation steps you want to perform in your workflow, 
+then decide which steps must be done before the build and which ones 
+after.  Using the Workflow Explorer from the Meister GUI, define your 
+Workflow.  Below are steps for creating <i>Pre-commit</i> Workflow:</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 18pt; LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 54pt; LINE-HEIGHT: 150%; TEXT-INDENT: -18pt; tab-stops: 54.0pt">1.  
+Create a new workflow from the Workflow Explorer, giving it a name and any other 
+options.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 54pt; LINE-HEIGHT: 150%; TEXT-INDENT: -18pt; tab-stops: 54.0pt">2.  
+On the Detail Tab, add Activities.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 54pt; LINE-HEIGHT: 150%; TEXT-INDENT: -18pt; tab-stops: 54.0pt">3.  
+For each pre-build step, identify the workflow plug-in and appropriate activity 
+template. If there is no activity template for the program you want to run, you 
+can use the "Execute Shell Command" from the Activity list and enter the full 
+command to execute for that step.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 54pt; LINE-HEIGHT: 150%; TEXT-INDENT: -18pt; tab-stops: 54.0pt">4.  
+For the build steps, first choose the Meister-&gt;Generate Build Control File 
+activity template and enter your Project Name, Dependency Directory Name and 
+other options, typically “-s” to enforce case sensitivity for Java and “-ov” for 
+verbose output.  </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 54pt; LINE-HEIGHT: 150%; TEXT-INDENT: -18pt; tab-stops: 54.0pt">5.  
+Next, choose one of the build execution activities like Meister-&gt;Execute 
+Meister Incremental Build with desired options. Incremental build is the default 
+setting and will provide you Build Avoidance for faster builds.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 54pt; LINE-HEIGHT: 150%; TEXT-INDENT: -18pt; tab-stops: 54.0pt">6.  
+For each post-build step, again identify the Workflow plug-in and appropriate 
+activity template. If there is no appropriate activity template for the program 
+you want to run, you can use the "Execute Shell Command" from the Activity list 
+and enter the full command to execute for that step.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 54pt; LINE-HEIGHT: 150%; TEXT-INDENT: -18pt; tab-stops: 54.0pt">7.  
+Execute the Workflow. If there are errors, check the commands and run it 
+again.</p><span id="related-topics"></span></body></html>

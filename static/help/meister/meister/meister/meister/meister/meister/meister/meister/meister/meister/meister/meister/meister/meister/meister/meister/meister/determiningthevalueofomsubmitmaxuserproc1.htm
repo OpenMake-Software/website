@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Determining the Value of OMSUBMIT_MAX_USER_PROC</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/MeisterAcceleration.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="configuringyourbuildenvironmentforparallelizedbuilds.htm" /><link rel="next" href="meisterinsight.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="bc34cbd3-f715-494a-b88b-02d1c1ae1a1c">
+<h3>Determining the Value of OMSUBMIT_MAX_USER_PROC</h3>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%">The value of 
+OMSUBMIT_MAX_USER_PROC  is the maximum number of simultaneous calls to the 
+compilers and linkers that your machine can run in multi-threaded mode.  As 
+a general rule, each processor can handle a maximum of four (4) calls to the 
+compilers and linkers in multi-threaded mode.  This is often dependent upon 
+the type of compiler or linker you are executing and the processing power of 
+your machine.   It is recommend that you begin by setting the value to 
+a lower number and experiment with your processing speeds until you begin seeing 
+no further improvements.  Following is a recommend setting:</p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" cellspacing="0" cellpadding="0" border="1">
+  <thead>
+  <tr>
+    <td style="BORDER-TOP: black 1pt solid; BORDER-RIGHT: black 1pt solid; BACKGROUND: #00b0f0; BORDER-BOTTOM: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: black 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 189.9pt" valign="top" width="380">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%"><b>Machine 
+      Configuration</b></p></td>
+    <td style="BORDER-TOP: black 1pt solid; BORDER-RIGHT: black 1pt solid; BACKGROUND: #00b0f0; BORDER-BOTTOM: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 193.5pt" valign="top" width="387">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%"><b>OMSUBMIT_MAX_USER_PROC 
+      </b></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%"><b>Maximum Recommend 
+      Value</b></p></td></tr></thead>
+  <tbody>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; BORDER-BOTTOM: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: black 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 189.9pt" valign="top" width="380">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%">Single Processor</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; BORDER-BOTTOM: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 193.5pt" valign="top" width="387">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%">4</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; BORDER-BOTTOM: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: black 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 189.9pt" valign="top" width="380">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%">Dual Core</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; BORDER-BOTTOM: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 193.5pt" valign="top" width="387">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%">8</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; BORDER-BOTTOM: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: black 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 189.9pt" valign="top" width="380">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%">Quad Core</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; BORDER-BOTTOM: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 193.5pt" valign="top" width="387">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%">16</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; BORDER-BOTTOM: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: black 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 189.9pt" valign="top" width="380">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%">4 Dual Core Processors</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; BORDER-BOTTOM: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 193.5pt" valign="top" width="387">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%">64</p></td></tr></tbody></table>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal"> </p><span id="related-topics"></span></body></html>

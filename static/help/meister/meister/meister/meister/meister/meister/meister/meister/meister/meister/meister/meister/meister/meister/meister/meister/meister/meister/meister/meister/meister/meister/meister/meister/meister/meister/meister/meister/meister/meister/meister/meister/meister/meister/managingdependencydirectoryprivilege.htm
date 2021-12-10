@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Managing Dependency Directory Privilege</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/ManagingUsersandGroups1.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="customaccessprivileges.htm" /><link rel="next" href="managingbuildserviceprivilege.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="4ea391de-1d8c-42ac-bdd0-2008b770840e">
+<h3>Managing Dependency Directory Privilege</h3>
+<p class="MsoNormal"></p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 23.15pt">For <i>Project 
+Dependency Directories</i>, the "top level" privilege is at the Project 
+Level.  If a <i>Group</i> is assigned write access to the <i>Project 
+Dependency Directories</i> at the Project Level, the <i>Group</i> will have 
+write access to all <i>Dependency Directories</i> for that <i>Project.</i>  
+If a new <i>Dependency Directory</i> is added, the <i>Group</i> will 
+automatically have write access to the new <i>Dependency Directory</i>.</p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 23.15pt"> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 23.15pt">Alternatively, a 
+<i>Group</i> could be assigned write access to a particular <i>Dependency 
+Directory</i> and could have read access to the other <i>Dependency 
+Directories</i>.  In this situation, if a new <i>Dependency Directory</i> 
+were added, the Administrator would have to update the <i>Group's</i> access for 
+the <i>Project Dependency Directory</i> in order to provide the <i>Group</i> 
+with "Write" access to the new <i>Dependency Directory.</i> Table GU-2 provides 
+some suggestions for assigning <i>Group Privileges</i> for <i>Dependency 
+Directories:</i></p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 20.15pt"><b>Table GU-2 Dependency 
+Directory Privileges Scenarios</b></p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; MARGIN-LEFT: 32.4pt; BORDER-LEFT: medium none" cellspacing="0" cellpadding="0" border="1">
+  <thead>
+  <tr>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 189pt" valign="top" width="378">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><b>Scenario</b><b></b><b></b><b></b></p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 221.4pt" valign="top" width="443">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"><b>Group 
+    Access</b></p></td></tr></thead>
+  <tbody>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 189pt" valign="top" width="378">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">You want to limit the 
+      number of <i>Projects</i> the end <i>User</i> can view and you don't want 
+      the Developers to have update privileges for the <i>Project Dependency 
+      Directories.</i></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 221.4pt" valign="top" width="443">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Create <i>Groups</i> 
+      based on the Development Teams.  Assign each <i>Group</i> Read-only 
+      access for any Projects they should view when they bring up the Meister 
+      Client.  Remove each of the Developers from the default <i>Users 
+      Group</i> so that they do not have the "default" privileges. Add the 
+      <i>Users</i> to the new <i>Groups</i> based on the 
+  <i>Project.</i></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 189pt" valign="top" width="378">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">You want to allow 
+      certain Developers to have Write access to the <i>Development Dependency 
+      Directory</i> of their Project.  You want them to be able to view all 
+      of the other <i>Projects</i> and <i>Dependency Directories</i>, but not to 
+      have Write access to the other <i>Projects</i> and <i>Dependency 
+      Directories.</i></p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 221.4pt" valign="top" width="443">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Create a <i>Group</i> 
+      that has Write access to the <i>Development Dependency Directory</i> for 
+      the <i>Project.</i> Add the <i>Users</i> who should have write access to 
+      the <i>Dependency Directories </i>to the <i>Group.</i>  Do not remove 
+      the <i>Users</i> from the default <i>Users Group.</i></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 189pt" valign="top" width="378">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">You want certain 
+      Developers on a development team to have the ability to create new 
+      <i>Dependency Directorie</i>s or update any existing <i>Dependency 
+      Directory.</i>  All of the other developers on the team should have 
+      Read Only access to their <i>Project's Dependency Directories.</i> Every 
+      <i>User</i> should only be able to view those<i> Projects and Dependency 
+      Directories</i> to which he has been given access.</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 221.4pt" valign="top" width="443">
+      <p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt">Create two 
+      <i>Groups</i>, one a "Development" <i>Group</i> for the <i>Project</i> and 
+      the other a "Team Lead" <i>Group</i> for the <i>Project.</i>  For the 
+      <i>Development Group</i>, assign Read access at the <i>Project</i> 
+      level.  To the <i>Development Group,</i> Add all <i>Users</i> who 
+      should have read only access.  Create the Team Lead <i>Group</i> and 
+      assign "Read", "Add", "Write", and "Delete" access at the <i>Project</i> 
+      level for <i>Dependency Directory</i> Privilege.  Then add the 
+      <i>Users</i> who should be part of the "Team Lead" <i>Group.</i>  
+      Remove all <i>Users</i> from the default <i>User Group.</i>  Since 
+      you want the <i>Users</i> to have fewer privileges than the default 
+      <i>User Group</i> provides, you must remove the <i>Users</i> from the 
+      default <i>User Group.</i></p></td></tr></tbody></table>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 0pt"> </p><span id="related-topics"></span></body></html>

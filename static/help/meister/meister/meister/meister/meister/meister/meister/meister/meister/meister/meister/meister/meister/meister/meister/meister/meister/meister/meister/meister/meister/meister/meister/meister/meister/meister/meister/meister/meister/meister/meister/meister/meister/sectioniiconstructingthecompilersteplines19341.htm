@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Section II: Constructing the Compiler Step (Lines 19 - 34)</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/WritingandUsingBuildMethods.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="sectioniinitializationlines1181.htm" /><link rel="next" href="sectioniiiexecutingandloggingthesteplines35431.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="30080282-f2e3-45ed-8dc6-d592ed3f5cce">
+<h3>Section II: Constructing the Compiler Step (Lines 19 - 34)</h3>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">19</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">20 
+$ENV{'LIB'}     = '';</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">21 
+$ENV{'INCLUDE'} = '';</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">22</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">23 
+$Flags .= ' /Fp' . $Pch . ' /Fo' . $TargetFile . ' /Fd' . $Pdb . ' /c ' . 
+$Source if ($CFG eq 'DEBUG');</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">24 
+$Flags .= ' /Fp' . $Pch . ' /Fo' . $TargetFile 
+.                 
+' /c ' . $Source if ($CFG ne 'DEBUG');</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">25 
+</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">26 
+$Flags =~ s/\/Yu/\/Yc/ if ($Target-&gt;getE =~ /pch/i || $Target-&gt;getFE =~ 
+/stdafx\.obj/i);</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">27 
+</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">28 
+#print "$Compiler $Defines $Flags\n$IncludeNL\n\n" if ($Silent ne 
+'Yes');</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">29</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">30($tmpfh, $rsp) = 
+tempfile('omXXXXX', SUFFIX =&gt; '.rsp', UNLINK =&gt; 1 );</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">31</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">32 
+print $tmpfh "$Defines $Include $Flags";</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">33 
+close $tmpfh;</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'">34</span></p>
+<p class="t1Text141"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'"><br /><br /></span></p><span id="related-topics"></span></body></html>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Adding Server Pools</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/UsingRemoteBuildServers.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="remoteagentsfordistributedprocessing.htm" /><link rel="next" href="assigningremoteagentstotheserverpool.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="af3f1a94-d08e-4ba7-9b95-b9dbb1be4ce2">
+<h2 style="LINE-HEIGHT: 150%">Adding Server Pools</h2>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"><i>Server Pools</i> are groupings 
+of one or more <i>Remote Agents, </i>virtual or physical<i>,</i> that are used 
+to execute <i>Workflow Activities</i> across a distributed environment and on 
+different operating systems. Each <i>Server Pool</i> will manage a set of 
+<i>Remote Agents, </i>load balancing between the Remote Agents for maximum 
+efficiency based on the availability of machine resources.</p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"><i>Server Pools</i> allow you to 
+organize your <i>Remote Agents</i> based on the attributes that they share in 
+common. For example, you can group a set of machines with a particular version 
+of Java or the .NET Framework together in a common <i>Server Pool.</i></p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%">To add a new <i>Server Pool</i>, go 
+to the Management Control Console, and select “Server Pools<i>” </i>and 
+“Administer” from the drop down menu. (Note: You cannot add <i>Server Pools</i> 
+using the Eclipse RCP Meister Client.) The top half of the screen lists 
+<i>Server Pools</i>. Click the <i>New Pool</i> button to create a new <i>Server 
+Pool</i>.</p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%">A <i>New Pool</i> dialog will 
+appear, prompting you to enter the following values:</p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"><b></b> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 31.5pt; LINE-HEIGHT: 150%"><b>Pool Name: 
+</b> The name of the <i>Server Pool</i> . This name will be displayed in 
+the Meister Eclipse RCP Client, <i>Workflow Explorer</i> under “Assign 
+Pool.”</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 31.5pt; LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 31.5pt; LINE-HEIGHT: 150%"><b>Operating 
+System Type: </b> The Operating System for all <i>Remote Agents</i> grouped 
+beneath the <i>Server Pool</i>. The currently allowed options are AIX, HP-UX, 
+Linux, Solaris, and Windows.  </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%">All values in the <i>New Pool 
+</i>prompt are required. Note:  All <i>Remote Agents</i> under a build pool 
+must be running the same Operating System and must be configured in exactly the 
+same way, i.e., development tools, databases, required compilers as well as has 
+access to all source code and reference libraries needed to execute <i>Workflow 
+Activities</i>.  For example, if you are executing a script that performs a 
+“<span style="FONT-FAMILY: 'Courier New'">cd” </span>in a “<span style="FONT-FAMILY: 'Courier New'">mybuild”</span> directory, the “<span style="FONT-FAMILY: 'Courier New'">mybuild”</span> directory must exist on all 
+<i>Remote Agents</i> that are part of the <i>Server Pool</i>.</p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p><span id="related-topics"></span></body></html>

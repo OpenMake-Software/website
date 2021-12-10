@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Nested Workflows</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/AdvancedWorkflowFeatures.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="runningworkflowsfromexternaltools.htm" /><link rel="next" href="reusableworkflows.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="0b752042-ff26-43e3-b304-b261974ed3bf">
+<h2>Nested Workflows</h2>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"><i>Workflows</i> can call other 
+<i>Workflows</i> called a <i>Nested Workflow.</i> You can define chaining 
+relationships between <i>Nested Workflow </i>causing one <i>Nested Workflow</i> 
+to wait until another <i>Nested Workflow</i> completes.<i> </i> <i>Nested 
+Workflows</i> allows you to create dependent relationships on <i>Workflow 
+Activities</i> that are running is a Distributed Workload Process.  For 
+example, if you are executing your software build on <i>Serve Pool “A”</i> and 
+you want your Testing <i>Workflow Activities</i> to execute on <i>Server Pool 
+“B”</i>, you would need to define each of these <i>Workflow Activities</i> as a 
+<i>Nested Workflow</i> and then create the chained relationship between 
+them.</p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%">Tutorial 
+Help:  View an online tutorial on <a href="http://www.openmakesoftware.com/online-tutorials/Excursion%20A-12/Excursion%20A-12.html">creating 
+and executing nested workflows</a>.</p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"><i>Note:  In order to use 
+Nested Workflows the Environment Variable OMSUBMIT_MAX_USER_PROC must be set to 
+a value of 3. This must be set in the shell that launches the </i><i><span style="FONT-FAMILY: 'Courier New'">omsubmit</span> executable. For 
+Example:</i></p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="TEXT-ALIGN: center; LINE-HEIGHT: 150%" align="center">OMSUBMIT_MAX_USER_PROC=3</p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p><span id="related-topics"></span></body></html>

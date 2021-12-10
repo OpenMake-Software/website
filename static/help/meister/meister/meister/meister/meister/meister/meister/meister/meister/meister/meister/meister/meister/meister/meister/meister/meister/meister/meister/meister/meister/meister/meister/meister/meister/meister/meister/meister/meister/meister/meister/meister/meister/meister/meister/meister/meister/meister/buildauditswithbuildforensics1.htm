@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Build Audits with Build Forensics</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/MeisterInsight.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="meisterinsight.htm" /><link rel="next" href="footprintingembeddingthedna1.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="8cb169bf-805c-44f3-ac7c-56b66efcff96">
+<h3>Build Audits with Build Forensics</h3>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><i>Build Audit 
+</i>reports provide the Build Forensics needed to trace a binary back to its 
+source code of origin.  A<i> Build Audit</i> shows accurate details of what 
+dependencies were used to create the deployable objects as well as all machine 
+configuration information.  A <i>Build Audit</i> can be used to show the 
+complete DNA and fingerprints of a Build.  <i>Build Audit</i> reports use 
+the command line program <span style="FONT-FAMILY: 'Courier New'">om</span> and 
+its high-speed<i> Dependency Discovery</i> to expose the dependencies and 
+artifacts used by the compiler during a build. These dependency and artifact 
+names, along with time stamp, size, a full-file path, version information, and 
+machine configuration, are written into each <i>Build Audit </i>report on the 
+Knowledge Base server. <i> Build Audits </i>do not require the use of a 
+version control tool as the <i>Dependency Discovery</i> does not depend on 
+version control information.  If the file is found within a version control 
+repository, the version information is reported.  If not, the file time 
+stamp, size and file-full path is reported.   </p>
+<p class="Bulleted" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%; TEXT-AUTOSPACE: ideograph-numeric; TEXT-INDENT: 0pt; tab-stops: 36.0pt"> </p>
+<p class="Bulleted" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%; TEXT-AUTOSPACE: ideograph-numeric; TEXT-INDENT: 0pt; tab-stops: 36.0pt">You 
+can execute a <i>Build Audit</i> from within a Workflow by going to the 
+<i>Workflow Explorer</i> and selecting the Workflow you wish to audit.  
+Double click on the Workflow and you will be displayed the <i>Workflow 
+Overview</i> panel.  Select the <i>Activity</i> tab at the bottom of your 
+screen and choose the <i>Add Activity. </i>Select the <i>Meister Activity 
+Plug-in </i>and the <i><span style="FONT-FAMILY: 'Times New Roman','serif'">Execute Meister Incremental Build 
+with Audit Report</span></i><span style="FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%"> </span><span style="FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 150%">Activity 
+Type.  Execute the Workflow and your <i>Build Audit</i> will be available 
+from the <i>Report Explorer</i> under<i> Build Audits.</i></span><i><span style="FONT-FAMILY: 'Arial','sans-serif'; LINE-HEIGHT: 150%"></span></i><i></i><i><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></i></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%">To execute a 
+build with <i>Build Audit </i>from a command line pass a <span style="FONT-FAMILY: 'Courier New'">–b</span> flag to the <span style="FONT-FAMILY: 'Courier New'">om</span> program along with the file 
+name.  Using a .<span style="FONT-FAMILY: 'Courier New'">htm</span> or 
+<span style="FONT-FAMILY: 'Courier New'">.html</span> extension will 
+automatically send the report to the server.  </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><i><span style="FONT-FAMILY: 'Courier New'">Usage:</span></i></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%"><i><span style="FONT-FAMILY: 'Courier New'">      om –b 
+buildaudit.html</span></i><span style="FONT-FAMILY: 'Courier New'"></span></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt; LINE-HEIGHT: 150%">Both Public and 
+Private <i>Build Audits </i>can be viewed from the Meister GUI.  Go to 
+Window &gt; Open Perspective &gt; OM Reports, to be provided a list of all Build 
+Audit Reports.  You can also view the <i>Build Audit r</i>eports from the 
+<i>Meister Management Control Console</i> by going to the <i>Insight</i> 
+Menu.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 18pt; LINE-HEIGHT: 150%"><i></i> </p><span id="related-topics"></span></body></html>

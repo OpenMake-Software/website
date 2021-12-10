@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Configuring Microsoft Team Build</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/TeamBuildWorkflows.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="microsoftteambuildandworkflows.htm" /><link rel="next" href="executingyourbuilddefinition.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="c310d85d-0b1d-4dc4-9b16-7512173bbc97">
+<h2>Configuring Microsoft Team Build</h2>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%">Table MTB-1 provides the steps for 
+configuring Team Build using a new Build Definition file.  Table MTB-2 
+provides the steps for configuring Team Build using an existing Build Definition 
+file.</p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%">MTB-1 Configuring Team Build Using 
+a New Build Definition File</p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" cellspacing="0" cellpadding="0" width="911" border="1">
+  <thead>
+  <tr>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 32.15pt" valign="top" width="64">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%">Step</p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 423.25pt" valign="top" width="847">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt">Action</p></td></tr></thead>
+  <tbody>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 32.15pt" valign="top" width="64">
+      <p class="MsoNormal" style="TEXT-ALIGN: center; LINE-HEIGHT: 150%" align="center">1</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 423.25pt" valign="top" width="847">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt">Add a 
+      new Build Definition in Visual Studio by clicking on "Build" -&gt; "New 
+      Build Definition" or right-clicking on "Builds" in the Team Explorer and 
+      selecting "New Build Definition"</p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 32.15pt" valign="top" width="64">
+      <p class="MsoNormal" style="TEXT-ALIGN: center; LINE-HEIGHT: 150%" align="center">2</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 423.25pt" valign="top" width="847">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt">Complete each item in the 
+      Build Definition wizard. NOTE: When in the "Project File" section of the 
+      Build Definition click on the "Create..." button to have the Build 
+      Definition project file created by the wizard.</p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 32.15pt" valign="top" width="64">
+      <p class="MsoNormal" style="TEXT-ALIGN: center; LINE-HEIGHT: 150%" align="center">3</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 423.25pt" valign="top" width="847">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt">Check 
+      the newly created MSBuild project file into Team Foundation Server</p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 32.15pt" valign="top" width="64">
+      <p class="MsoNormal" style="TEXT-ALIGN: center; LINE-HEIGHT: 150%" align="center">4</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 423.25pt" valign="top" width="847">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt">Navigate to the Team 
+      Build project file in the Source Control Explorer, right-click and select 
+      "Check Out for Edit..."</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 32.15pt" valign="top" width="64">
+      <p class="MsoNormal" style="TEXT-ALIGN: center; LINE-HEIGHT: 150%" align="center">5</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 423.25pt" valign="top" width="847">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt">Add 
+      the line the following line which imports the custom OpenMake MSBuild 
+      Targets as follows:</p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"> <span style="FONT-FAMILY: 'Courier New'">&lt;Import 
+      Project="$(MSBuildExtensionsPath)\OpenMake\v7\OpenMake.Build.Workflow.targets" 
+      /&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"> </p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 32.15pt" valign="top" width="64">
+      <p class="MsoNormal" style="TEXT-ALIGN: center; LINE-HEIGHT: 150%" align="center">6</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 423.25pt" valign="top" width="847">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt">Add an 
+      <span class="SpellE">ItemGroup</span> for the Workflow that the MSBuild 
+      project file will execute as follows:</p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"> </p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"> <span style="FONT-FAMILY: 'Courier New'"> &lt;<span class="SpellE">ItemGroup</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"><span style="FONT-FAMILY: 'Courier New'">    &lt;<span class="SpellE">WorkFlow</span> Include="[<span class="SpellE">workflow_name</span>]"&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"><span style="FONT-FAMILY: 'Courier New'">      
+      &lt;<span class="SpellE">ProjectEnvironmentString</span>&gt; &lt;/<span class="SpellE">ProjectEnvironmentString</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"><span style="FONT-FAMILY: 'Courier New'">    &lt;/<span class="SpellE">WorkFlow</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"><span style="FONT-FAMILY: 'Courier New'">  &lt;/<span class="SpellE">ItemGroup</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"> </p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt">  
+      Example:</p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"> </p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt">  
+      <span style="FONT-FAMILY: 'Courier New'">&lt;<span class="SpellE">ItemGroup</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"><span style="FONT-FAMILY: 'Courier New'">    &lt;<span class="SpellE">WorkFlow</span> Include="MORTGAGE PAYMENT - JAVA 
+      CLIENT"&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"><span style="FONT-FAMILY: 'Courier New'">      
+      &lt;<span class="SpellE">ProjectEnvironmentString</span>&gt; &lt;/<span class="SpellE">ProjectEnvironmentString</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"><span style="FONT-FAMILY: 'Courier New'">    &lt;/<span class="SpellE">WorkFlow</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"><span style="FONT-FAMILY: 'Courier New'">  &lt;/<span class="SpellE">ItemGroup</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"> </p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 32.15pt" valign="top" width="64">
+      <p class="MsoNormal" style="TEXT-ALIGN: center; LINE-HEIGHT: 150%" align="center">7</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 423.25pt" valign="top" width="847">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt">Optional: Add an Item 
+      Group for environment variables to pass into the Workflow as follows:</p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"> </p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt">  
+      <span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"><span style="FONT-FAMILY: 'Courier New'">  &lt;<span class="SpellE">ItemGroup</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"><span style="FONT-FAMILY: 'Courier New'">    &lt;Machine 
+      Include="[<span class="SpellE">machine_name</span>]"&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"><span style="FONT-FAMILY: 'Courier New'">      
+      &lt;<span class="SpellE">MachineEnvironmentString</span>&gt;[key=value]&lt;/<span class="SpellE">MachineEnvironmentString</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"><span style="FONT-FAMILY: 'Courier New'">    
+      &lt;/Machine&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"><span style="FONT-FAMILY: 'Courier New'">  &lt;/<span class="SpellE">ItemGroup</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"><span style="FONT-FAMILY: 'Courier New'">  </span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"><span style="FONT-FAMILY: 'Courier New'">  </span>Example:</p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"><span style="FONT-FAMILY: 'Courier New'">  </span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"><span style="FONT-FAMILY: 'Courier New'">  &lt;<span class="SpellE">ItemGroup</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"><span style="FONT-FAMILY: 'Courier New'">    &lt;Machine 
+      Include="linux_build_server1"&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"><span style="FONT-FAMILY: 'Courier New'">      
+      &lt;<span class="SpellE">MachineEnvironmentString</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"><span style="FONT-FAMILY: 'Courier New'">        
+      JAVA_HOME=/<span class="SpellE">usr</span>/java/j2sdk_1.4.2_16&lt;/<span class="SpellE">MachineEnvironmentString</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"><span style="FONT-FAMILY: 'Courier New'">    
+      &lt;/Machine&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt"><span style="FONT-FAMILY: 'Courier New'">  &lt;/<span class="SpellE">ItemGroup</span>&gt;  </span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 32.15pt" valign="top" width="64">
+      <p class="MsoNormal" style="TEXT-ALIGN: center; LINE-HEIGHT: 150%" align="center">8</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 423.25pt" valign="top" width="847">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 27.75pt">Save 
+      the MSBuild project file and check in to Team Foundation 
+  Server.</p></td></tr></tbody></table>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"><b></b> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%">MTB-2 Configuring Team Build Using 
+an Existing Build Definition File</p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" cellspacing="0" cellpadding="0" width="911" border="1">
+  <thead>
+  <tr>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 32.15pt" valign="top" width="64">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%">Step</p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 423.25pt" valign="top" width="847">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt">Action</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 32.15pt" valign="top" width="64">
+      <p class="MsoNormal" style="TEXT-ALIGN: center; LINE-HEIGHT: 150%" align="center">1</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 423.25pt" valign="top" width="847">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt">Navigate to the Team 
+      Build project file in the Source Control Explorer, right-click and select 
+      "Check Out for Edit..."</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 32.15pt" valign="top" width="64">
+      <p class="MsoNormal" style="TEXT-ALIGN: center; LINE-HEIGHT: 150%" align="center">2</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 423.25pt" valign="top" width="847">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt">Add 
+      the line the following line which imports the custom OpenMake MSBuild 
+      Targets as follows:</p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"> <span style="FONT-FAMILY: 'Courier New'">&lt;Import 
+      Project="$(MSBuildExtensionsPath)\OpenMake\v7\OpenMake.Build.Workflow.targets" 
+      /&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"> </p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 32.15pt" valign="top" width="64">
+      <p class="MsoNormal" style="TEXT-ALIGN: center; LINE-HEIGHT: 150%" align="center">3</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 423.25pt" valign="top" width="847">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt">Add an 
+      <span class="SpellE">ItemGroup</span> for the Workflow that the MSBuild 
+      project file will execute as follows:</p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"> </p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"> <span style="FONT-FAMILY: 'Courier New'"> &lt;<span class="SpellE">ItemGroup</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"><span style="FONT-FAMILY: 'Courier New'">    &lt;<span class="SpellE">WorkFlow</span> Include="[<span class="SpellE">workflow_name</span>]"&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"><span style="FONT-FAMILY: 'Courier New'">      
+      &lt;<span class="SpellE">ProjectEnvironmentString</span>&gt; &lt;/<span class="SpellE">ProjectEnvironmentString</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"><span style="FONT-FAMILY: 'Courier New'">    &lt;/<span class="SpellE">WorkFlow</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"><span style="FONT-FAMILY: 'Courier New'">  &lt;/<span class="SpellE">ItemGroup</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"> </p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt">  
+      Example:</p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"> </p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt">  
+      <span style="FONT-FAMILY: 'Courier New'">&lt;<span class="SpellE">ItemGroup</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"><span style="FONT-FAMILY: 'Courier New'">    &lt;<span class="SpellE">WorkFlow</span> Include="MORTGAGE PAYMENT - JAVA 
+      CLIENT"&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"><span style="FONT-FAMILY: 'Courier New'">      
+      &lt;<span class="SpellE">ProjectEnvironmentString</span>&gt; &lt;/<span class="SpellE">ProjectEnvironmentString</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"><span style="FONT-FAMILY: 'Courier New'">    &lt;/<span class="SpellE">WorkFlow</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"><span style="FONT-FAMILY: 'Courier New'">  &lt;/<span class="SpellE">ItemGroup</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"> </p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 32.15pt" valign="top" width="64">
+      <p class="MsoNormal" style="TEXT-ALIGN: center; LINE-HEIGHT: 150%" align="center">4</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 423.25pt" valign="top" width="847">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt">Optional: Add an Item 
+      Group for environment variables to pass into the Workflow as follows:</p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"> </p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt">  
+      <span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"><span style="FONT-FAMILY: 'Courier New'">  &lt;<span class="SpellE">ItemGroup</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"><span style="FONT-FAMILY: 'Courier New'">    &lt;Machine 
+      Include="[<span class="SpellE">machine_name</span>]"&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"><span style="FONT-FAMILY: 'Courier New'">      
+      &lt;<span class="SpellE">MachineEnvironmentString</span>&gt;[key=value]&lt;/<span class="SpellE">MachineEnvironmentString</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"><span style="FONT-FAMILY: 'Courier New'">    
+      &lt;/Machine&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"><span style="FONT-FAMILY: 'Courier New'">  &lt;/<span class="SpellE">ItemGroup</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"><span style="FONT-FAMILY: 'Courier New'">  </span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"><span style="FONT-FAMILY: 'Courier New'">  </span>Example:</p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"><span style="FONT-FAMILY: 'Courier New'">  </span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"><span style="FONT-FAMILY: 'Courier New'">  &lt;<span class="SpellE">ItemGroup</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"><span style="FONT-FAMILY: 'Courier New'">    &lt;Machine 
+      Include="linux_build_server1"&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"><span style="FONT-FAMILY: 'Courier New'">      
+      &lt;<span class="SpellE">MachineEnvironmentString</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"><span style="FONT-FAMILY: 'Courier New'">        
+      JAVA_HOME=/<span class="SpellE">usr</span>/java/j2sdk_1.4.2_16&lt;/<span class="SpellE">MachineEnvironmentString</span>&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"><span style="FONT-FAMILY: 'Courier New'">    
+      &lt;/Machine&gt;</span></p>
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt"><span style="FONT-FAMILY: 'Courier New'">  &lt;/<span class="SpellE">ItemGroup</span>&gt;  </span></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 32.15pt" valign="top" width="64">
+      <p class="MsoNormal" style="TEXT-ALIGN: center; LINE-HEIGHT: 150%" align="center">5</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 423.25pt" valign="top" width="847">
+      <p class="MsoNormal" style="LINE-HEIGHT: 150%; MARGIN-RIGHT: 36.75pt">Save 
+      the MSBuild project file and check in to Team Foundation 
+  Server.</p></td></tr></thead>
+  <tbody></tbody></table>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p><span id="related-topics"></span></body></html>

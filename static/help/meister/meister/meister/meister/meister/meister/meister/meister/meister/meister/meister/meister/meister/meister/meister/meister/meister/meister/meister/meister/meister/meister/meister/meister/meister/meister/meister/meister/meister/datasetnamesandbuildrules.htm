@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Dataset Names and Build Rules</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/zOS Administration Guide.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="managingbuildtypesandrules.htm" /><link rel="next" href="defaultfiletypeextension.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="fb0fae47-e754-4d8b-9e3f-d2cabaacabd1">
+<h3>Dataset Names and Build Rules</h3>
+<p class="MsoNormal"> </p>
+<p class="MsoBodyTextIndent"><i>z/OS </i>Build Types<i> and </i>Rules<i> are 
+handled the same way </i>Build Types<i> and </i>Rules<i> are handled for any 
+other supported operating system.  The biggest difference between z/OS and 
+other supported operating systems is the structure and naming of files.  In 
+addition, z/OS </i>Build Types<i> do not use Option Groups.  </i></p>
+<p class="MsoBodyTextIndent" style="TEXT-INDENT: 18pt"><i></i> </p>
+<p class="MsoBodyTextIndent"><i>Unlike development tools on other operating 
+systems such as UNIX or Windows, the common mainframe development tools, namely 
+COBOL, PL1, and Assembler, do not necessarily have standard input type and 
+output type names.  It is common practice for each mainframe administrator 
+to name their source and load libraries as they see appropriate.  There are 
+some naming standards; however it is not unusual to see deviations from this 
+standard.   For example, source module names could be:</i></p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 41.15pt"> </p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 41.15pt"><span style="FONT-FAMILY: Courier">ACME.PAYROLL.PROD.SOURCE(members)</span></p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 41.15pt"><span style="FONT-FAMILY: Courier"> </span>or</p>
+<p class="MsoBodyTextIndent" style="MARGIN-LEFT: 41.15pt"><span style="FONT-FAMILY: Courier">ACME.PAYROLL.PROD.COBOBL(members)</span></p>
+<p class="MsoBodyTextIndent"> </p>
+<p class="MsoBodyTextIndent"><i>In the above example, both libraries contain COBOL 
+programs.  In the first library name, the Type qualifier “</i><i><span style="FONT-FAMILY: Courier">SOURCE</span>” does not indicate what kind of 
+source code can be found in the library. It could be a mixture of PL1 and COBOL 
+source code.  The product would not be able to execute against this library 
+because it uses the Type qualifier, in this case “</i><i><span style="FONT-FAMILY: Courier">SOURCE</span>”, to determine the Build </i>Rule<i> 
+to execute and which compiler to call.  The </i><i><span style="FONT-FAMILY: 'Courier New'">OOMLBLDM</span> program would not be able to 
+determine from the “</i><i><span style="FONT-FAMILY: Courier">SOURCE</span>” 
+Type qualifier to call a COBOL compile or a PL1 compile.</i></p>
+<p class="MsoBodyTextIndent"><i></i> </p>
+<p class="MsoBodyTextIndent"><i>For this reason, the Type qualifier and the 
+organization of source code is very important.  In the second library name 
+where "</i><i><span style="FONT-FAMILY: Courier">COBOL</span>" is the Type 
+qualifier, The OOMLBLDM program would immediately understand that the members in 
+this library are COBOL programs and could execute the Build 
+</i>Rules<i>.</i></p>
+<p class="MsoBodyTextIndent"><i></i> </p>
+<p class="MsoBodyTextIndent"><i>In summary, dataset names are used to determine 
+the file "Type" when interpreting the Build </i>Rules<i>.  For this reason, 
+the method used for naming your source and load datasets is critical in order to 
+build your components correctly.  It is also important that Datasets are 
+used to store the same source code Types and that the source code Types are not 
+mixed as in the "SOURCE" example above where both COBOL and PL1 modules were 
+managed in a single Dataset.</i></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 0pt"> </p>
+<p class="MsoBodyTextIndent2">Standard dataset names use multiple high-level 
+qualifiers based on:</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 34.2pt"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 34.2pt; TEXT-INDENT: 0pt; tab-stops: 63.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">  </span>Project </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 34.2pt; TEXT-INDENT: 0pt; tab-stops: 63.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">  </span>Group </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 34.2pt; TEXT-INDENT: 0pt; tab-stops: 63.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">  </span>Type</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 0pt"> </p>
+<p class="MsoBodyTextIndent2" style="MARGIN-LEFT: 18.35pt">The last qualifier of 
+the dataset name is assumed to be the “Type” qualifier and is used to determine 
+the "File Extension" on the Build <i>Rule</i>. </p>
+<p class="MsoBodyTextIndent2"> </p>
+<p class="MsoBodyTextIndent2">For example:</p>
+<p class="MsoBodyTextIndent2" style="MARGIN-LEFT: 54pt">The <i>Rule</i> for a z/OS 
+COBOL Load module looks like:</p>
+<p class="MsoBodyTextIndent2" style="MARGIN-LEFT: 54pt"> </p>
+<p class="MsoBodyTextIndent2" style="TEXT-ALIGN: center; MARGIN-LEFT: 54pt" align="center">Dependency File Extension: .COBOL()</p>
+<p class="MsoBodyTextIndent2" style="TEXT-ALIGN: center; MARGIN-LEFT: 54pt" align="center">Target File Extension:  .LOAD()</p>
+<p class="MsoBodyTextIndent2" style="TEXT-ALIGN: center; MARGIN-LEFT: 54pt" align="center">.COBOL()  -&gt; .LOAD()</p>
+<p class="MsoBodyTextIndent2" style="TEXT-ALIGN: center; MARGIN-LEFT: 54pt" align="center"> </p>
+<p class="MsoBodyTextIndent2" style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: Courier">&lt;Project&gt;.&lt;Group&gt;.<b>COBOL(member)</b> 
+is compiled into</span></p>
+<p class="MsoBodyTextIndent2" style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: Courier">&lt;Project&gt;.&lt;Group&gt;<b>.LOAD(member)</b></span></p>
+<p class="MsoBodyTextIndent2"><span style="FONT-FAMILY: Courier"></span> </p>
+<p class="MsoBodyTextIndent2" style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: Courier">ACME.ACCTPAY.COBOL(acctpay1)  is compiled 
+into</span></p>
+<p class="MsoBodyTextIndent2" style="TEXT-ALIGN: center" align="center"><span style="FONT-FAMILY: Courier">ACME.ACCTPAY.LOAD(acctpay1)</span></p>
+<p class="MsoBodyTextIndent2"> </p>
+<p class="MsoBodyTextIndent2" style="TEXT-INDENT: 18pt"> </p>
+<p class="MsoBodyTextIndent2">The Dependency File Extension “.COBOL()” tells the 
+OOMLOM program that when building a z/OS COBOL load module use the dependency 
+source code member of  the type COBOL to create a load module of the type 
+LOAD.</p>
+<p class="MsoBodyTextIndent2"> </p><span id="related-topics"></span></body></html>

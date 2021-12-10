@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Customizing File Type Extensions</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/zOS Administration Guide.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="defaultfiletypeextension.htm" /><link rel="next" href="customizingzosscriptsfornewtypes.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="56c28143-7d80-4556-9c9b-53d2099c5c1f">
+<h3>Customizing File Type Extensions</h3>
+<p class="MsoNormal"> </p>
+<p class="MsoBodyTextIndent2">Because not all z/OS installations use the same 
+naming standards for datasets, it may be necessary to update the <i>Rules</i> 
+and <i>Methods</i> of the z/OS <i>Build Types</i> to use different names for the 
+TYPE qualifier.</p>
+<p class="MsoBodyTextIndent2">For example, instead of using:</p>
+<p class="MsoBodyTextIndent2" style="TEXT-ALIGN: center" align="center"><b><span style="FONT-FAMILY: Courier">.COBOL(member)</span></b><span style="FONT-FAMILY: Courier"> compiled into <b>.LOAD(member)</b></span></p>
+<p class="MsoBodyTextIndent2" style="TEXT-ALIGN: center" align="center"><b><span style="FONT-FAMILY: Courier"></span></b> </p>
+<p class="MsoBodyTextIndent2">The names should be:</p>
+<p class="MsoBodyTextIndent2" style="TEXT-ALIGN: center" align="center"><b><span style="FONT-FAMILY: Courier">.COB(member)</span></b><span style="FONT-FAMILY: Courier"> compiled into <b>.LOADLIB(member)</b></span></p>
+<p class="MsoBodyTextIndent2"> </p>
+<p class="MsoBodyTextIndent2">In order to use new dataset names for a particular 
+<i>Build Type</i>, the <i>Rules</i> and <i>Methods</i> associated to the 
+<i>Build Type</i> must be updated.</p>
+<p class="MsoBodyTextIndent2"> </p>
+<p class="MsoBodyTextIndent2">The Web Client is used to update the Build 
+<i>Rules</i>.  In order to update the Build <i>Rules</i>, you must be an 
+Administrator or have Group Privileges to access the <i>Build 
+Type</i>.   </p>
+<p class="MsoBodyTextIndent2"> </p>
+<p class="MsoBodyTextIndent2">To update a Build <i>Rule</i> go to the “<i>Build 
+Types</i> and <i>Rules</i>” main menu option from the Web Client and select the 
+z/OS operating system.  This will display each of the <i>Rules</i> 
+associated to the <i>Build Type</i>.  The Build <i>Rules</i> indicate the 
+names of the Type qualifier for the source dependency libraries and the Type 
+qualifier name for the load libraries.  </p>
+<p class="MsoBodyTextIndent2"> </p>
+<p class="MsoBodyTextIndent2">If your Type qualifier names are different, you will 
+need to edit the <i>Rule</i>.  For “Dependency File Extension” Type 
+qualifier names, simply add the new name to the Dependency File Extension 
+list.  For “Intermediate” or “Final Target File Extension” Type qualifiers, 
+you will need to change the name. This is because multiple Type qualifiers can 
+be used as input to the compile step; however only one load library can be 
+specified. Multiple load modules cannot be created for a single compile 
+step.</p>
+<p class="MsoBodyTextIndent2"> </p>
+<p class="MsoBodyTextIndent2">Once you have updated your <i>Rules</i>, you will 
+also need to update the corresponding <i>Methods</i>.  When updating the 
+<i>Rule</i>, the associated <i>Build Method</i> will be displayed in the 
+"Command to Execute" field on the <i>Build Rule Detail</i> Screen.  Take 
+note of which <i>Methods</i> you will need to update when you change the 
+<i>Build Rule</i> File Extension Types.</p>
+<p class="MsoBodyTextIndent2"> </p>
+<p class="MsoBodyTextIndent2"> </p><span id="related-topics"></span></body></html>

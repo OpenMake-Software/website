@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Reusable Source Code Best Practices</title>
+<meta charset="utf-8" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="predefinedcompilerdependencydirectories.htm" /><link rel="next" href="usingpredefinedbuildservices.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="8946c7a6-bec1-464f-8244-00aa628c1b83">
+<h2><i>Reusable Source Code Best Practices</i></h2>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt">Most companies that do a 
+substantial amount of development will establish a team that is responsible for 
+the "Architecture" of these applications.  The Architecture team writes 
+reusable code that the "Business" development teams can include in their 
+business software solutions.  A common example of this would be the 
+incorporation of standard SOA directories where the WSDL objects are stored and 
+managed.  Other examples would include:</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt; TEXT-INDENT: 18pt; tab-stops: 27.0pt 54.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">  </span>Standard 
+controls</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt; TEXT-INDENT: 18pt; tab-stops: 27.0pt 54.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">  </span>Database access 
+routines</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt; TEXT-INDENT: 18pt; tab-stops: 27.0pt 54.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">  </span>Specialized 
+Security routines</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 27pt; TEXT-INDENT: 18pt; tab-stops: 27.0pt 54.0pt"><span style="FONT-FAMILY: Verdana">•</span><span style="FONT-FAMILY: Symbol; VISIBILITY: hidden">  
+</span>Networking/Communication routines</p>
+<p class="MsoHeader" style="MARGIN-LEFT: 27pt"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 24pt">Beyond the "architecture" level of 
+code, there is also code that can be shared between business level application 
+teams.  This code sharing means that two separate applications may pass 
+data to one another, requiring that one application compile with the header 
+files and link with the libraries or borrow a jar file of another 
+application.  Often this sharing of code is done using reusable code 
+objects designed based on the common structures of object-oriented 
+programming.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 24pt"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 24pt">The most common mistake that is 
+made with reusable code is that it becomes "copied code".  "Copied code" 
+refers to the situation where, instead of using the reusable code from a central 
+shared area, each developer copies the reusable modules into their own work 
+directories.  In this situation, when a Version Management tool is used, 
+the reusable modules are often checked into different team directories.  
+Thus, when a fix is needed in the reusable modules, it becomes a major effort to 
+ensure that each team updates their copies of these modules. This process of 
+managing reusable objects is very ineffective.  In fact it negates the 
+carefully planned design of common or shared programming since the reusable code 
+base branches so often that it is no longer reusable. </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 24pt"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 24pt">Conversely, developers often argue 
+that they prefer to keep their own private copies of the reusable modules so 
+that they are not affected by changes in the reusable code.  However, a 
+better approach is to version and manage the reusable code in a way that allows 
+developers to use it as soon as it becomes available from the other teams.  
+By using the<i> Dependency Directory</i>, this streamlined process of managing 
+the reusable code can be achieved. </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 24pt"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 24pt">Each Project Team's <i>Dependency 
+Directory</i> should reference the reusable code at the level that is 
+appropriate.  For example, for application development teams, the 
+development level <i>Dependency Directory</i> should reference the reusable code 
+at the "Testing" level.   This organization gives the Developers an 
+opportunity to test the reusable code before it is released to production.  
+It also allows the dependency relationship between application teams and the 
+Architecture team to be clearly defined for release control.</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 24pt"> </p><span id="related-topics"></span></body></html>

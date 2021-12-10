@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Running Workflows from External Tools</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/AdvancedWorkflowFeatures.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="definingmultiplatformorcrosslanguageworkflows.htm" /><link rel="next" href="nestedworkflows.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="16d478dd-4bb2-4c92-9b2c-33d5239df9ff">
+<h2><i>Running Workflows</i><i></i><i></i><i> from External Tools</i></h2>
+<p class="MsoNormal" style="MARGIN-LEFT: 18pt"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%">You can execute <i>Workflows</i> 
+that use <i>Server Pools</i> from the command line. This is useful when an 
+external tool is used to "kick-off" the <i>Workflow</i>, such as from a 
+versioning or task management tool.   Executing the <i>Workflow</i> 
+from the command line supports this process.</p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%">Once a <i>Workflow</i>  has 
+been defined and saved from the <i>Workflow Editor</i>, you can execute it with 
+<span style="FONT-FAMILY: 'Courier New'">omcmdline.jar</span><span style="FONT-FAMILY: 'Courier New'"></span><span style="FONT-FAMILY: 'Courier New'">.</span>  <span style="FONT-FAMILY: 'Courier New'">omcmdline.jar</span> can be found in the bin 
+directory under the root install of the Command Line Client.  When executed 
+<span style="FONT-FAMILY: 'Courier New'">omcmdline.jar</span> will call any or 
+all <i>Workflows</i> exactly as they are defined in the <i>Workflow 
+Explorer</i>.  As a result, the <i>Workflow</i> must be defined to use a 
+<i>Server Pool</i><i></i><i></i> before it can be executed remotely from 
+the command line.  </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%">The syntax for calling 
+<i>Workflows</i> from the command line is as follows:</p>
+<p class="MsoNormal"> </p>
+<p class="MsoBodyText3"><span style="FONT-FAMILY: 'Courier New'">java -jar 
+&lt;<span class="SpellE">Command_Line_Client_Root</span>&gt;\bin\ 
+omcmdline.jar</span><span style="FONT-FAMILY: 'Courier New'"></span><span style="FONT-FAMILY: 'Courier New'"> -build &lt;<span class="SpellE">Build_Job</span>&gt;, &lt;<span class="SpellE">Build_Job</span>&gt; 
+</span></p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal" style="LINE-HEIGHT: 150%">To call this from an external tool, 
+simply create a script that references this command and add it to your external 
+task. All logs from a command line <i>Workflow</i><i></i><i></i><i> </i>are 
+stored on the central Knowledgebase Server and can be viewed using the 
+<i>Workflow Log Explorer</i>.</p>
+<p class="MsoNormal"><a name="PrivateorPublic" id="PrivateorPublic"></a> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 18pt"><span style="FONT-SIZE: 14pt"></span> </p>
+<p class="MsoNormal"> </p><span id="related-topics"></span></body></html>

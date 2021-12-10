@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>getBuildTaskFiles( $BuildTask, $OptionGroup, $all)</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/WritingandUsingBuildMethods.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="getoptiongroupsbuildtask.htm" /><link rel="next" href="getbuildtaskoptionoptionnamebuildtaskoptiongroup.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="bdc222c1-3638-4543-bcef-dec60be34af7">
+<h3>getBuildTaskFiles( $BuildTask, $OptionGroup, $all)</h3>
+<p class="MsoPlainText"><span style="FONT-SIZE: 12pt"></span> </p>
+<p class="MsoNormal">This method gets the files and options for the files that 
+match a given <i>Build Task</i> and <i>Option Group</i>. If the <i>Option 
+Group</i> is not passed, the outline will assume the standard option group as 
+defined in $OPTIONGROUP_DEFAULT_NAME. It will returns references to file list 
+and option list.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">If $all is true, all files are returned listed as 
+dependencies. Otherwise, only the files are returned whose Dependency Parent is 
+the Target that is being built.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">For example, in the Javac task for abc.jar.</p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt"><span style="FONT-SIZE: 12pt"></span> </p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt"><span style="FONT-SIZE: 12pt">        $Target = 
+"abc.javac";</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt"><span style="FONT-SIZE: 12pt">        
+$DependencyParent{"a.java"} = "abc.javac";</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt"><span style="FONT-SIZE: 12pt">        
+$DependencyParent{"rt.jar"} = "abc.classpath";</span></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt"><span style="FONT-SIZE: 12pt"></span> </p>
+<p class="MsoNormal">If $all is true, both a.java and rt.jar are returned. If $all 
+is not true, only a.java is returned. This is because rt.jar is inherited from 
+the previous <i>Build Task</i>.</p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'"></span> </p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt"><u><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">USAGE:</span></u></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt"><span style="FONT-SIZE: 12pt"></span> </p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 58.5pt">my ( $file_ref, $option_ref ) 
+= $build_options-&gt;getBuildTaskFiles( "Ant</p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 58.5pt">Javac" ); my @files = 
+@{$file_ref}; my @options = @{$option_ref};</p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt"><span style="FONT-SIZE: 12pt"></span> </p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt"><u><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">RETURNS:</span></u></p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt; tab-stops: 62.25pt"><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'">         
+</span></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 36pt">References to two lists will be 
+returned, the files and the matching options for those files.</p>
+<p class="MsoPlainText" style="MARGIN-LEFT: 36pt"><span style="FONT-SIZE: 12pt"></span> </p>
+<p class="MsoPlainText"><span style="FONT-SIZE: 12pt"></span> </p>
+<p class="MsoPlainText"><b><span style="FONT-SIZE: 12pt; FONT-FAMILY: 'Arial','sans-serif'"></span></b> </p><span id="related-topics"></span></body></html>

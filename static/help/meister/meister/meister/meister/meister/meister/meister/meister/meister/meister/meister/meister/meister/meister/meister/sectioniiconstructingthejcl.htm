@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Section II: Constructing the JCL</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/zOS Administration Guide.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="sectioniinitialization.htm" /><link rel="next" href="locationofmethods.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="d57a763e-d45e-4d16-b5d0-0ff7e033fe03">
+<h4>Section II: Constructing the JCL </h4>
+<p class="t1Text141"> </p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">call PrePendJobCard 
+$JobCard;    /* Add the Job Card 
+*/               
+</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">queue 
+'//*-------------------------------------------------------'</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">queue '//* Using 
+'$ScriptName                                        
+</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">queue '//* for 
+'$RelTarget                    
+                       </span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">queue 
+'//*-------------------------------------------------------'</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">$CobolListing = 
+DelListDSN("Cobol",$Target,$Step,"Compile") </span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">queue 
+"//*-------------------------------------------------------"</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">queue "//* Run the 
+Cobol Compiler"</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">queue 
+"//*-------------------------------------------------------"</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">queue 
+"//COB"$CurrentStep  "EXEC PGM=IGYCRCTL,"</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">call FormatParmFlags 
+$CompFlags</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">queue 
+"//*"</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">call GetDSNConcat 
+"STEPLIB",$ENV.IGY_SIGYCOMP;                  
+</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">call GetDSNConcat 
+"SYSLIB",$ENV.CICS_SDFHCOB 
+$SysLibList;                  
+</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">call GetDSNPath 
+"SYSIN",$Source,"DISP=SHR";                    
+</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">call GetDSNPath 
+"SYSLIN",$Target,"DISP=SHR";                    
+</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">queue 
+"//SYSUT1    DD UNIT=SYSDA,SPACE=(460,(350,100))"</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">queue 
+"//SYSUT2    DD UNIT=SYSDA,SPACE=(460,(350,100))"</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">queue 
+"//SYSUT3    DD UNIT=SYSDA,SPACE=(460,(350,100))"</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">queue 
+"//SYSUT4    DD UNIT=SYSDA,SPACE=(460,(350,100))"</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">queue 
+"//SYSUT5    DD UNIT=SYSDA,SPACE=(460,(350,100))"</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">queue 
+"//SYSUT6    DD UNIT=SYSDA,SPACE=(460,(350,100))"</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">queue 
+"//SYSUT7    DD UNIT=SYSDA,SPACE=(460,(350,100))"</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">queue 
+"//SYSUT8    DD UNIT=SYSDA,SPACE=(460,(350,100))"</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">$CobolListing = 
+GetListDSN("Cobol",$Target,$Step,"Compile") </span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">queue 
+"//*--------------------------------------------------------"</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">queue "//* Log the 
+Output"</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">queue 
+"//*--------------------------------------------------------"</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">call LogMessage 
+"Detail","LCOB"$CurrentStep,"*.COB"$CurrentStep ||,  </span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">     ".SYSPRINT","RC &gt; 
+4",$CobolListing,"Compile"                                               
+</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">     </span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">queue 
+"//   IF (COB"$CurrentStep".RC &lt; 8) THEN"</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">call UpdateStats 
+$Target, "Detail","LSTS"$CurrentStep,"*.STS"$CurrentStep</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">queue 
+"//   ENDIF"</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">call 
+AddSubmitNextJCL "COB"$CurrentStep".RC &lt; 
+8"                                                                   
+     </span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">call 
+WriteJCL                            
+</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">exit 0;  
+</span></p>
+<p class="MsoNormal"> </p><span id="related-topics"></span></body></html>

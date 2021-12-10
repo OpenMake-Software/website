@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Section I: Initialization</title>
+<meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="LinksExt/zOS Administration Guide.css" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="samplemethod.htm" /><link rel="next" href="sectioniiconstructingthejcl.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="5e811bba-f6dd-442d-bd24-973e4a5c751a">
+<h4>Section I: Initialization</h4>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">/* Determine if the 
+compiler is for C++ 
+*/              
+</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">$Compiler      = 
+GetCompiler("COMPILE","CCNDRVR", "CXX");  </span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">/* Get Source 
+Dependency 
+*/                          
+</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">$Source        
+= 
+GetDep($AllDeps,".cobol");                
+</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">/* Get Compile Flags 
+*/               
+</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">$CompFlags     = 
+GetCompileFlags("COMPILE","IGYCRCTL");    </span></p>
+<p class="MsoHeader" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<p class="MsoHeader" style="MARGIN-LEFT: 0pt"><span style="FONT-FAMILY: 'Courier New'">/* Get SYSLIB library concatenation 
+*/</span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">$SysLibList = 
+GetVPathDSN($ValidDatasetVPath,".copy .copylib 
+.cpy")</span>                              
+<span style="FONT-FAMILY: Courier"></span></p>
+<p class="MsoNormal"><span style="FONT-SIZE: 8pt; FONT-FAMILY: 'Courier New'"></span> </p><span id="related-topics"></span></body></html>

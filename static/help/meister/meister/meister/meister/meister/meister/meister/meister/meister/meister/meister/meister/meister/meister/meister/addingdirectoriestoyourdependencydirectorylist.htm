@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Adding Directories to your Dependency Directory List</title>
+<meta charset="utf-8" />
+<script src="js/nethelp.redirector.js" type="text/javascript"></script>
+<link rel="prev" href="addinganewdependencydirectorylistname.htm" /><link rel="next" href="therefdirvariable.htm" />
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2014.1.0.935" />
+</head>
+<body data-c1-topic-id="7fde00ed-a671-45b7-b2c9-58bddbdd01bb">
+<h2>Adding Directories to your Dependency Directory List</h2>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"><i>Dependency Directories</i> must be added to your 
+<i>Project</i>, otherwise your builds will not work as there will be no 
+reference to the source code or libraries needed for the build. In addition, 
+every Project's Dependency Directory List must reference the <i>Local Build 
+Directory</i> (.).  The local build directory is needed as this is where 
+intermediate objects of the build can be found.  In addition, developers 
+check-out source code to their Local Build Directory, therefore it needs to be 
+listed as a <i>Dependency Directory</i>.  For this reason, the first 
+directory in your <i>Dependency Directory</i> List should be ".".</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">Directories can be added to your <i>Dependency Directory</i> 
+list by using the <i>Overview</i> tab on the right hand side of your <i>Project 
+Explorer</i> screen. When you add your directories to your <i>Dependency 
+Directory</i> list, you can define the type of files that may be found in your 
+directories.  The possible types are defined in Table CP-4.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"><b>Table CP-4  Directory Definitions</b></p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" cellspacing="0" cellpadding="0" border="1">
+  <tbody>
+  <tr>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 72.9pt" valign="top" width="146">
+      <p class="MsoNormal">Type</p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 369.9pt" valign="top" width="740">
+      <p class="MsoNormal">Definition</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 72.9pt" valign="top" width="146">
+      <p class="MsoNormal">Project</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 369.9pt" valign="top" width="740">
+      <p class="MsoNormal">This directory type indicates that a Microsoft Project 
+      file is present in the directory.  It is used for .Net, Visual Studio 
+      and Visual Basic Project files only.  See .<a class="topic-link" href="netandprojectdependencydirectories.htm">NET Project Dependency 
+      Directories</a> for more details on using this type for Microsoft 
+      builds.</p>
+      <p class="MsoNormal"> </p>
+      <p class="MsoNormal"> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 72.9pt" valign="top" width="146">
+      <p class="MsoNormal">TGT</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 369.9pt" valign="top" width="740">
+      <p class="MsoNormal">This indicates that the directory may contain Target 
+      Files (<span style="FONT-FAMILY: 'Courier New'">.tgt</span>).  </p>
+      <p class="MsoNormal"> </p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 72.9pt" valign="top" width="146">
+      <p class="MsoNormal">Source</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 369.9pt" valign="top" width="740">
+      <p class="MsoNormal">Selecting this option indicates that source files such 
+      as <span style="FONT-FAMILY: 'Courier New'">.java</span>, <span style="FONT-FAMILY: 'Courier New'">.c</span>, <span style="FONT-FAMILY: 'Courier New'">.cpp</span>, or similar source files 
+      reside in this directory</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 72.9pt" valign="top" width="146">
+      <p class="MsoNormal">Library</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 369.9pt" valign="top" width="740">
+      <p class="MsoNormal">Selecting this option indicates that library files such 
+      as <span style="FONT-FAMILY: 'Courier New'">.lib</span>,<span style="FONT-FAMILY: 'Courier New'"> .o</span>,<span style="FONT-FAMILY: 'Courier New'"> .ja</span>r, etc. reside in this 
+      directory.</p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">Table CP-5 will guide you through the process of adding 
+directories to your Directory Dependency List.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"><b>Table CP-5  Add Directories to your Directory 
+Dependencies</b></p>
+<table class="MsoNormalTable" style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; MARGIN-LEFT: 5.4pt; BORDER-LEFT: medium none" cellspacing="0" cellpadding="0" border="1">
+  <tbody>
+  <tr>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 49.5pt" valign="top" width="99">
+      <p class="MsoNormal"><b>Step</b></p></td>
+    <td style="BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; BACKGROUND: #99ccff; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 387.9pt" valign="top" width="776">
+      <p class="MsoNormal"><b>Action</b></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 49.5pt" valign="top" width="99">
+      <p class="MsoNormal">1</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 387.9pt" valign="top" width="776">
+      <p class="MsoNormal">From the main menu select <i>Window-Open Perspective-OM 
+      Meister</i></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 49.5pt" valign="top" width="99">
+      <p class="MsoNormal">2</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 387.9pt" valign="top" width="776">
+      <p class="MsoNormal">Select the<i> Project Explorer</i> tab near the top of 
+      your screen.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 49.5pt" valign="top" width="99">
+      <p class="MsoNormal">3</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 387.9pt" valign="top" width="776">
+      <p class="MsoNormal">Double Click on the <i>Dependency Directory Name</i> 
+      which you wish to assign a file system directory.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 49.5pt" valign="top" width="99">
+      <p class="MsoNormal">4</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 387.9pt" valign="top" width="776">
+      <p class="MsoNormal">You will be provided an <i>Overview </i>screen on the 
+      right side of the <i>Project Explorer</i></p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 49.5pt" valign="top" width="99">
+      <p class="MsoNormal">5</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 387.9pt" valign="top" width="776">
+      <p class="MsoNormal">Select the <i>New</i> or <i>Browse</i> button on the 
+      right of your screen.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 49.5pt" valign="top" width="99">
+      <p class="MsoNormal">6</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 387.9pt" valign="top" width="776">
+      <p class="MsoNormal">If you selected <i>New</i> – enter the directory in the 
+      <i>Directory Definition</i> field and select they type of files that may 
+      be found in the Directory.  Select OK.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 49.5pt" valign="top" width="99">
+      <p class="MsoNormal">7</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 387.9pt" valign="top" width="776">
+      <p class="MsoNormal">If you selected <i>Browse – </i>browse the file system 
+      to your directory you wish to add.   Select OK.</p></td></tr>
+  <tr>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; WIDTH: 49.5pt" valign="top" width="99">
+      <p class="MsoNormal">8</p></td>
+    <td style="BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt; WIDTH: 387.9pt" valign="top" width="776">
+      <p class="MsoNormal">To Define your Directory, use the <i>Edit </i>button to 
+      specify the type of files that can be found in your Directory using the 
+      Directory Definition dialog box. </p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 30pt">*Note:  An "ERROR 40" will 
+occur during the build if the needed code is not found in the <i>Dependency 
+Directory</i> List. This indicates that you may not have defined all of the 
+needed directories for the build.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal" style="MARGIN-LEFT: 31.5pt">Note:  The <i>Browse 
+</i>will not remember its last location on Windows unless Meister is being run 
+as a plug-in to Eclipse 3.4 or Eclipse 3.5.  This issue is due to a bug in 
+the Eclipse framework.</p>
+<p class="MsoNormal"> </p>
+<div class="related-topics-header">
+<p class="RelatedHead">More:</p>
+<div class="related-topics">
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="therefdirvariable.htm">The REFDIR Variable</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="eclipseplugindependencydirectories.htm">Eclipse Plug-in Dependency 
+Directories</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="netandprojectdependencydirectories.htm">.NET and "Project" Dependency 
+Directories</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="reusabledependencydirectories.htm">Reusable Dependency Directories</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="orderingdependencydirectories.htm">Ordering Dependency Directories</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="usingdependencydirectorylistsforalifecycleprocess.htm">Using Dependency 
+Directory Lists for a Life Cycle Process</a></p>
+<p class="MsoNormal"><a class="topic-link" style="TEXT-DECORATION: none" href="usingdependencydirectorylistsforaversionlabelprocess.htm">Using Dependency 
+Directory Lists for a Version Label Process</a></p></div></div></body></html>
