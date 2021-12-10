@@ -24,4 +24,5 @@ COPY --from=build /build/conf/nginx.conf /etc/nginx/
 
 # fix /tmp/pagespeed_cache permission denied
 RUN mkdir -p /tmp/pagespeed_cache; \
-    chmod a+w /tmp/pagespeed_cache; 
+    chmod a+w /tmp/pagespeed_cache; \
+    pk add --no-cache "openssl>1.0.2q-r0"
