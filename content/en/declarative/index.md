@@ -15,7 +15,7 @@ type: contributor
     <h1 class="text-left">Consistent, Repeatable Builds</h1>
     <hr>
     <br>
-    <img src="/images/ScriptingNerd-sm.jpg" alt="build manager" width="300px" height="400px"  />
+    <img src="/images/ScriptingNerd-sm.jpg" alt="build manager" style="width"300px;height:400px;"  />
   </div>
 
 One of the most misunderstood steps in the CI/CD pipeline is the software 'build.' Software builds compile and link source code into releasable binaries, and then adds those binaries to a release 'package.' The main reason why it is misunderstood is because an unsung hero, often called the 'build manager,' works quietly, tirelessly and often late to make sure the builds are running. In the early days of continuous integration we talked about the importance of the "10 minute" build, and our build manager made it their goal to accomplish the mission. 

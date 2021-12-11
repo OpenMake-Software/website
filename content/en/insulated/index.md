@@ -15,7 +15,7 @@ type: contributor
     <h1 class="text-left">What is an insulted build supply chain?</h1>
     <hr>
     <br>
-    <img src="/images/dogwithtowelonhead.jpg" alt="insulated builds" width="30%" height="30%" />
+    <img src="/images/dogwithtowelonhead.jpg" alt="insulated builds" style="width:30%;height:30%" />
   </div>
 
 Insulate your software supply chain to control the objects that are used in your software builds. A porous software compile process creates the risk of having unwanted and unnecessary artifacts in the binaries you ship to your end users. Insulating the build supply chain is essential for securing the contents of your binaries and deployment packages. To create an insulated build, the process must have precise control over the source code and external libraries that go into the build process and the resulting binaries that go into the deployment package.

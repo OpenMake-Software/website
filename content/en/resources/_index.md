@@ -14,7 +14,7 @@ menu:
 ## Meister Security Best Practices
 
 <div style="margin-right:auto;margin-left:auto">
-<img src="/images/womenatcomputer.jpg" alt="Build Security" width="200px" height="150px" />
+<img src="/images/womenatcomputer.jpg" alt="Build Security" style="width"200px;height:150px;" />
 </div>
 <br>
 <div class="wrapdiv">
@@ -31,7 +31,7 @@ menu:
 ## Meister and WebSphere
 
 <div style="margin-right:auto;margin-left:auto">
-<img src="/images/ibm.png" alt="WebSphere" width="200px" height="150px" />
+<img src="/images/ibm.png" alt="WebSphere" style="width:200px;height:150px;" />
 </div>
 <br>
 <div class="wrapdiv">
@@ -50,7 +50,7 @@ menu:
 ## Meister and Eclipse
 
 <div style="margin-right:auto;margin-left:auto">
-<img src="/images/eclipse_Ready.jpg" alt="Eclipse" width="200px" height="200px" />
+<img src="/images/eclipse_Ready.jpg" alt="Eclipse" style="width:200px;height:200px;" />
 </div>
 <br>
 <div class="wrapdiv">
@@ -66,7 +66,7 @@ menu:
 ## Meister for Improved CI Builds
 
 <div style="margin-right:auto;margin-left:auto">
-<img src="/images/agility.jpg" alt="Eclipse" width="200px" height="200px" />
+<img src="/images/agility.jpg" alt="Eclipse" style="width:200px;height:200px;" />
 </div>
 <br>
 <div class="wrapdiv">
@@ -86,7 +86,7 @@ menu:
 ## Meister for .Net
 
 <div style="margin-right:auto;margin-left:auto">
-<img src="/images/ms-net.jpg" alt="Microsoft .Net" width="200px" height="100px" />
+<img src="/images/ms-net.jpg" alt="Microsoft .Net" style="width:200px;height:100px;" />
 </div>
 <br>
 <div class="wrapdiv">
@@ -101,7 +101,7 @@ menu:
 
 ## Meister Tutorials - Learn How to Setup Meister 
 <div style="margin-right:auto;margin-left:auto">
-<img src="/images/school.jpg" alt="Meister Tutorials" width="200px" height="150px" />
+<img src="/images/school.jpg" alt="Meister Tutorials" style="width:200px;height:150px;" />
 </div>
 <br>
 <div class="wrapdiv">

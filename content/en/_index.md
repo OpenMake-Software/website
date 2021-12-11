@@ -49,7 +49,7 @@ description: Securing your Software Builds
 <hr>
 </div>
 <div style="margin-right:auto;margin-left:auto">
-<img src="images/steps-meister.png" alt="Meister Steps" width="1300" height="650"/>
+<img src="images/steps-meister.png" alt="Meister Steps" style="width:1300px;height:650px" />
 </div>
 {{< /blocks/section >}}
 
@@ -100,43 +100,43 @@ Dependency Scanning  | <i class="fas fa-3x fa-check-square"></i>
 
 <div class="flowlogos">
 <div>
-<img src="images/jolt09-19th-winner-sm.jpg" alt="Jolt Award"  width="216" height="129" />
+<img src="images/jolt09-19th-winner-sm.jpg" alt="Jolt Award"  style="width:216px;height:129px;" />
 </div>
 
 <div>
-<img src="images/16thfinalistcopy-sm.jpg" alt="Jolt Award"  width="216" height="129" />
+<img src="images/16thfinalistcopy-sm.jpg" alt="Jolt Award"  style="width:216px;height:129px;" />
 </div>
 
 <div> 
-<img src="images/SDTimes-2020.png" alt="SDTimes Award 2020" width="150" height="150" />
+<img src="images/SDTimes-2020.png" alt="SDTimes Award 2020" style="width:150px;height:150px;" />
 </div>
 
 <div>
-<img src="images/SDT100_logo_2019_600px.jpg" alt="SDTimes Award 2019"  width="170" height="170" />
+<img src="images/SDT100_logo_2019_600px.jpg" alt="SDTimes Award 2019" style="width:170px;height:170px;" />
 </div>
 
 <div>
-<img src="images/SDtimes2018.png" alt="SDTimes Award 2018"  width="150" height="150" />
+<img src="images/SDtimes2018.png" alt="SDTimes Award 2018" style="width:150px;height:150px;" />
 </div>
 
 <div>
-<img src="images/SDtimes2017.png" alt="SDTimes Award 2017"  width="150" height="150" />
+<img src="images/SDtimes2017.png" alt="SDTimes Award 2017" style="width:150px;height:150px;" />
 </div>
 
 <div>
-<img src="images/CPMembersChoice.png" alt="Peoples Choice Award"  width="150" height="150" />
+<img src="images/CPMembersChoice.png" alt="Peoples Choice Award" style="width:150px;height:150px;" />
 </div>
 
 <div> 
-<img src="images/sdtimes2008.gif" alt="SDTimes Award 2008" width="150" height="150" />
+<img src="images/sdtimes2008.gif" alt="SDTimes Award 2008" style="width:150px;height:150px;" />
 </div>
 
 <div> 
-<img src="images/2007SDTimes.jpg" alt="SDTimes Award 2007" width="150" height="150" />
+<img src="images/2007SDTimes.jpg" alt="SDTimes Award 2007" style="width:50px;height:150px;" />
 </div>
 
 <div> 
-<img src="images/SDTimes100Award.gif" alt="SDTimes Award 2006" width="150" height="150" />
+<img src="images/SDTimes100Award.gif" alt="SDTimes Award 2006" style="width:150px;height:150px;" />
 </div>
 
 {{< /blocks/section >}}
@@ -180,40 +180,40 @@ Dependency Scanning  | <i class="fas fa-3x fa-check-square"></i>
 <div class="flowlogos">
 
 <div> 
-<img src="images/Banorte.png" alt="Banorte Bank" width="150" height="50" />
+<img src="images/Banorte.png" alt="Banorte Bank" style="width:150px;height:50px;" />
 </div>
 
 <div>
-<img src="images/BCBS-MI.jpg" alt="BCBS MI"  width="200" height="75" />
+<img src="images/BCBS-MI.jpg" alt="BCBS MI"  style="width:200px;height:75px;" />
 </div>
 
 <div>
-<img src="images/BCBS-SC.jpg" alt="BCBS SC"  width="120" height="75" />
+<img src="images/BCBS-SC.jpg" alt="BCBS SC"  style="width:120px;height:75px;" />
 </div>
 
 <div>
-<img src="images/BNSF.jpg" alt="BNSF"  width="170" height="75" />
+<img src="images/BNSF.jpg" alt="BNSF"  style="width:170px;height:75px;" />
 </div>
 
 <div>
-<img src="images/BNYMellon.jpg" alt="BNYMellon"  width="150" height="75" />
+<img src="images/BNYMellon.jpg" alt="BNYMellon"  style="width:150px;height:75px;" />
 </div>
 
 <div> 
-<img src="images/zurich.png" alt="Zurich" width="150" height="75" />
+<img src="images/zurich.png" alt="Zurich" style="width:150px;height:75px;" />
 </div>
 
 <div> 
-<img src="images/UCLA.jpg" alt="UCLA" width="150" height="75" />
+<img src="images/UCLA.jpg" alt="UCLA" style="width:150px;height:75px;" />
 </div>
 
 <div> 
-<img src="images/KnightsofColumbus.png" alt="Zurich" width="150" height="75" />
+<img src="images/KnightsofColumbus.png" alt="Zurich" style="width:150px;height:75px;" />
 </div>
 
 
 <div> 
-<img src="images/broadcom.png" alt="Broadcom" width="170" height="50" />
+<img src="images/broadcom.png" alt="Broadcom" style="width:170px;height:50px;" />
 </div>
 
 

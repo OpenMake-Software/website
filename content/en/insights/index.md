@@ -15,7 +15,7 @@ type: contributor
     <h1 class="text-left">Validating Builds with an SBOM</h1>
     <hr>
     <br>
-    <img src="/images/digitalvisability.png" alt="risk vs. control" width="444px" height="322px"  />
+    <img src="/images/digitalvisability.png" alt="risk vs. control" style="width:444px;height:322px;"  />
   </div>
 
 
