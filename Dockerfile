@@ -1,5 +1,5 @@
 # base nginx image
-FROM node:lts-alpine3.13 as build
+FROM node:lts-alpine as build
 
 # an arbitrary directory to build our site in
 WORKDIR /build
@@ -26,4 +26,5 @@ COPY --from=build /build/conf/nginx.conf /etc/nginx/
 RUN mkdir -p /tmp/pagespeed_cache; \
     chmod a+w /tmp/pagespeed_cache; \
     apk update; \
-    apk upgrade --available;
+    apk upgrade --available; \
+    chmod -R 755 /etc/nginx/html

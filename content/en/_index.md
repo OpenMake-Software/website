@@ -22,7 +22,7 @@ description: Securing your Software Builds
 </div>
 <div class="col-7">
    <p style="color:black; font-size: 1.5rem;"> Repeatable and secure software compiles are the groundwork for achieving consistency in your software supply chain. Whatever your software application, OpenMake Meister insulates and secures the creation of binaries using a declarative model that eliminates ad-hoc and vulnerable software builds.</p>
-   <p class="text-center"><button > <a href="/images/MeisterDataSheet-final.pdf/"><span>Get the Data Sheet</span></a></button></p>
+   <p class="text-center"><button > <a href="/images/MeisterDataSheet-final.pdf"><span>Get the Data Sheet</span></a></button></p>
 </div>
 <div class="col">
 </div>
