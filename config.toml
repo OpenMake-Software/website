@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://www.openmakesoftware.com/"
 title = "OpenMake Meister"
 
 # Hugo allows theme composition (and inheritance). The precedence is from left to right.

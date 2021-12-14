@@ -1,5 +1,5 @@
 # base nginx image
-FROM node:lts-alpine as build
+FROM node:lts-alpine3.13 as build
 
 # an arbitrary directory to build our site in
 WORKDIR /build
@@ -9,9 +9,10 @@ ENV HUGO_ENV=production
 COPY . .
 
 # install node_modules, will be cached unless package.json has changed
-RUN npm ci; \
-  apk add --update hugo git; \
-  /usr/bin/hugo
+RUN npm update; \
+    npm ci; \
+    apk add --update hugo git; \
+     /usr/bin/hugo
 
 FROM wernight/alpine-nginx-pagespeed
 
