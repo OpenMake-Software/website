@@ -26,7 +26,7 @@ Hugo uses [markdown](https://www.markdownguide.org/) in conjunction with the the
     - Make sure for Windows to install hugo-extended
 3. Open a command prompt and cd to your repo dir
 4. Run: `hugo server`
-5. Access the local site using `http://localhost:1313`
+5. Access the local site using `https://localhost:1313`
 
 _Note: the site will automatically refresh on a file save._
 

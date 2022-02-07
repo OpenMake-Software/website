@@ -37,7 +37,7 @@ To ensure your logo displays correctly, you may want to resize it, ensure it doe
 
 ## Add your favicons
 
-The easiest way to do this is to create a set of favicons via http://cthedot.de/icongen (which lets you create a huge range of icon sizes and options from a single image) and/or https://favicon.io/, and put them in your site project's `static/favicons` directory. This will override the default favicons from the theme.
+The easiest way to do this is to create a set of favicons via https://cthedot.de/icongen (which lets you create a huge range of icon sizes and options from a single image) and/or https://favicon.io/, and put them in your site project's `static/favicons` directory. This will override the default favicons from the theme.
 
 Note that https://favicon.io/  doesn't create as wide a range of sizes as Icongen but *does* let you quickly create favicons from text: if you want to create text favicons you can use this site to generate them, then use Icongen to create more sizes (if necessary) from your generated `.png` file.
 

@@ -26,7 +26,7 @@ Software Build Automation includes managing software dependencies, executing inc
 
 Watch this Google video from their education series.
 
-http://www.youtube.com/watch?v=2qv3fcXW1mg
+https://www.youtube.com/watch?v=2qv3fcXW1mg
 
 They have written a homegrown process that is extremely similar to Meister.  Build Rules, the elimination of scripts, incremental processing, management of libraries, parallelization  and distribution of workload is all shown. The good news is you do not need to write this process on your own. You can use Meister instead.  Meister solves all the problems and provides all the features covered here.   So yes, your builds can be intelligent too.
 

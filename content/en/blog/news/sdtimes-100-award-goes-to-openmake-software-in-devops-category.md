@@ -21,7 +21,7 @@ Launched in February 2000, BZ Media's SD Times is the newspaper of record for th
 
 ### About OpenMake Software®
 
-OpenMake® Software delivers highly reusable DevOps Solutions that allow our customers to master agile’s last mile. For more information on OpenMake Software, go to www.OpenMakeSoftware.com
+OpenMake® Software delivers highly reusable DevOps Solutions that allow our customers to master agile’s last mile. For more information on OpenMake Software, go to [www.OpenMakeSoftware.com](https://www.openmakesoftware.com)
 
 ### About DeployHub®
 

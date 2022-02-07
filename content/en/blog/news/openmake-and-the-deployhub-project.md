@@ -25,7 +25,7 @@ coverImage: "DeployHub-Stacked-Final-Grey200.png"
 
  
 
-DeployHub, Inc. will support the DeployHub Open Source community and provide an open source SaaS offering for a frictionless road to full continuous deployment. For more information, go to [www.deployhub.com](http://www.deployhub.com).
+DeployHub, Inc. will support the DeployHub Open Source community and provide an open source SaaS offering for a frictionless road to full continuous deployment. For more information, go to [www.deployhub.com](https://www.deployhub.com).
 
  
 
@@ -39,7 +39,7 @@ DeployHub Inc. is driven by the goal to firmly establish continuous deployments 
 
 ## **_About OpenMake Software_**
 
-OpenMake® Software delivers highly reusable DevOps Solutions that allow our customers to master agile’s last mile. As a 100% self-funded organization, we have the freedom to focus on our customer’s needs, delivering innovation in continuous builds and continuous deployment. More Info at [www.OpenMakeSoftware.com](../2008/www.OpenMakeSoftware.com)
+OpenMake® Software delivers highly reusable DevOps Solutions that allow our customers to master agile’s last mile. As a 100% self-funded organization, we have the freedom to focus on our customer’s needs, delivering innovation in continuous builds and continuous deployment. More Info at [www.OpenMakeSoftware.com](https://www.openmakesoftware.com)
 
  
 

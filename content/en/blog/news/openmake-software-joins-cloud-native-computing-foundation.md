@@ -24,6 +24,6 @@ Cloud native computing uses an open source software stack to deploy applications
 
 OpenMake® Software delivers highly reusable DevOps Solutions that allow our customers to master agile’s last mile. As a 100% self-funded organization, we have the freedom to focus on our customer’s needs, delivering innovation in continuous builds and continuous deployment. An investment in our DevOps solutions or Professional Services forms a ‘technical partnership’ that provides you expertise and support to solve your toughest build and release problems for today and tomorrow.
 
-More Info at [www.OpenMakeSoftware.com](../2008/www.OpenMakeSoftware.com)
+More Info at [www.OpenMakeSoftware.com](https://www.openmakesoftware.com)
 
 OpenMake Software is a registered trademark of Catalyst Systems Corporation. All other trademarks used in this document are the property of their respective owners.

@@ -27,7 +27,7 @@ This SDTimes 100 award is an important achievement for OpenMake Software.  It r
 
 ## **About SD Times**
 
-Launched in February 2000, BZ Media's SDTimes is the newspaper of record for the software development industry. SDTimes is published twice monthly in identical print and digital editions and can also be read online at [www.sdtimes.com](http://sdtimes.com/).
+Launched in February 2000, BZ Media's SDTimes is the newspaper of record for the software development industry. SDTimes is published twice monthly in identical print and digital editions and can also be read online at [www.sdtimes.com](https://sdtimes.com/).
 
 ##  **About OpenMake Software**
 
