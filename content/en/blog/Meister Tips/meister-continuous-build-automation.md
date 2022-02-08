@@ -29,7 +29,7 @@ Meister Build Automation accelerates Continuous Integration to improve the manag
 
 Meister Build Automation has the intelligence to drastically reduce your build times for full builds and down to a few seconds with accurate incremental builds. Meister uses Build Avoidance only re-building the source code that has been changed. So easy! Meister supports build acceleration for all supported languages including Java, .Net, C++, C-Unix and others including the ability to manage multiple .Net Solution files in a single parallel build stream.
 
-View the <a href="https://youtu.be/9lHy-6UgMng">Build Automation Demo</a>
+View the <a href="https://www.youtube.com/watch?v=9lHy-6UgMng&feature=youtu.be">Build Automation Demo</a>
 
 
 ## Build Automation Insight

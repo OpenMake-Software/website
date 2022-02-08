@@ -17,7 +17,7 @@ This SD Times 100 award is an important achievement for OpenMake Software as the
 
 ### About SD Times
 
-Launched in February 2000, BZ Media's SD Times is the newspaper of record for the software development industry. SD Times is published twice monthly in identical print and digital editions and can also be read online at www.sdtimes.com.
+Launched in February 2000, BZ Media's SD Times is the newspaper of record for the software development industry. SD Times is published twice monthly in identical print and digital editions and can also be read online at [www.sdtimes.com](https://sdtimes.com/).
 
 ### About OpenMake Software®
 
@@ -25,4 +25,4 @@ OpenMake® Software delivers highly reusable DevOps Solutions that allow our cus
 
 ### About DeployHub®
 
-DeployHub is a central microservice sharing platform where developers catalog, publish, version and deploy their applications built on-top of Kubernetes. For more information go to www.DeployHub.com
+DeployHub is a central microservice sharing platform where developers catalog, publish, version and deploy their applications built on-top of Kubernetes. For more information go to [DeployHub.com](https://www.deployhub.com/)

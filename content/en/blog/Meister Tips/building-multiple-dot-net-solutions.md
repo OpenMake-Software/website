@@ -15,7 +15,7 @@ coverImage: "Meister-final-grey-stacked-white-background.png"
 
 ## Dot Net Solution builds are Complicated with Multiple Solution Files.
 
-We often get customers who have multiple Dot [Net Solutions](https://www.microsoft.com/net/download) for creating a single application.   While Microsoft may advise against the practice, large companies tend to push the limit in software development requiring that more than one Dot Net solution file be used.  The .Net IDE cannot handle this requirement, which is were we come in.
+We often get customers who have multiple Dot [Net Solutions](https://dotnet.microsoft.com/en-us//download) for creating a single application.   While Microsoft may advise against the practice, large companies tend to push the limit in software development requiring that more than one Dot Net solution file be used.  The .Net IDE cannot handle this requirement, which is were we come in.
 
 <div>
 <img src="/images/Meister-final-grey-stacked-white-background-300x300.png" alt="Meister and Environment Variables" />

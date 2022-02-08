@@ -21,6 +21,6 @@ Receiving the award for the forth consecutive year is an important achievement f
 
 "We make configuring software builds and deployments easy," says Steve Taylor, Chief IT Architect of  OpenMake Software.  "Access to automated build and deploy tooling is a barrier for development teams due in large part to the cost.  We are democratizing continuous deployments for all.  And the Ortelius Microservice Management open source project is leveraging our core configuration expertise designed for microservices. "
 
-<strong>SD Times</strong> launched in February 2000 by BZ Media, and is the newspaper of record for the software development industry. SD Times is published twice monthly in print and at <u><a href="https://www.sdtimes.com/">www.sdtimes.com</a>.</u>
+<strong>SD Times</strong> launched in February 2000 by BZ Media, and is the newspaper of record for the software development industry. SD Times is published twice monthly in print and at <u><a href="https://sdtimes.com/">www.sdtimes.com</a>.</u>
 
 <strong>DeployHub</strong> is a central hub of microservice configuration metadata.  It tracks and versions the ‘death star’ thus simplifying the migration to – and ongoing management of – a microservice architecture. They understand the importance of supporting today’s cloud and physical data centers, but maintain a strong focus on the critical need for a microservices and <a href="https://kubernetes.io/">Kubernetes</a> platform.

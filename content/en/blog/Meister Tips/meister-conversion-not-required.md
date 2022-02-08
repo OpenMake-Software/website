@@ -14,7 +14,7 @@ coverImage: "makechange.jpg"
 
 ## No Meister Conversion Required to Start Using Meister Build services.
 
-Meister conversion is a myth. To use Meister, our competitors would like you to believe that an Ant to Meister or Maven to [Meister](https://www.openmakesoftware.com/meister-continuous-build/) conversion is required.  We are often asked, "how long does it take to convert my Ant Scripts to Meister?"  The answer is there is really no requirement to "convert" to Meister. Meister will do that for you by referencing the most accurate information found - the [Eclipse](https://eclipse.org) or [Microsoft .Net](https://www.microsoft.com/net) Project files.
+Meister conversion is a myth. To use Meister, our competitors would like you to believe that an Ant to Meister or Maven to [Meister](https://www.openmakesoftware.com/meister-continuous-build/) conversion is required.  We are often asked, "how long does it take to convert my Ant Scripts to Meister?"  The answer is there is really no requirement to "convert" to Meister. Meister will do that for you by referencing the most accurate information found - the [Eclipse](https://www.eclipse.org/) or [Microsoft .Net](https://dotnet.microsoft.com/en-us/) Project files.
 
 <div>
 <img src="/images/makechange-300x200.jpg" alt="manage build changes" />

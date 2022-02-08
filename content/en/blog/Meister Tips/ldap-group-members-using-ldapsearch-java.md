@@ -17,7 +17,7 @@ Ldapsearch has become a handy tool for us. Here is how we use it. Many of our cu
 </div>
 <br>
 
-We use the LDAP server provided by <a href="https://www.forumsys.com/tutorials/integration-how-to/ldap/online-ldap-test-server/">Forum Systems Online LDAP Test Server</a>.
+We use the LDAP server provided by <a href="https://www.forumsys.com/2014/02/22/online-ldap-test-server/">Forum Systems Online LDAP Test Server</a>.
 
 Here is the ldapsearch command line:
 

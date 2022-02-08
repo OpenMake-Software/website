@@ -16,7 +16,7 @@ coverImage: "kubernetes-wheel.jpg"
 
 ## **_About Cloud Native Computing Foundation_**
 
-Cloud native computing uses an open source software stack to deploy applications as microservices, packaging each part into its own container, and dynamically orchestrating those containers to optimize resource utilization. The Cloud Native Computing Foundation (CNCF) hosts critical components of cloud native software stacks, including Kubernetes and Prometheus. CNCF serves as the neutral home for collaboration and brings together the industry’s top developers, end users and vendors – including the world’s largest public cloud and enterprise software companies as well as dozens of innovative startups. CNCF is part of The Linux Foundation, a nonprofit organization. For more information about CNCF, please visit www.cncf.io.
+Cloud native computing uses an open source software stack to deploy applications as microservices, packaging each part into its own container, and dynamically orchestrating those containers to optimize resource utilization. The Cloud Native Computing Foundation (CNCF) hosts critical components of cloud native software stacks, including Kubernetes and Prometheus. CNCF serves as the neutral home for collaboration and brings together the industry’s top developers, end users and vendors – including the world’s largest public cloud and enterprise software companies as well as dozens of innovative startups. CNCF is part of The Linux Foundation, a nonprofit organization. For more information about CNCF, please visit [www.cncf.io](https://www.cncf.io/).
 
  
 
