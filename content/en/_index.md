@@ -208,13 +208,7 @@ Dependency Scanning  | <i class="fas fa-3x fa-check-square"></i>
 </div>
 
 <div> 
-<img src="images/KnightsofColumbus.png" alt="Zurich" style="width:150px;height:75px;" />
-</div>
-
-
-<div> 
 <img src="images/broadcom.png" alt="Broadcom" style="width:170px;height:50px;" />
 </div>
-
 
 {{< /blocks/section >}}
