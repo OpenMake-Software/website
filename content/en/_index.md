@@ -162,7 +162,7 @@ Dependency Scanning  | <i class="fas fa-3x fa-check-square"></i>
 ### Thought Leaders in Build Management
 
 <div class="wrapdiv">
-<p class="wrapdiv_text"><a href="/expert/">Steve Taylor</a> and <a href="/expert/">Tracy Ragan</a>, the co-founders of OpenMake Software, have been recognized thought leaders in software builds, configuration management, software bill of material reporting, and build security for over 25 years. With their combined leadership skills and market vision, they have successfully navigated the changes in the DevOps space brining new and timely innovation to the communities they serve.
+<p class="wrapdiv_text"><a href="/expert/">Steve Taylor</a> and <a href="/expert/">Tracy Ragan</a>, the co-founders of OpenMake Software, have been recognized thought leaders in software builds, configuration management, software bill of material reporting, and build security for over 25 years. With their combined leadership skills and market vision, they have successfully navigated the changes in the DevOps space brining new and timely innovation to the communities they serve. Check out their next endeavor, DeployHub, a <a href="https://www.deployhub.com/"> Microservice Catalog </a> that provides a comprehensive view of an organization's security profile in a decoupled architecture. 
 </div>
 {{< /blocks/feature_dual2 >}}
 {{< /blocks/section >}}
