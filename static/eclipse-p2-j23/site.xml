@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/com.openmake.feature.meister751_7.5.1.jar" id="com.openmake.feature.meister751" version="7.5.1"/>
+   <feature url="features/com.openmake.feature.meister751_7.5.1.jar" id="com.openmake.feature.meister751" version="7.5.1">
+      <category name="Meister_751"/>
+   </feature>
+   <category-def name="Meister_751" label="Meister 7.51"/>
 </site>
