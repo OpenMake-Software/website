@@ -35,7 +35,9 @@ Each installation requires a central Knowledge Base that acts as the "operator" 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
-## $25,000 USD Annual Subscription with Standard Support
+## $25,000 USD Annual Subscription with Standard Support (25 Users)
+## $40,000 USD Annual Subscription with Standard Support (50 Users)
+## $75,000 USD Annual Subscription with Standard Support (Unlimited Users)
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
